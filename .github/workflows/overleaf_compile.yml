@@ -46,6 +46,10 @@ jobs:
               run: |
                   mv compiled_document.pdf ./output.pdf
 
+            - name: Mark Git Directory as Safe
+              run: |
+                  git config --global --add safe.directory /__w/master-thesis/master-thesis
+
             - name: Commit and Push Compiled Document
               run: |
                   git config --global user.name "github-actions"
