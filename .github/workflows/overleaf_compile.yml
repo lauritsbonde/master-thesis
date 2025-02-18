@@ -18,10 +18,15 @@ jobs:
               run: |
                   git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.OVERLEAF_GIT_URL }} overleaf_project
 
-            - name: Compile LaTeX Document
+            - name: Compile LaTeX Document with Bibliography
               run: |
                   cd overleaf_project
-                  latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+                  latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex || true
+                  if [ -f main.bcf ]; then
+                    echo "Running Biber for bibliography..."
+                    biber main
+                  fi
+                  latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
                   mv main.pdf ../compiled_document.pdf
 
             - name: Move Compiled PDF to Repository
