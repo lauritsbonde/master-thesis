@@ -57,21 +57,21 @@ jobs:
                   mv compiled_document.pdf ./thesis.pdf
                   echo "::notice::📁 Moved compiled PDF to repository"
 
-            - name: Commit and Push Compiled Document
+            - name: Commit and Push Compiled Document as Admin
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GH_PAT: ${{ secrets.GH_PAT }}
               run: |
                   echo "::notice::🚀 Preparing to commit and push PDF..."
-                  git config --global user.name "lauritsbonde"
+                  git config --global user.name "Laurits Bonde"
                   git config --global user.email "lauritsbonde@hotmail.dk"
 
                   # Set the repository as safe
                   git config --global --add safe.directory /__w/master-thesis/master-thesis
 
-                  # Use GitHub token for authentication
-                  git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+                  # Use the Classic PAT for authentication
+                  git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git
 
                   git add thesis.pdf
                   git commit -m "Update compiled PDF from Overleaf [skip ci]" || echo "::notice::⚠️ No changes to commit"
                   git push origin HEAD:master
-                  echo "::notice::✅ Compiled PDF successfully pushed to GitHub"
+                  echo "::notice::✅ Compiled PDF successfully pushed as Laurits Bonde"
