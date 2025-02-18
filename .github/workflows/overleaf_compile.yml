@@ -62,7 +62,7 @@ jobs:
                   GH_PAT: ${{ secrets.GH_PAT }}
               run: |
                   echo "::notice::🚀 Preparing to commit and push PDF..."
-                  git config --global user.name "Laurits Bonde"
+                  git config --global user.name "lauritsbonde"
                   git config --global user.email "lauritsbonde@hotmail.dk"
 
                   # Set the repository as safe
@@ -74,4 +74,4 @@ jobs:
                   git add thesis.pdf
                   git commit -m "Update compiled PDF from Overleaf [skip ci]" || echo "::notice::⚠️ No changes to commit"
                   git push origin HEAD:master
-                  echo "::notice::✅ Compiled PDF successfully pushed as Laurits Bonde"
+                  echo "::notice::✅ Compiled PDF successfully pushed"
