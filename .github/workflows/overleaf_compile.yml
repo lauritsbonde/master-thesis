@@ -51,9 +51,13 @@ jobs:
                   git config --global --add safe.directory /__w/master-thesis/master-thesis
 
             - name: Commit and Push Compiled Document
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   git config --global user.name "github-actions"
                   git config --global user.email "actions@github.com"
+                  git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+
                   git add output.pdf
-                  git commit -m "Update compiled PDF from Overleaf"
-                  git push
+                  git commit -m "Update compiled PDF from Overleaf" || echo "No changes to commit"
+                  git push origin HEAD:main

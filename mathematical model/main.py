@@ -55,5 +55,7 @@ def calculatePowerUsage(number_of_boats: int, boat: Boat):
 boat = Boat(lenght=0.32, width=0.21, height=0.11, weight=0.7, speed=2)
 numberOfboat = 10
 
-print("total drag: " + str(power))
-print("drag per boat: " + str(power/numberOfboat))
+powerUsage = calculatePowerUsage(numberOfboat, boat)
+
+print("total drag: " + str(powerUsage))
+print("drag per boat: " + str(powerUsage/numberOfboat))
