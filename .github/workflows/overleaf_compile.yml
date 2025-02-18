@@ -54,7 +54,7 @@ jobs:
 
             - name: Move Compiled PDF to Repository
               run: |
-                  mv compiled_document.pdf ./output.pdf
+                  mv compiled_document.pdf ./thesis.pdf
                   echo "::notice::📁 Moved compiled PDF to repository"
 
             - name: Commit and Push Compiled Document
@@ -71,7 +71,7 @@ jobs:
                   # Use GitHub token for authentication
                   git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
 
-                  git add output.pdf
+                  git add thesis.pdf
                   git commit -m "Update compiled PDF from Overleaf [skip ci]" || echo "::notice::⚠️ No changes to commit"
                   git push origin HEAD:master
                   echo "::notice::✅ Compiled PDF successfully pushed to GitHub"
