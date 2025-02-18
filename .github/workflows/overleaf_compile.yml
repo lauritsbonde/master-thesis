@@ -23,22 +23,22 @@ jobs:
                   apt-get update
                   apt-get install -y inkscape
 
-            - name: Compile LaTeX Document with BibTeX
+            - name: Compile LaTeX Document with Conditional BibTeX
               run: |
                   cd overleaf_project
 
                   # First LaTeX run
                   latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex || true
 
-                  # Run BibTeX if a .aux file exists
-                  if [ -f main.aux ]; then
-                    echo "Running BibTeX for bibliography..."
+                  # Check if citations exist in .aux file
+                  if grep -q '\\citation' main.aux; then
+                    echo "Citations found. Running BibTeX..."
                     bibtex main
+                    latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
+                    latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
+                  else
+                    echo "No citations found, skipping BibTeX."
                   fi
-
-                  # Second and third LaTeX runs to resolve citations
-                  latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
-                  latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
 
                   mv main.pdf ../compiled_document.pdf
 
