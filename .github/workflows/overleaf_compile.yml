@@ -16,7 +16,6 @@ jobs:
         steps:
             - name: Checkout GitHub repository
               uses: actions/checkout@v3
-              run: echo "::notice::✅ Repository checked out successfully"
 
             - name: Clone Overleaf Project
               run: |
