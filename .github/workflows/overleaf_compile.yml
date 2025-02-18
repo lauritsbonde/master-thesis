@@ -62,8 +62,8 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   echo "::notice::🚀 Preparing to commit and push PDF..."
-                  git config --global user.name "github-actions"
-                  git config --global user.email "actions@github.com"
+                  git config --global user.name "lauritsbonde"
+                  git config --global user.email "lauritsbonde@hotmail.dk"
 
                   # Set the repository as safe
                   git config --global --add safe.directory /__w/master-thesis/master-thesis
