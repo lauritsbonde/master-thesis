@@ -9,14 +9,10 @@ on:
 jobs:
     compile-overleaf:
         runs-on: ubuntu-latest
+        container: texlive/texlive:latest
         steps:
             - name: Checkout GitHub repository
               uses: actions/checkout@v3
-
-            - name: Install LaTeX dependencies
-              run: |
-                  sudo apt update
-                  sudo apt install -y texlive-full latexmk
 
             - name: Clone Overleaf Project
               run: |
