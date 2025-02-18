@@ -3,7 +3,7 @@ name: Compile Overleaf Document
 on:
     push:
         branches:
-            - master
+            - main
     workflow_dispatch:
 
 jobs:
@@ -18,15 +18,28 @@ jobs:
               run: |
                   git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.OVERLEAF_GIT_URL }} overleaf_project
 
-            - name: Compile LaTeX Document with Bibliography
+            - name: Install Missing Dependencies
+              run: |
+                  apt-get update
+                  apt-get install -y inkscape
+
+            - name: Compile LaTeX Document with BibTeX
               run: |
                   cd overleaf_project
+
+                  # First LaTeX run
                   latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex || true
-                  if [ -f main.bcf ]; then
-                    echo "Running Biber for bibliography..."
-                    biber main
+
+                  # Run BibTeX if a .aux file exists
+                  if [ -f main.aux ]; then
+                    echo "Running BibTeX for bibliography..."
+                    bibtex main
                   fi
+
+                  # Second and third LaTeX runs to resolve citations
                   latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
+                  latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
+
                   mv main.pdf ../compiled_document.pdf
 
             - name: Move Compiled PDF to Repository
