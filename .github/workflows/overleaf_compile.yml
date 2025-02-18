@@ -7,8 +7,7 @@ on:
     workflow_dispatch:
 
 permissions:
-    contents: write
-    pull-requests: write
+    contents: write # 🚀 Allows the workflow to push changes
 
 jobs:
     compile-overleaf:
@@ -26,62 +25,53 @@ jobs:
 
             - name: Install Missing Dependencies
               run: |
-                  echo "::notice::📦 Installing missing dependencies..."
+                  echo "::notice::📦 Installing missing dependencies (Inkscape)..."
                   apt-get update
                   apt-get install -y inkscape
                   echo "::notice::✅ Dependencies installed successfully"
 
-            - name: Compile LaTeX Document
+            - name: Compile LaTeX Document with Conditional BibTeX
               run: |
                   cd overleaf_project
-                  echo "::notice::🚀 Compiling LaTeX document..."
+                  echo "::notice::🚀 Starting LaTeX compilation..."
+
+                  # First LaTeX run
                   latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex || true
 
-                  mv main.pdf ../thesis.pdf
-                  echo "::notice::✅ Compilation complete!"
+                  # Check if citations exist in .aux file
+                  if grep -q '\\citation' main.aux; then
+                    echo "::notice::📚 Citations found. Running BibTeX..."
+                    bibtex main
+                    latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
+                    latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
+                    echo "::notice::✅ Bibliography processed successfully"
+                  else
+                    echo "::notice::📜 No citations found, skipping BibTeX."
+                  fi
 
-            - name: Commit and Push to Temporary Branch
+                  echo "::notice::✅ LaTeX compilation completed successfully"
+                  mv main.pdf ../compiled_document.pdf
+
+            - name: Move Compiled PDF to Repository
+              run: |
+                  mv compiled_document.pdf ./thesis.pdf
+                  echo "::notice::📁 Moved compiled PDF to repository"
+
+            - name: Commit and Push Compiled Document
               env:
-                  GH_PAT: ${{ secrets.GH_PAT }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   echo "::notice::🚀 Preparing to commit and push PDF..."
-                  git config --global user.name "Laurits Bonde"
-                  git config --global user.email "lauritsbonde@hotmail.dk"
+                  git config --global user.name "github-actions"
+                  git config --global user.email "actions@github.com"
 
                   # Set the repository as safe
                   git config --global --add safe.directory /__w/master-thesis/master-thesis
 
-                  # Create and switch to the temporary branch
-                  BRANCH_NAME="update-thesis"
-                  git checkout -b $BRANCH_NAME || git checkout $BRANCH_NAME
+                  # Use GitHub token for authentication
+                  git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
 
-                  # Commit changes
                   git add thesis.pdf
                   git commit -m "Update compiled PDF from Overleaf [skip ci]" || echo "::notice::⚠️ No changes to commit"
-                  git push origin $BRANCH_NAME
-                  echo "::notice::✅ Changes pushed to branch: $BRANCH_NAME"
-
-            - name: Create Pull Request
-              uses: peter-evans/create-pull-request@v5
-              with:
-                  token: ${{ secrets.GH_PAT }}
-                  branch: update-thesis
-                  base: master
-                  title: '📄 Update Compiled PDF'
-                  body: 'Automated update of the compiled LaTeX document.'
-                  labels: 'automated, pdf'
-                  assignees: lauritsbonde
-
-            - name: Approve Pull Request
-              uses: hmarr/auto-approve-action@v3
-              with:
-                  github-token: ${{ secrets.GH_PAT }}
-
-            - name: Auto-Merge Pull Request
-              uses: pascalgn/automerge-action@v0.15.6
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-              with:
-                  merge-method: squash
-                  pull-request-title: '📄 Update Compiled PDF'
-                  pull-request-body: 'Automated update of the compiled LaTeX document.'
+                  git push origin HEAD:master
+                  echo "::notice::✅ Compiled PDF successfully pushed to GitHub"
