@@ -51,7 +51,7 @@ void setup() {
     Serial.print("Sending: ");
     Serial.println(commands[i]);
 
-    Serial1.println(commands[i]);  // Send command
+    Serial1.println(commands[i]);  
     delay(200);  // Wait for the command to process
   }
   Serial.println("Everything is setup!");
@@ -60,10 +60,10 @@ void setup() {
 void loop() {
   static String receivedData = "";
   static unsigned long lastReadTime = 0;
-  const unsigned long readInterval = 100; // Adjust for better timing
+  const unsigned long readInterval = 100; 
 
   if(millis() - lastReadTime > readInterval){
-    lastReadTime = millis(); // Update last read timestamp
+    lastReadTime = millis();
     while (Serial1.available()) {
       char c = Serial1.read();
       if (c == '\n') {  // End of a response line
@@ -74,29 +74,29 @@ void loop() {
           logData(distance); 
         }
 
-        receivedData = ""; // Clear buffer for next response
+        receivedData = ""; 
       } else {
-        receivedData += c; // Append to buffer
+        receivedData += c; 
       }
     }
   }
 
   // If no data has been received for a while, do not spam "Serial1 not available"
-  if (millis() - lastReadTime > 2000) { // 2-second timeout
+  if (millis() - lastReadTime > 2000) { 
     Serial.println("Serial1 not available");
     lastReadTime = millis(); // Reset to avoid constant printing
   }
 }
 
-// Function to extract numeric value from string
+// Function to extract numeric value from string format "an0: 0.03 m"
 float extractDistance(String input) {
-  int startIndex = input.indexOf(':'); // Find position of ':'
+  int startIndex = input.indexOf(':'); 
   if (startIndex != -1) {
-    String numPart = input.substring(startIndex + 1); // Get part after ':'
-    numPart.trim(); // Remove any whitespace
+    String numPart = input.substring(startIndex + 1); 
+    numPart.trim();
     return numPart.toFloat(); // Convert to float
   }
-  return NAN; // Return NaN if no number was found
+  return NAN; 
 }
 
 // Function to log data to SD card
