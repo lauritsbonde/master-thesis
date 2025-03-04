@@ -1,77 +1,77 @@
 name: Compile Overleaf Document
 
 on:
-    push:
-        branches:
-            - master
-    workflow_dispatch:
+  push:
+    branches:
+      - disabled
+  workflow_dispatch:
 
 permissions:
-    contents: write # 🚀 Allows the workflow to push changes
+  contents: write # 🚀 Allows the workflow to push changes
 
 jobs:
-    compile-overleaf:
-        runs-on: ubuntu-latest
-        container: texlive/texlive:latest
-        steps:
-            - name: Checkout GitHub repository
-              uses: actions/checkout@v3
+  compile-overleaf:
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+    steps:
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v3
 
-            - name: Clone Overleaf Project
-              run: |
-                  echo "::notice::📥 Cloning Overleaf project..."
-                  git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.OVERLEAF_GIT_URL }} overleaf_project
-                  echo "::notice::✅ Overleaf project cloned successfully"
+      - name: Clone Overleaf Project
+        run: |
+          echo "::notice::📥 Cloning Overleaf project..."
+          git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.OVERLEAF_GIT_URL }} overleaf_project
+          echo "::notice::✅ Overleaf project cloned successfully"
 
-            - name: Install Missing Dependencies
-              run: |
-                  echo "::notice::📦 Installing missing dependencies (Inkscape)..."
-                  apt-get update
-                  apt-get install -y inkscape
-                  echo "::notice::✅ Dependencies installed successfully"
+      - name: Install Missing Dependencies
+        run: |
+          echo "::notice::📦 Installing missing dependencies (Inkscape)..."
+          apt-get update
+          apt-get install -y inkscape
+          echo "::notice::✅ Dependencies installed successfully"
 
-            - name: Compile LaTeX Document with Conditional BibTeX
-              run: |
-                  cd overleaf_project
-                  echo "::notice::🚀 Starting LaTeX compilation..."
+      - name: Compile LaTeX Document with Conditional BibTeX
+        run: |
+          cd overleaf_project
+          echo "::notice::🚀 Starting LaTeX compilation..."
 
-                  # First LaTeX run
-                  latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex || true
+          # First LaTeX run
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex || true
 
-                  # Check if citations exist in .aux file
-                  if grep -q '\\citation' main.aux; then
-                    echo "::notice::📚 Citations found. Running BibTeX..."
-                    bibtex main
-                    latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
-                    latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
-                    echo "::notice::✅ Bibliography processed successfully"
-                  else
-                    echo "::notice::📜 No citations found, skipping BibTeX."
-                  fi
+          # Check if citations exist in .aux file
+          if grep -q '\\citation' main.aux; then
+            echo "::notice::📚 Citations found. Running BibTeX..."
+            bibtex main
+            latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
+            latexmk -pdf -interaction=nonstopmode -halt-on-error -shell-escape main.tex
+            echo "::notice::✅ Bibliography processed successfully"
+          else
+            echo "::notice::📜 No citations found, skipping BibTeX."
+          fi
 
-                  echo "::notice::✅ LaTeX compilation completed successfully"
-                  mv main.pdf ../compiled_document.pdf
+          echo "::notice::✅ LaTeX compilation completed successfully"
+          mv main.pdf ../compiled_document.pdf
 
-            - name: Move Compiled PDF to Repository
-              run: |
-                  mv compiled_document.pdf ./thesis.pdf
-                  echo "::notice::📁 Moved compiled PDF to repository"
+      - name: Move Compiled PDF to Repository
+        run: |
+          mv compiled_document.pdf ./thesis.pdf
+          echo "::notice::📁 Moved compiled PDF to repository"
 
-            - name: Commit and Push Compiled Document
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: |
-                  echo "::notice::🚀 Preparing to commit and push PDF..."
-                  git config --global user.name "github-actions"
-                  git config --global user.email "actions@github.com"
+      - name: Commit and Push Compiled Document
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "::notice::🚀 Preparing to commit and push PDF..."
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
 
-                  # Set the repository as safe
-                  git config --global --add safe.directory /__w/master-thesis/master-thesis
+          # Set the repository as safe
+          git config --global --add safe.directory /__w/master-thesis/master-thesis
 
-                  # Use GitHub token for authentication
-                  git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          # Use GitHub token for authentication
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
 
-                  git add thesis.pdf
-                  git commit -m "Update compiled PDF from Overleaf [skip ci]" || echo "::notice::⚠️ No changes to commit"
-                  git push origin HEAD:master
-                  echo "::notice::✅ Compiled PDF successfully pushed to GitHub"
+          git add thesis.pdf
+          git commit -m "Update compiled PDF from Overleaf [skip ci]" || echo "::notice::⚠️ No changes to commit"
+          git push origin HEAD:master
+          echo "::notice::✅ Compiled PDF successfully pushed to GitHub"
