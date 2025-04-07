@@ -91,10 +91,13 @@
 
     <main>
       <section id="content">
+        <div style="margin-top: 2rem">
+          <h4>ESC Config</h4>
+          <p id="esc-config">Loading ESC modes...</p>
+        </div>
         <form>
           <div>
             <h3>Motor Control</h3>
-            <p>90 means stop, under means backwards, over means forwards</p>
             <label for="right-angle">Right motor</label>
             <input
               type="number"
@@ -130,7 +133,30 @@
     </main>
 
     <script>
+      async function fetchESCConfig() {
+        try {
+          const res = await fetch("http://localhost:3000/config");
+          if (!res.ok) throw new Error("Failed to load config");
+
+          const data = await res.json();
+
+          const escConfigElement = document.getElementById("esc-config");
+
+          const left = data.leftMode === 0 ? "BIDIRECTIONAL" : "UNIDIRECTIONAL";
+          const right =
+            data.rightMode === 0 ? "BIDIRECTIONAL" : "UNIDIRECTIONAL";
+
+          escConfigElement.textContent = `Left ESC: ${left} - Right ESC: ${right}`;
+        } catch (err) {
+          console.error("Failed to load ESC config:", err);
+          document.getElementById("esc-config").textContent =
+            "ESC config unavailable.";
+        }
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
+        fetchESCConfig(); // Fetch and display ESC modes on page load
+
         const form = document.querySelector("form");
 
         form.addEventListener("submit", async (e) => {

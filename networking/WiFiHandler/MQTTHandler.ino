@@ -104,17 +104,17 @@ void publishMessage(const char* topic, JsonDocument doc , boolean retained){
 }
 
 /*** Methods for Game Messages ****/
-void connected(){
+void connected(ESCModes escModes) {
   JsonDocument doc;
 
-  // Assign values to the JSON document
   doc["message"] = "connected";
+  doc["leftMode"] = escModes.left;
+  doc["rightMode"] = escModes.right;
 
-  // Create a String object to hold the serialized JSON
   publishMessage("connected", doc, false);
 }
 
-void connectToMqtt() {
+void connectToMqtt(ESCModes escModes) {
   espClient.setInsecure();
 
   client.setServer(mqtt_server, mqtt_port);
@@ -127,9 +127,6 @@ void connectToMqtt() {
     timeOut++;
   }
 
-  JsonDocument doc;
-  doc["message"] = "Connected";
-
-  publishMessage("connected", doc, false);
+  connected(escModes);
 }
 

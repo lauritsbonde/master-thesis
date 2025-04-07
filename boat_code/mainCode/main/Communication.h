@@ -1,5 +1,6 @@
 // Communication.h
 #pragma once
+#include "MotorControl.h"
 
-void setupCommunication();
+void setupCommunication(ESCModes escModes);
 char* readEspComm();

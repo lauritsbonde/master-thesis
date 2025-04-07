@@ -11,7 +11,12 @@ struct ESC {
   ESCMode mode;
 };
 
-void setupMotors();
+struct ESCModes {
+  ESCMode left;
+  ESCMode right;
+};
+
+ESCModes setupMotors();
 
 void stopMotors();
 void setLeftMotorSpeed(int speed);

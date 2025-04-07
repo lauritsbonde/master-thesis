@@ -10,19 +10,14 @@ void setup() {
 
   setupLEDS();
 
-  setupMotors();
+  ESCModes escModes = setupMotors();
 
   SDWriterSetup();
 
-  setupCommunication();
+  setupCommunication(escModes);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  // readEspComm();
-
-  setMotorSpeeds(100);
-  delay(2000);
-  stopMotors();
-  delay(2000);
+  readEspComm();
 }

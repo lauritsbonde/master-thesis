@@ -4,23 +4,34 @@
 ESC leftESC = {Servo(), 9, 12, UNIDIRECTIONAL};
 ESC rightESC = {Servo(), 10, 13, UNIDIRECTIONAL};
 
+// connected to ground is Bidirectional
 ESCMode detectESCMode(uint8_t configPin) {
   pinMode(configPin, INPUT_PULLUP);  // pulled HIGH unless grounded
   return digitalRead(configPin) == LOW ? BIDIRECTIONAL : UNIDIRECTIONAL;
 }
 
-void setupMotors() {
-  leftESC.mode = detectESCMode(leftESC.configPin);
-  rightESC.mode = detectESCMode(rightESC.configPin);
+ESCModes setupMotors() {
+  ESCModes modes;
+  modes.left = detectESCMode(leftESC.configPin);
+  modes.right = detectESCMode(rightESC.configPin);
+
+  leftESC.mode = modes.left;
+  rightESC.mode = modes.right;
 
   leftESC.servo.attach(leftESC.pwmPin, 1000, 2000);
   rightESC.servo.attach(rightESC.pwmPin, 1000, 2000);
 
-  // Arm ESCs
+  // Arm esc sequence
   leftESC.servo.write(0);
   rightESC.servo.write(0);
 
+  setMotorSpeeds(180);
+  stopMotors();
+  // arm done;
+
   startLogging();
+
+  return modes;
 }
 
 
@@ -36,17 +47,9 @@ void stopMotors() {
 }
 
 void setMotorSpeed(ESC& esc, int speed) {
-  int pulse;
-  if (esc.mode == BIDIRECTIONAL) {
-    if(speed < 90) {
-      speed = 90;
-    }
-    pulse = speed;
-  } else {
-    pulse = speed;
-  }
+  speed = constrain(speed, 0, 180);
 
-  esc.servo.write(pulse);
+  esc.servo.write(speed);
 }
 
 void setLeftMotorSpeed(int speed) {

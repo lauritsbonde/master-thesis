@@ -31,12 +31,27 @@ const options = {
 // Connect to MQTT broker
 const client = mqtt.connect(options);
 
+let lastConnectMsg = {}; // connected message from esp
+
 client.on("connect", () => {
   console.log("✅ Connected to HiveMQ Cloud MQTT broker");
+  client.subscribe("connected", (err) => {
+    if (err) {
+      console.error("❌ Failed to subscribe to topic:", err);
+    }
+  });
 });
 
 client.on("error", (err) => {
   console.error("❌ MQTT connection error:", err);
+});
+
+client.on("message", (topic, message) => {
+  if (topic === "connected") {
+    const msg = JSON.parse(message.toString());
+    lastConnectMsg = msg;
+    console.log("📥 Received connected message:", msg);
+  }
 });
 
 // Endpoint to receive data and publish to MQTT
@@ -58,6 +73,10 @@ app.post("/send-data", (req, res) => {
 
     res.send("🚀 Data sent to MQTT broker!");
   });
+});
+
+app.get("/config", (req, res) => {
+  return res.json(lastConnectMsg);
 });
 
 app.listen(port, () => {
