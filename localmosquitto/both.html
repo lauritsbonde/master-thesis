@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Boat Control Panel</title>
+    <title>Boat Dual Motor Control</title>
     <style>
       body {
         margin: 0;
@@ -86,42 +86,27 @@
 
   <body>
     <header>
-      <h1>Control the Boats</h1>
+      <h1>Control Both Motors</h1>
     </header>
 
     <main>
       <section id="content">
-        <div style="margin-top: 2rem">
+        <div style="margin-top: 1rem">
           <h4>ESC Config</h4>
           <p id="esc-config">Loading ESC modes...</p>
         </div>
+
         <form>
           <div>
-            <h3>Motor Control</h3>
-            <label for="right-angle">Right motor</label>
+            <label for="both-motors">Motor Speed (%)</label>
             <input
               type="number"
               min="0"
               max="100"
               step="1"
-              default="0"
-              id="right-angle"
+              id="both-motors"
               placeholder="Enter percentage (0-100)"
-              name="rightMotor"
-            />
-          </div>
-
-          <div>
-            <label for="left-angle">Left motor</label>
-            <input
-              type="number"
-              min="0"
-              max="100"
-              step="1"
-              default="0"
-              id="left-angle"
-              placeholder="Enter percentage (0-100)"
-              name="leftMotor"
+              name="motorSpeed"
             />
           </div>
 
@@ -134,10 +119,10 @@
 
     <section style="text-align: center; padding: 1.5rem">
       <p style="margin-bottom: 0.75rem; font-weight: bold">
-        Need to control both motors?
+        Need individual control?
       </p>
       <a
-        href="both.html"
+        href="index.html"
         style="
           display: inline-block;
           background-color: #0074d9;
@@ -151,7 +136,7 @@
         onmouseover="this.style.backgroundColor='#005fa3'"
         onmouseout="this.style.backgroundColor='#0074d9'"
       >
-        Go to Both Motor Control
+        Go to Individual Motor Control
       </a>
     </section>
 
@@ -178,16 +163,15 @@
       }
 
       document.addEventListener("DOMContentLoaded", () => {
-        fetchESCConfig(); // Fetch and display ESC modes on page load
+        fetchESCConfig();
 
         const form = document.querySelector("form");
+        const input = document.getElementById("both-motors");
 
         form.addEventListener("submit", async (e) => {
           e.preventDefault();
 
-          const formData = new FormData(form);
-          const rightMotor = formData.get("rightMotor");
-          const leftMotor = formData.get("leftMotor");
+          const speed = input.value || 0;
 
           try {
             const res = await fetch("http://localhost:3000/send-data", {
@@ -196,15 +180,15 @@
                 "Content-Type": "application/x-www-form-urlencoded",
               },
               body: new URLSearchParams({
-                rightMotor,
-                leftMotor,
+                leftMotor: speed,
+                rightMotor: speed,
               }),
             });
 
             const text = await res.text();
             console.log("Sent:", text);
           } catch (err) {
-            console.error("Failed to send data:", err);
+            console.error("Failed to send speed:", err);
           }
         });
 
@@ -218,8 +202,8 @@
                 "Content-Type": "application/x-www-form-urlencoded",
               },
               body: new URLSearchParams({
-                rightMotor: 0,
                 leftMotor: 0,
+                rightMotor: 0,
               }),
             });
 

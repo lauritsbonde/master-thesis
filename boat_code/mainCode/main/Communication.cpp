@@ -49,9 +49,9 @@ char* readEspComm() {
           return;
         }
 
-        // Parse the values
-        int rightVal = 90;
-        int leftVal = 90;
+        // Parse the values (percentages)
+        int rightVal = 0;
+        int leftVal = 0;
 
         int rightIndex = receivedData.indexOf("right:");
         int leftIndex = receivedData.indexOf("left:");
@@ -68,18 +68,11 @@ char* readEspComm() {
           leftVal = leftStr.toInt();
 
           if(espConnected){
-            if(leftVal == 90 && rightVal == 90){
-              Serial.println("STOPPING");
+            if(leftVal == 0 && rightVal == 0){
               stopMotors();
               motorStop();
             } else {
-              setMotorSpeeds(180);
-              delay(5);
-              Serial.print("Setting left to:");
-              Serial.println(leftVal);
               setLeftMotorSpeed(leftVal);
-              Serial.print("Setting right to:");
-              Serial.println(rightVal);
               setRightMotorSpeed(rightVal);
               motorRuns();
             }

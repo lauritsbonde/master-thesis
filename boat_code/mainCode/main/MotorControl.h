@@ -6,9 +6,11 @@ enum ESCMode { BIDIRECTIONAL, UNIDIRECTIONAL };
 
 struct ESC {
   Servo servo;
-  uint8_t pwmPin;
-  uint8_t configPin;
+  uint8_t pwmPin; // signal pin
+  uint8_t modePin; // defines directional mode
+  uint8_t boostPin; // defines if the esc needs a boost to get started
   ESCMode mode;
+  bool needsBoost;
 };
 
 struct ESCModes {
@@ -19,6 +21,6 @@ struct ESCModes {
 ESCModes setupMotors();
 
 void stopMotors();
-void setLeftMotorSpeed(int speed);
-void setRightMotorSpeed(int speed);
-void setMotorSpeeds(int speed);
+void setLeftMotorSpeed(int speedPercent);
+void setRightMotorSpeed(int speedPercent);
+void setMotorSpeeds(int speedPercent);
