@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boat Control Panel</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f0f4f8;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #004080;
+        color: white;
+        padding: 1rem 2rem;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      #content {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 0.25rem;
+      }
+
+      input[type="number"] {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        width: 100%;
+      }
+
+      button {
+        padding: 0.75rem;
+        background-color: #0074d9;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.2s;
+      }
+
+      button:hover {
+        background-color: #005fa3;
+      }
+
+      #stop-button {
+        background-color: #ff4136;
+        margin-top: 1rem;
+      }
+
+      #stop-button:hover {
+        background-color: #e3362d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Control the Boats</h1>
+    </header>
+
+    <main>
+      <section id="content">
+        <div style="margin-top: 2rem">
+          <h4>ESC Config</h4>
+          <p id="esc-config">Loading ESC modes...</p>
+        </div>
+        <h4 style="color:red">OBS: if no values added, default values from setup page will be used</h4>
+        <form>
+          <div>
+            <h3>Motor Control</h3>
+            <label for="right-angle">Right motor</label>
+            <input
+              type="number"
+              min="0"
+              max="100"
+              step="1"
+              default="0"
+              id="right-angle"
+              placeholder="Enter percentage (0-100)"
+              name="rightMotor"
+            />
+          </div>
+
+          <div>
+            <label for="left-angle">Left motor</label>
+            <input
+              type="number"
+              min="0"
+              max="100"
+              step="1"
+              default="0"
+              id="left-angle"
+              placeholder="Enter percentage (0-100)"
+              name="leftMotor"
+            />
+          </div>
+
+          <button type="submit">Send</button>
+        </form>
+
+        <button id="stop-button" type="button">Stop</button>
+      </section>
+    </main>
+
+    <section style="text-align: center; padding: 1.5rem">
+      <p style="margin-bottom: 0.75rem; font-weight: bold">
+        Need to control both motors?
+      </p>
+      <a
+        href="both.html"
+        style="
+          display: inline-block;
+          background-color: #0074d9;
+          color: white;
+          padding: 0.75rem 1.5rem;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: 500;
+          transition: background-color 0.2s;
+        "
+        onmouseover="this.style.backgroundColor='#005fa3'"
+        onmouseout="this.style.backgroundColor='#0074d9'"
+      >
+        Go to Both Motor Control
+      </a>
+    </section>
+
+    <script>
+      async function fetchESCConfig() {
+        try {
+          const res = await fetch("http://localhost:3000/config");
+          if (!res.ok) throw new Error("Failed to load config");
+
+          const data = await res.json();
+
+          const escConfigElement = document.getElementById("esc-config");
+
+          const left = data.leftMode === 0 ? "BIDIRECTIONAL" : "UNIDIRECTIONAL";
+          const right =
+            data.rightMode === 0 ? "BIDIRECTIONAL" : "UNIDIRECTIONAL";
+
+          escConfigElement.textContent = `Left ESC: ${left} - Right ESC: ${right}`;
+        } catch (err) {
+          console.error("Failed to load ESC config:", err);
+          document.getElementById("esc-config").textContent =
+            "ESC config unavailable.";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        fetchESCConfig(); // Fetch and display ESC modes on page load
+
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const formData = new FormData(form);
+          const rightMotor = formData.get("rightMotor");
+          const leftMotor = formData.get("leftMotor");
+
+          try {
+            const res = await fetch("http://localhost:3000/send-data", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams({
+                rightMotor,
+                leftMotor,
+              }),
+            });
+
+            const text = await res.text();
+            console.log("Sent:", text);
+          } catch (err) {
+            console.error("Failed to send data:", err);
+          }
+        });
+
+        const stopButton = document.getElementById("stop-button");
+
+        stopButton.addEventListener("click", async () => {
+          try {
+            const res = await fetch("http://localhost:3000/send-data", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams({
+                rightMotor: 0,
+                leftMotor: 0,
+              }),
+            });
+
+            const text = await res.text();
+            console.log("Stopped:", text);
+          } catch (err) {
+            console.error("Failed to send stop command:", err);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

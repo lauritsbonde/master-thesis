@@ -1,27 +1,34 @@
 #include <SPI.h>
-//#include <SD.h>
 #include "SdFat.h"
+
 SdFat SD;
-
 #define SD_CS_PIN SS
-
-// Test with reduced SPI speed for breadboards.  SD_SCK_MHZ(4) will select
-// the highest speed supported by the board that is not over 4 MHz.
-// Change SPI_SPEED to SD_SCK_MHZ(50) for best performance.
 #define SPI_SPEED SD_SCK_MHZ(4)
 
+int distance = 30; // Tag height in cm
 FsFile logFile;
-char *filename = "multi-uwb-test-50cm.csv";
+char filename[32];
+bool sdLoggingAvailable = false;
 
-void setup() {
-  Serial.begin(9600);
+float baseLength = 0.184; // In meters
 
-  Serial.print("Initializing SD card...");
+float distanceFromTopToAnchor(float baseCm, float heightCm) {
+  float halfBase = baseCm / 2.0;
+  return sqrt(halfBase * halfBase + heightCm * heightCm);
+}
+
+float expected = distanceFromTopToAnchor(baseLength * 100.0f, distance); // cm -> m
+
+void setupLogging() {
+  sprintf(filename, "multi-uwb-test-%dcm.csv", distance);
 
   if (!SD.begin(SD_CS_PIN, SPI_SPEED)) {
     Serial.println("initialization failed!");
+    sdLoggingAvailable = false;
     return;
   }
+
+  sdLoggingAvailable = true;
   Serial.println("initialization done.");
 
   if (SD.exists(filename)) {
@@ -31,78 +38,104 @@ void setup() {
 
   logFile = SD.open(filename, FILE_WRITE);
   if (logFile) {
-    logFile.println("Timestamp (s), Anchor-0 (m), Anchor-1 (m), MiddlePoint (m)");  
+    logFile.println("Timestamp (s), Anchor-0 (m), Anchor-1 (m), MiddlePoint (m), Expected (m), Method");
     logFile.close();
+  } else {
+    sdLoggingAvailable = false;
+    Serial.println("Failed to create log file.");
   }
+}
+
+void setup() {
+  Serial.begin(9600);
+  
+  setupLogging();
 
   Serial1.begin(115200);
   delay(500);
 
   const char *commands[] = {
-    "AT+RST",               // Reset module
-    "AT+anchor_tag=0,0",    // Set as "tag" with ID 0
-    "AT+interval=5",        // Set sending interval (5-50)
-    "AT+switchdis=1"        // Start localization
+    "AT+RST",
+    "AT+anchor_tag=0,0",
+    "AT+interval=5",
+    "AT+switchdis=1"
   };
 
-  int numCommands = sizeof(commands) / sizeof(commands[0]);
-
-  for (int i = 0; i < numCommands; i++) {
+  for (const char* cmd : commands) {
     Serial.print("Sending: ");
-    Serial.println(commands[i]);
-
-    Serial1.println(commands[i]);  
-    delay(200);  // Wait for the command to process
+    Serial.println(cmd);
+    Serial1.println(cmd);
+    delay(200);
   }
+
   Serial.println("Everything is setup!");
 }
 
 void loop() {
   static String receivedData = "";
   static unsigned long lastReadTime = 0;
-  const unsigned long readInterval = 100; 
-
-  static float distances[2] = { NAN, NAN }; // Stores distances for an0 and an1
+  const unsigned long readInterval = 100;
+  static float distances[2] = { NAN, NAN };
 
   if (millis() - lastReadTime > readInterval) {
     lastReadTime = millis();
     while (Serial1.available()) {
       char c = Serial1.read();
-      if (c == '\n') {  // End of a response line
-        float distance = extractDistance(receivedData);
+      if (c == '\n') {
+        float distanceVal = extractDistance(receivedData);
         int deviceId = extractAnchorDevice(receivedData);
 
-        if (!isnan(distance) && deviceId >= 0 && deviceId < 2) {
-          distances[deviceId] = distance;
-
-          Serial.print("Anchor ");
-          Serial.print(deviceId);
-          Serial.print(": ");
-          Serial.print(distance, 3);
-          Serial.println(" m"); // Print distance in meters
+        if (!isnan(distanceVal) && deviceId >= 0 && deviceId < 2) {
+          distances[deviceId] = distanceVal;
 
           if (!isnan(distances[0]) && !isnan(distances[1])) {
-            float dm = distanceToMiddle(distances[0], distances[1]);
-            Serial.print("Distance to middle: ");
-            Serial.print(dm, 3);
-            Serial.println(" m"); // Print middle distance in meters
-            
-            // Log all three values (Anchor-0, Anchor-1, MiddlePoint)
-            logData(distances[0], distances[1], dm);
+            String method;
+            float dm;
+
+            bool violatesTriangle = (
+              distances[0] + distances[1] <= baseLength ||
+              fabs(distances[0] - distances[1]) >= baseLength
+            );
+
+            if (violatesTriangle) {
+              Serial.println("Triangle inequality violated");
+              method = "estimate";
+              dm = trilaterationEstimate(distances[0], distances[1], baseLength);
+              if (dm == 0.0f) {
+                method = "fallback";
+                dm = trilaterationFallback(distances[0], distances[1]);
+              }
+            } else {
+              dm = trilaterationHeight(distances[0], distances[1], baseLength);
+              if (dm < 0.0f) { // check for geometry failure
+                Serial.println("Direct method failed due to invalid triangle geometry");
+                method = "estimate";
+                dm = trilaterationEstimate(distances[0], distances[1], baseLength);
+                if (dm == 0.0f) {
+                  method = "fallback";
+                  dm = trilaterationFallback(distances[0], distances[1]);
+                }
+              } else {
+                method = "direct";
+              }
+            }
+
+            logDataAuto(distances[0], distances[1], dm, expected / 100.0f, method);
           }
+        } else {
+          Serial.println("invalid distances");
         }
 
-        receivedData = ""; 
+        receivedData = "";
       } else {
-        receivedData += c; 
+        receivedData += c;
       }
     }
   }
 
-  // If no data has been received for a while, do not spam "Serial1 not available"
-  if (millis() - lastReadTime > 2000) { 
+  if (millis() - lastReadTime > 2000) {
     Serial.println("Serial1 not available");
-    lastReadTime = millis(); // Reset to avoid constant printing
+    lastReadTime = millis();
   }
 }
 
@@ -110,51 +143,88 @@ int extractAnchorDevice(String input) {
   if (input.startsWith("an")) {
     int colonIndex = input.indexOf(':');
     if (colonIndex != -1) {
-      String deviceIdStr = input.substring(2, colonIndex); // Extract the part after "an" and before ":"
-      return deviceIdStr.toInt(); // Convert to integer
+      return input.substring(2, colonIndex).toInt();
     }
   }
-  return -1; // Return -1 if unknown format
+  return -1;
 }
 
-// Function to extract numeric value from string format "an0: 0.03 m"
 float extractDistance(String input) {
-  Serial.println(input);
-  int startIndex = input.indexOf(':'); 
+  int startIndex = input.indexOf(':');
   if (startIndex != -1) {
-    String numPart = input.substring(startIndex + 1); 
+    String numPart = input.substring(startIndex + 1);
     numPart.trim();
-    return numPart.toFloat(); // Convert to float
+    return numPart.toFloat();
   }
-  return NAN; 
+  return NAN;
 }
 
-float distanceToMiddle(float d0, float d1) {
-  const float anchorDistance = 0.184; // Distance between anchors in meters
-  float middleX = anchorDistance / 2.0; // Middle point at 0.092 meters
+float trilaterationHeight(float d0, float d1, float base) {
+  float x = (d0 * d0 - d1 * d1) / (2.0f * base);
+  if (fabs(x) > base / 2.0f) {
+    Serial.println("x is outside base: invalid triangle geometry");
+    return -1.0f;
+  }
+  float ySquared = d0 * d0 - x * x;
 
-  // Compute the perpendicular distance to the middle point using trilateration
-  float x = (d0 * d0 - d1 * d1 + anchorDistance * anchorDistance) / (2.0 * anchorDistance);
-  float d_m = sqrt(abs(d0 * d0 - x * x)); // Ensuring no negative sqrt
-
-  return d_m; // Return distance to middle in meters
+  if (ySquared < 0.0f) {
+    Serial.println("Invalid geometry: negative y²");
+    return -1.0f;
+  }
+  return sqrt(ySquared);
 }
 
-// Function to log data to SD card
-// Function to log data to SD card
-void logData(float d0, float d1, float middle) {
+float trilaterationEstimate(float d0, float d1, float base) {
+  float a = min(d0, d1);
+  float b = max(d0, d1);
+  float x = (a * a - b * b) / (2.0f * base);
+  float ySquared = a * a - x * x;
+
+  if (ySquared < 0.0f) {
+    Serial.println("Even fallback estimate failed: negative y²");
+    ySquared = 0.0f;
+  }
+  return sqrt(ySquared);
+}
+
+float trilaterationFallback(float d0, float d1) {
+  float minD = min(d0, d1);
+  Serial.println("Using fallback vertical estimate based on min(d0, d1): ");
+  return minD;
+}
+
+void logDataToSerial(float d0, float d1, float middle, float expected, const String& method) {
+  unsigned long timestamp = millis();
+  float timeInSeconds = timestamp / 1000.0;
+
+  Serial.print("Time: "); Serial.print(timeInSeconds, 2); Serial.print("s | ");
+  Serial.print("Anchor 0: "); Serial.print(d0, 3); Serial.print(" m | ");
+  Serial.print("Anchor 1: "); Serial.print(d1, 3); Serial.print(" m | ");
+  Serial.print("Middle: "); Serial.print(middle, 3); Serial.print(" m | ");
+  Serial.print("Expected: "); Serial.print(expected, 3); Serial.print(" m | ");
+  Serial.print("Method: "); Serial.println(method);
+}
+
+void logDataToFile(float d0, float d1, float middle, float expected, const String& method) {
   logFile = SD.open(filename, FILE_WRITE);
   if (logFile) {
-    unsigned long timestamp = millis(); // Get time in milliseconds
-    logFile.print(timestamp / 1000.0, 2); // Convert to seconds
-    logFile.print(",");
-    logFile.print(d0, 3); // Anchor-0 distance in meters
-    logFile.print(",");
-    logFile.print(d1, 3); // Anchor-1 distance in meters
-    logFile.print(",");
-    logFile.println(middle, 3); // Distance to middle in meters
+    unsigned long timestamp = millis();
+    logFile.print(timestamp / 1000.0, 2); logFile.print(",");
+    logFile.print(d0, 3); logFile.print(",");
+    logFile.print(d1, 3); logFile.print(",");
+    logFile.print(middle, 3); logFile.print(",");
+    logFile.print(expected, 3); logFile.print(",");
+    logFile.println(method);
     logFile.close();
   } else {
     Serial.println("Failed to write to SD card!");
+  }
+}
+
+void logDataAuto(float d0, float d1, float middle, float expected, const String& method) {
+  if (sdLoggingAvailable) {
+    logDataToFile(d0, d1, middle, expected, method);
+  } else {
+    logDataToSerial(d0, d1, middle, expected, method);
   }
 }

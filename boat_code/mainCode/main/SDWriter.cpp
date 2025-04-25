@@ -19,9 +19,12 @@
 
  */
 
+#include "SDWriter.h"
+#include "CurrentMeasure.h"
 #include <SPI.h>
 //#include <SD.h>
 #include "SdFat.h"
+
 SdFat SD;
 
 #define SD_CS_PIN SS
@@ -41,7 +44,7 @@ void SDWriterSetup() {
     ; // wait for serial port to connect. Needed for native USB port only
   }
 
-  Serial.print("Initializing SD card...");
+  Serial.println("Initializing SD card...");
 
   if (!SD.begin(SD_CS_PIN, SPI_SPEED)) {
     Serial.println("initialization failed!");
@@ -51,7 +54,7 @@ void SDWriterSetup() {
 
 }
 
-void SDWrite(String text) {
+void SDWrite(const String& text) {
   
   // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
