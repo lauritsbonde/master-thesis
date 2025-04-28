@@ -49,11 +49,11 @@ void setup() {
   Serial.begin(115200);
   Serial.println("Starting ESP setup");
 
-  /*
+  
   while (!modesReceived) {
     readESCModeMessage();
     delay(10);
-  }*/
+  }
 
   WiFi.setAutoReconnect(true);
   WiFi.setSleepMode(WIFI_NONE_SLEEP);

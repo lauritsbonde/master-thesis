@@ -91,5 +91,6 @@ void StartMotors(int leftMotor, int rightMotor) {
 }
 
 void startDefaultMotors() {
+  Serial.println("Arduino starting motors");
   StartMotors(leftESC.speed, rightESC.speed);    
 }

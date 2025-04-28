@@ -157,7 +157,8 @@
 
           <button type="submit">Send</button>
         </form>
-
+        <button id="start-button">Start</button> 
+        <button id="stop-button" type="button">Stop</button>
       </section>
     </main>
 
@@ -320,6 +321,49 @@
             console.log("Sent:", text);
           } catch (err) {
             console.error("Failed to send speed:", err);
+          }
+        });
+
+
+        const stopButton = document.getElementById("stop-button");
+
+        stopButton.addEventListener("click", async () => {
+          try {
+            const res = await fetch("http://localhost:3000/send-data", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams({
+                rightMotor: 0,
+                leftMotor: 0,
+              }),
+            });
+
+            const text = await res.text();
+            console.log("Stopped:", text);
+          } catch (err) {
+            console.error("Failed to send stop command:", err);
+          }
+        });
+
+        const startButton = document.getElementById("start-button");
+        
+        startButton.addEventListener("click", async () => {
+          try {
+            const res = await fetch("http://localhost:3000/start", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams({
+              }),
+            });
+
+            const text = await res.text();
+            console.log("Started:", text);
+          } catch (err) {
+            console.error("Failed to send stop command:", err);
           }
         });
 

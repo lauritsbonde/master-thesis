@@ -58,7 +58,15 @@ client.on("message", (topic, message) => {
     counter = counter + 1; 
     const label = "Boat: " + counter.toString();
     const mac =  msg["MAC"];
-    activeBoatList.push({label, mac})
+   
+    // Check if mac already exists in activeBoatList
+    const macExists = activeBoatList.some(item => item.mac === mac);
+    
+    if (!macExists) {
+      activeBoatList.push({ label, mac });
+    } else {
+      console.log(`MAC address ${mac} already exists in the list.`);
+    }
 
   }
 });
@@ -83,6 +91,25 @@ app.post("/send-data", (req, res) => {
     res.send("🚀 Data sent to MQTT broker!");
   });
 });
+
+// Endpoint to receive data and publish to MQTT
+app.post("/start", (req, res) => {
+  
+
+  console.log("📥 starting:");
+
+  client.publish("boats/motors-start", JSON.stringify(""), (err) => {
+    if (err) {
+      console.error("❌ Failed to publish:", err);
+      return res.status(500).send("Failed to send to MQTT");
+    }
+
+    res.send("🚀 Data sent to MQTT broker!");
+  });
+});
+
+
+
 
 // Endpoint to receive data and publish to MQTT
 app.post("/send-setup-data", (req, res) => {

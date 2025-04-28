@@ -79,26 +79,27 @@ char* readEspComm() {
         
         motorValues speed = parseMotorValues(receivedData);
         
-        if(receivedData.indexOf("setup") >= 0) {
-          Serial.print("Setup speed");
+        if(receivedData.indexOf("setup ") >= 0) {
+          Serial.println("setup speed");
 
           if(speed.left >= 0 && speed.right >= 0 ) {
              setDefaultSpeeds(speed.left, speed.right);
+             Serial.println("Setting default speed");
           }
+        }
+
+        if(receivedData.indexOf("startMotor") >= 0) 
+        {
+           startDefaultMotors();
         }
         
         if(espConnected){
           if(speed.left == 0 && speed.right == 0){
             stopMotors();
             motorStop();
-          } else if (speed.left >= 0 && speed.right >= 0){
-            //setLeftMotorSpeed(leftVal);
-            //setRightMotorSpeed(rightVal);
-            StartMotors(speed.left, speed.right);
-            
-            motorRuns(); 
-          } else {
-            startDefaultMotors(); // start motors with saved values. 
+            Serial.println("Arduino stopping motors");
+          } else if (speed.left > 0 && speed.right > 0){
+            //StartMotors(speed.left, speed.right);
           } 
         } else {
           Serial.print("Malformed message: ");
