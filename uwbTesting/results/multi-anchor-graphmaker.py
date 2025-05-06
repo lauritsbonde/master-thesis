@@ -119,6 +119,6 @@ def process_all_csv(rawdata_folder, output_folder):
             plot_csv_graph(csv_path, output_folder)
 
 if __name__ == "__main__":
-    rawdata_folder = os.path.join(os.path.dirname(__file__), "rawdata")
-    output_folder = os.path.join(os.path.dirname(__file__), "graphs")
+    rawdata_folder = os.path.join(os.path.dirname(__file__), "rawdata/multi")
+    output_folder = os.path.join(os.path.dirname(__file__), "graphs/multi")
     process_all_csv(rawdata_folder, output_folder)
