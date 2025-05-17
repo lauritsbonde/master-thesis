@@ -25,6 +25,7 @@
 //#include <SD.h>
 #include "SdFat.h"
 
+
 SdFat SD;
 
 #define SD_CS_PIN SS
@@ -51,7 +52,6 @@ void SDWriterSetup() {
     return;
   }
   Serial.println("initialization done.");
-
 }
 
 void SDWrite(const String& text) {
@@ -94,10 +94,16 @@ void SDWrite(const String& text) {
 
 }
 
+
+unsigned long startTime;
 bool SD_shall_log = false; 
 int counter = 0; 
 
 void startLogging() {
+  if(SD_shall_log == true) {
+    return; 
+  } 
+  startTime = millis();  // Store the current time
   SD_shall_log = true;
   Serial.println("Logging started");
   counter = counter + 1; 
@@ -114,7 +120,10 @@ void loggingLoop() { // Determine if Sd shall keep logging
 
     String current = MeasureCurrent(); 
     String round = String(counter); 
-    String report = "round: " + round + "; currentMeasure: " + current; 
+    unsigned long elapsed = millis() - startTime;
+    String strElapsed = String(elapsed);
+
+    String report = "round: " + round + "; currentMeasure: " + current + "; elapsed: " + strElapsed ; 
     SDWrite(report);
   }
   

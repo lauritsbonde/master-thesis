@@ -93,6 +93,18 @@ char* readEspComm() {
            startDefaultMotors();
         }
         
+        if(receivedData.indexOf("calibration") >= 0) 
+        {
+          if(speed.left >= 0 && speed.right >= 0 ) {
+             StartMotors(speed.left, speed.right); // set new motor speed
+            Serial.print("Calibration Motor with values: left: ");
+            Serial.print(speed.left);
+            Serial.print(", right: ");
+            Serial.println(speed.right);
+          }
+        }
+        
+        
         if(espConnected){
           if(speed.left == 0 && speed.right == 0){
             stopMotors();

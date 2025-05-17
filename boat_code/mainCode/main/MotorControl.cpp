@@ -71,11 +71,15 @@ int calculateESCSignal(int speedPercent, ESC esc) {
 
 void setLeftMotorSpeed(int speedPercent) {
   int escSignal = calculateESCSignal(speedPercent, leftESC);
+   Serial.print("Set left motor speed to: "); 
+   Serial.println(escSignal);
   leftESC.servo.write(escSignal);
 }
 
 void setRightMotorSpeed(int speedPercent) {
   int escSignal = calculateESCSignal(speedPercent, rightESC);
+  Serial.print("Set right motor speed to: ");
+  Serial.println(escSignal);
   rightESC.servo.write(escSignal);
 }
 

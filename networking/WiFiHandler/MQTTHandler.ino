@@ -11,8 +11,8 @@ const char* mqtt_username = "nicklasjeppesen";
 const char* mqtt_password = "Xujme3-zefrid-reqjyq";
 const int mqtt_port = 8883;
 
-const char* subscribeTopics[] = {"boats/motors", "boats/motorSetup", "boats/motors-start"};
-const int numTopics = 3; // this is the length of the array above
+const char* subscribeTopics[] = {"boats/motors", "boats/motorSetup", "boats/motors-start", "boats/motorsCalibration"};
+const int numTopics = 4; // this is the length of the array above
 
 /**** Secure WiFi Connectivity Initialisation *****/
 WiFiClientSecure espClient;
@@ -92,13 +92,32 @@ void handleStartMotor() {
   Serial.println("startMotor");
 }
 
+void  handleMotorCalibration(JsonDocument doc) { 
+
+  if (doc.containsKey("leftMotor") && doc.containsKey("rightMotor") && doc.containsKey("mac")) {
+    int left = doc["leftMotor"];
+    int right = doc["rightMotor"];
+    const char* mac = doc["mac"];
+    if(strcmp(mac, getWiFi().macAddress().c_str()) == 0) {
+      Serial.print("calibration ");
+      Serial.print("left: ");
+      Serial.print(left);
+      Serial.print(" - right: ");
+      Serial.println(right);
+    }
+  } else {
+    Serial.println("Missing keys in instruction.");
+  }
+  
+}
+
 
 
 /**** Function to handle incoming messages *****/
 void callback(char* topic, byte* payload, unsigned int length) {
   // Create a StaticJsonDocument with a sufficient size for your JSON message
   StaticJsonDocument<256> doc;
-  
+
   // Attempt to deserialize the JSON from the payload
   DeserializationError error = deserializeJson(doc, payload, length);
   
@@ -113,12 +132,15 @@ void callback(char* topic, byte* payload, unsigned int length) {
     return;
   }
 
+
   if(strcmp(topic, "boats/motors") == 0) {
     handleInstruction(doc);
   } else if(strcmp(topic, "boats/motorSetup") == 0) {
     handleSpeedSetup(doc); 
   } else if(strcmp(topic, "boats/motors-start") == 0) {
    handleStartMotor(); 
+  } else if (strcmp(topic, "boats/motorsCalibration") == 0) {
+    handleMotorCalibration(doc);
   }
  
 }
