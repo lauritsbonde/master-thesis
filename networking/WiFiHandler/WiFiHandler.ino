@@ -2,8 +2,8 @@
 #include <ESP8266WebServer.h>
 #include <ArduinoJson.h>
 
-const char* wifiSSID = "Nicklas jeppesen";       
-const char* wifiPassword = "12345678"; 
+const char* wifiSSID = "Nicklas jeppesen";
+const char* wifiPassword = "12345678";
 
 unsigned long disconnectStart = 0;
 unsigned long lastStatusSend = 0;
@@ -49,7 +49,6 @@ void setup() {
   Serial.begin(115200);
   Serial.println("Starting ESP setup");
 
-  
   while (!modesReceived) {
     readESCModeMessage();
     delay(10);

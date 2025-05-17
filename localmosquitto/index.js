@@ -8,16 +8,16 @@ import cors from "cors";
 const app = express();
 const port = 3000;
 
-var counter = 0; 
-var activeBoatList = []
+var counter = 0;
+var activeBoatList = [];
 
 // BOAT-1: MAC: "A4:CF:12:B4:06:66"
 // BOAT-2: MAC: "A4:CF:12:BF:53:CE"
 // BOAT-3 MAC:  "A4:CF:12:B4:06:9F"
 
-const boatOneMac = "A4:CF:12:B4:06:66"
-const boatTWOeMac = "A4:CF:12:BF:53:CE"
-const boatThreeMac = "A4:CF:12:B4:06:9F"
+const boatOneMac = "A4:CF:12:B4:06:66";
+const boatTWOeMac = "A4:CF:12:BF:53:CE";
+const boatThreeMac = "A4:CF:12:B4:06:9F";
 
 app.use(cors());
 
@@ -62,24 +62,27 @@ client.on("message", (topic, message) => {
     const msg = JSON.parse(message.toString());
     lastConnectMsg = msg;
     console.log("📥 Received connected message:", msg);
-   
-    counter = counter + 1; 
+
+    counter = counter + 1;
     //const label = "Boat: " + counter.toString();
-    const mac =  msg["MAC"];
-   
+    const mac = msg["MAC"];
+
     // Check if mac already exists in activeBoatList
-    const macExists = activeBoatList.some(item => item.mac === mac);
-    var label = ""
-    if(mac == boatOneMac) {label = "Boat: 1"} 
-    else if (mac == boatTWOeMac) {label = "Boat: 2"} 
-    else if (mac == boatThreeMac) {label = "Boat: 3"}
+    const macExists = activeBoatList.some((item) => item.mac === mac);
+    var label = "";
+    if (mac == boatOneMac) {
+      label = "Boat: 1";
+    } else if (mac == boatTWOeMac) {
+      label = "Boat: 2";
+    } else if (mac == boatThreeMac) {
+      label = "Boat: 3";
+    }
 
     if (!macExists) {
       activeBoatList.push({ label, mac });
     } else {
       console.log(`MAC address ${mac} already exists in the list.`);
     }
-
   }
 });
 
@@ -106,8 +109,6 @@ app.post("/send-data", (req, res) => {
 
 // Endpoint to receive data and publish to MQTT
 app.post("/start", (req, res) => {
-  
-
   console.log("📥 starting:");
 
   client.publish("boats/motors-start", JSON.stringify(""), (err) => {
@@ -119,9 +120,6 @@ app.post("/start", (req, res) => {
     res.send("🚀 Data sent to MQTT broker!");
   });
 });
-
-
-
 
 // Endpoint to receive data and publish to MQTT
 app.post("/send-setup-data", (req, res) => {
@@ -166,10 +164,6 @@ app.post("/calibrate", (req, res) => {
     res.send("🚀 Data sent to MQTT broker!");
   });
 });
-
-
-
-
 
 app.get("/config", (req, res) => {
   return res.json(lastConnectMsg);

@@ -92,7 +92,7 @@ void handleStartMotor() {
   Serial.println("startMotor");
 }
 
-void  handleMotorCalibration(JsonDocument doc) { 
+void  handleMotorCalibration(JsonDocument doc) {
 
   if (doc.containsKey("leftMotor") && doc.containsKey("rightMotor") && doc.containsKey("mac")) {
     int left = doc["leftMotor"];
@@ -108,10 +108,8 @@ void  handleMotorCalibration(JsonDocument doc) {
   } else {
     Serial.println("Missing keys in instruction.");
   }
-  
+
 }
-
-
 
 /**** Function to handle incoming messages *****/
 void callback(char* topic, byte* payload, unsigned int length) {
@@ -120,7 +118,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
   // Attempt to deserialize the JSON from the payload
   DeserializationError error = deserializeJson(doc, payload, length);
-  
+
   // Check if deserialization was successful
   if (error) {
     return;
@@ -132,17 +130,16 @@ void callback(char* topic, byte* payload, unsigned int length) {
     return;
   }
 
-
   if(strcmp(topic, "boats/motors") == 0) {
     handleInstruction(doc);
   } else if(strcmp(topic, "boats/motorSetup") == 0) {
-    handleSpeedSetup(doc); 
+    handleSpeedSetup(doc);
   } else if(strcmp(topic, "boats/motors-start") == 0) {
-   handleStartMotor(); 
+   handleStartMotor();
   } else if (strcmp(topic, "boats/motorsCalibration") == 0) {
     handleMotorCalibration(doc);
   }
- 
+
 }
 
 /**** Method for Publishing MQTT Messages **********/
@@ -179,4 +176,3 @@ void connectToMqtt(ESCModes escModes) {
 
   connected(escModes);
 }
-

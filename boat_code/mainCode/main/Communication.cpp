@@ -9,7 +9,7 @@ bool espConnected = false;
 void setupCommunication(ESCModes escModes) {
   Serial2.begin(115200);
   espNotReady();
-  
+
   // write the modes to the esp
   Serial2.print("leftMode: ");
   Serial2.print(escModes.left);
@@ -23,7 +23,7 @@ motorValues parseMotorValues(String msg) {
   // Parse the values (percentages)
   int rightVal = 0;
   int leftVal = 0;
-  
+
 
   int rightIndex = msg.indexOf("right:");
   int leftIndex = msg.indexOf("left:");
@@ -34,7 +34,7 @@ motorValues parseMotorValues(String msg) {
     String rightStr = msg.substring(rightIndex + 6, msg.indexOf("-", rightIndex));
     rightStr.trim();
     rightVal = rightStr.toInt();
-    speed.right = rightVal; 
+    speed.right = rightVal;
 
     // Extract number after "left:"
     String leftStr = msg.substring(leftIndex + 5);
@@ -75,10 +75,10 @@ char* readEspComm() {
           espConnected = true;
           espReady();
           return;
-        } 
-        
+        }
+
         motorValues speed = parseMotorValues(receivedData);
-        
+
         if(receivedData.indexOf("setup ") >= 0) {
           Serial.println("setup speed");
 
@@ -88,12 +88,12 @@ char* readEspComm() {
           }
         }
 
-        if(receivedData.indexOf("startMotor") >= 0) 
+        if(receivedData.indexOf("startMotor") >= 0)
         {
            startDefaultMotors();
         }
-        
-        if(receivedData.indexOf("calibration") >= 0) 
+
+        if(receivedData.indexOf("calibration") >= 0)
         {
           if(speed.left >= 0 && speed.right >= 0 ) {
              StartMotors(speed.left, speed.right); // set new motor speed
@@ -103,8 +103,8 @@ char* readEspComm() {
             Serial.println(speed.right);
           }
         }
-        
-        
+
+
         if(espConnected){
           if(speed.left == 0 && speed.right == 0){
             stopMotors();
@@ -112,7 +112,7 @@ char* readEspComm() {
             Serial.println("Arduino stopping motors");
           } else if (speed.left > 0 && speed.right > 0){
             //StartMotors(speed.left, speed.right);
-          } 
+          }
         } else {
           Serial.print("Malformed message: ");
           Serial.println(receivedData);
@@ -127,9 +127,3 @@ char* readEspComm() {
 
   return (char*)receivedData.c_str(); // You can ignore the return if you're parsing inline
 }
-
-
-
-
-
-

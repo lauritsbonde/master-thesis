@@ -3,12 +3,12 @@
 
  This example shows how to read and write data to and from an SD card file
  The circuit:
- * SD card attached to SPI bus as follows: FOR UNO: 
+ * SD card attached to SPI bus as follows: FOR UNO:
  ** MOSI - pin 11
  ** MISO - pin 12
  ** CLK - pin 13
 
- FOR Arduino MEGA 2560: 
+ FOR Arduino MEGA 2560:
 
  ** MOSI - pin 51
  ** MISO - pin 50
@@ -55,7 +55,7 @@ void SDWriterSetup() {
 }
 
 void SDWrite(const String& text) {
-  
+
   // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
   myFile = SD.open("test.txt", FILE_WRITE);
@@ -65,7 +65,7 @@ void SDWrite(const String& text) {
     //Serial.print("Writing to test.txt...");
     // myFile.println("testing 1, 2, 3.");
      myFile.println(text);  // print out SD card context.
-   
+
     // close the file:
     myFile.close();
    // Serial.println("done.");
@@ -89,24 +89,24 @@ void SDWrite(const String& text) {
     myFile.close();
   } else {
     // if the file didn't open, print an error:
-    Serial.println("error opening test.txt"); 
+    Serial.println("error opening test.txt");
   }*/
 
 }
 
 
 unsigned long startTime;
-bool SD_shall_log = false; 
-int counter = 0; 
+bool SD_shall_log = false;
+int counter = 0;
 
 void startLogging() {
   if(SD_shall_log == true) {
-    return; 
-  } 
+    return;
+  }
   startTime = millis();  // Store the current time
   SD_shall_log = true;
   Serial.println("Logging started");
-  counter = counter + 1; 
+  counter = counter + 1;
 }
 
 void stopLogging() {
@@ -118,18 +118,14 @@ void loggingLoop() { // Determine if Sd shall keep logging
 
   if(SD_shall_log) {
 
-    String current = MeasureCurrent(); 
-    String round = String(counter); 
+    String current = MeasureCurrent();
+    String round = String(counter);
     unsigned long elapsed = millis() - startTime;
     String strElapsed = String(elapsed);
 
-    String report = "round: " + round + "; currentMeasure: " + current + "; elapsed: " + strElapsed ; 
+    String report = "round: " + round + "; currentMeasure: " + current + "; elapsed: " + strElapsed ;
     SDWrite(report);
   }
-  
-  
+
+
 }
-
-
-
-

@@ -2,108 +2,150 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 import re
-from matplotlib.lines import Line2D  # Import for custom legend entry
+from matplotlib.lines import Line2D
 
 # Constants
-WARM_UP_COUNT = 20  # Number of warm-up timestamps to ignore in statistics
-DATA_COUNT = 300  # Number of data points to process
+WARM_UP_COUNT = 20
+DATA_FOLDER = "rawdata"
+OUTPUT_FOLDER = "graphs/single-anchor"
 
 def extract_distance_from_filename(filename):
     match = re.search(r'uwb-test-(\d+)cm', filename)
-    return int(match.group(1)) / 100 if match else None  # Convert to meters
+    return int(match.group(1)) / 100 if match else None
 
-def plot_csv_graph(filepath, output_folder):
-    # Read the CSV file and ensure proper parsing
-    df = pd.read_csv(filepath, skipinitialspace=True)
-    df.columns = df.columns.str.strip()
+def compute_statistics(data, actual_distance):
+    avg = data['Distance (m)'].mean()
+    max_val = data['Distance (m)'].max()
+    min_val = data['Distance (m)'].min()
+    std_dev = data['Distance (m)'].std()
+    if actual_distance:
+        mean_err = (data['Distance (m)'] - actual_distance).mean()
+        mae = (data['Distance (m)'] - actual_distance).abs().mean()
+        rmse = ((data['Distance (m)'] - actual_distance) ** 2).mean() ** 0.5
+    else:
+        mean_err = mae = rmse = None
+    return min_val, avg, max_val, std_dev, mean_err, mae, rmse
 
-    # Check if the required columns exist
-    if 'Timestamp (s)' not in df.columns or 'Distance (m)' not in df.columns:
-        print("Error: CSV file must contain 'Timestamp (s)' and 'Distance (m)' columns.")
-        print("Detected columns:", df.columns.tolist())  # Debugging output
-        return
+def plot_individual(df, filename, actual_distance, global_xmax, global_ymax, output_folder):
+    df = df.copy()
+    df = df.sort_values("Timestamp (s)")
+    df['Timestamp (s)'] -= df['Timestamp (s)'].iloc[0]
+    df = df[df['Timestamp (s)'] <= global_xmax]
 
-    # Extract actual distance from filename
-    actual_distance = extract_distance_from_filename(os.path.basename(filepath))
+    df['Mode'] = ['WARMUP' if i < WARM_UP_COUNT else 'TEST' for i in range(len(df))]
+    df_test = df[df['Mode'] == 'TEST']
+    stats = compute_statistics(df_test, actual_distance)
 
-    # Limit data to the first 200 points
-    df = df.iloc[:DATA_COUNT]
-    df_warmup = df.iloc[:WARM_UP_COUNT]
-    df_valid = df.iloc[WARM_UP_COUNT - 1:]  # Include last warm-up point to maintain continuity
+    plt.figure(figsize=(8, 5))
+    plt.plot(df['Timestamp (s)'], df['Distance (m)'], color='blue', linestyle='-', label='Measured Distance')
 
-    def compute_statistics(data):
-        avg_distance = data['Distance (m)'].mean()
-        max_distance = data['Distance (m)'].max()
-        min_distance = data['Distance (m)'].min()
-        std_dev = data['Distance (m)'].std()
+    if actual_distance:
+        plt.axhline(y=actual_distance, color='red', linestyle='dotted', linewidth=2, label='Actual Distance')
 
+    transition_time = df['Timestamp (s)'].iloc[WARM_UP_COUNT] if len(df) > WARM_UP_COUNT else None
+    if transition_time:
+        plt.axvline(x=transition_time, color='black', linestyle='dashed', linewidth=1, alpha=0.5)
+
+    min_d, avg_d, max_d, std_dev, mean_err, mae, rmse = stats
+    stats_text = (f"Min: {min_d:.3f} m | Avg: {avg_d:.3f} m | Max: {max_d:.3f} m\n"
+                  f"Std Dev: {std_dev:.3f} m\n"
+                  f"Mean Error: {mean_err:.3f} m\n"
+                  f"MAE: {mae:.3f} m\n"
+                  f"RMSE: {rmse:.3f} m")
+    plt.text(0.05, 0.25, stats_text, transform=plt.gca().transAxes,
+             fontsize=10, verticalalignment='top', bbox=dict(facecolor='white', alpha=0.8, edgecolor='black'))
+
+    plt.xlim(0, global_xmax * 1.1)
+    plt.ylim(0, global_ymax * 1.1)
+    plt.xlabel('Timestamp (s)')
+    plt.ylabel('Distance (m)')
+    plt.title(f'Distance Over Time - {os.path.basename(filename)}')
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+
+    output_path = os.path.join(output_folder, os.path.basename(filename).replace('.csv', '_stats.png'))
+    plt.savefig(output_path)
+    plt.close()
+    print(f"Saved plot: {output_path}")
+
+def plot_combined(all_data, global_xmax, global_ymax, output_folder):
+    plt.figure(figsize=(12, 6))
+    colors = plt.cm.tab10.colors
+    markers = ['o', 's', '^', 'v', '<', '>', 'D', 'p']
+    for idx, (filename, df, actual_distance) in enumerate(all_data):
+        df = df.copy()
+        df = df.sort_values("Timestamp (s)")
+        df['Timestamp (s)'] -= df['Timestamp (s)'].iloc[0]
+        df = df[df['Timestamp (s)'] <= global_xmax]
+        df['Mode'] = ['WARMUP' if i < WARM_UP_COUNT else 'TEST' for i in range(len(df))]
+
+        t = df['Timestamp (s)']
+        d = df['Distance (m)']
+        color = colors[idx % len(colors)]
+        marker = markers[idx % len(markers)]
+
+        plt.plot(t, d, label=filename.replace('.csv', ''), color=color, marker=marker, linewidth=1, markersize=3, markevery=5)
         if actual_distance:
-            mean_error = (data['Distance (m)'] - actual_distance).mean()
-            mean_abs_error = (data['Distance (m)'] - actual_distance).abs().mean()
-            rmse = ((data['Distance (m)'] - actual_distance) ** 2).mean() ** 0.5
-        else:
-            mean_error = mean_abs_error = rmse = None
+            plt.plot(t, [actual_distance] * len(t), linestyle='dashed', color=color, alpha=0.5, marker=marker, markersize=3, markevery=5)
 
-        return avg_distance, max_distance, min_distance, std_dev, mean_error, mean_abs_error, rmse
+        for i in range(1, len(df)):
+            if df['Mode'].iloc[i] != df['Mode'].iloc[i - 1]:
+                plt.axvline(x=df['Timestamp (s)'].iloc[i], color='black', linestyle='dashed', alpha=0.3)
 
-    def plot_graph(df_warmup, df_valid, filename_suffix, stats_data, include_warmup):
-        """Helper function to generate and save the graph."""
-        plt.figure(figsize=(8, 5))
+    plt.xlim(0, global_xmax * 1.1)
+    plt.ylim(0, global_ymax * 1.1)
+    plt.xlabel("Timestamp (s)")
+    plt.ylabel("Distance (m)")
+    plt.title("Combined Distance Comparison")
+    plt.legend(fontsize=8)
+    plt.grid(True)
+    plt.tight_layout()
 
-        # Plot warm-up data in gray
-        plt.plot(df_warmup['Timestamp (s)'], df_warmup['Distance (m)'], linestyle='-', color='gray', alpha=0.5)
-
-        # Plot valid data normally
-        plt.plot(df_valid['Timestamp (s)'], df_valid['Distance (m)'], linestyle='-', color='blue', label='Measured Distance')
-
-        if actual_distance:
-            plt.axhline(y=actual_distance, color='r', linestyle='dotted', linewidth=2, label='Actual Distance')
-
-        plt.xlabel('Timestamp (s)')
-        plt.ylabel('Distance (m)')
-        plt.title(f'Distance over time ({os.path.basename(filepath)}) - {filename_suffix}')
-        plt.grid(True)
-
-        legend_entries = [
-            Line2D([0], [0], color='blue', linestyle='-', linewidth=2, label="Measured Distance"),
-            Line2D([0], [0], color='r', linestyle='dotted', linewidth=2, label="Actual Distance"),
-        ]
-        if not include_warmup:
-          legend_entries.insert(0, Line2D([0], [0], color='gray', linestyle='-', linewidth=2, label="Warm-up"))
-
-        avg_distance, max_distance, min_distance, std_dev, mean_error, mean_abs_error, rmse = stats_data
-
-        stats_text = (f"Min: {min_distance:.3f} m | Avg: {avg_distance:.3f} m | Max: {max_distance:.3f} m\n"
-                      f"Std Dev: {std_dev:.3f} m\n"
-                      f"Mean Error: {mean_error:.3f} m\n"
-                      f"MAE: {mean_abs_error:.3f} m\n"
-                      f"RMSE: {rmse:.3f} m")
-
-        plt.text(0.1, 0.26, stats_text, transform=plt.gca().transAxes, fontsize=10,
-                 verticalalignment='top', bbox=dict(facecolor='white', alpha=0.8, edgecolor='black'))
-
-        plt.legend(handles=legend_entries, loc='lower right', frameon=True, framealpha=1,
-                   handlelength=3, handletextpad=1.5, borderaxespad=1.2, fontsize=10)
-
-        filename = os.path.basename(filepath).replace('.csv', f'_{filename_suffix}.png')
-        output_path = os.path.join(output_folder, filename)
-        plt.savefig(output_path, bbox_inches='tight')
-        plt.close()
-        print(f"Saved plot: {output_path}")
-
-    plot_graph(df_warmup, df, "Full", compute_statistics(df), include_warmup=True)
-    plot_graph(df_warmup, df_valid, "Filtered", compute_statistics(df_valid), include_warmup=False)
+    output_path = os.path.join(output_folder, "combined_plot.png")
+    plt.savefig(output_path)
+    plt.close()
+    print(f"Saved combined plot: {output_path}")
 
 def process_all_csv(rawdata_folder, output_folder):
+    global_xmax = float('inf')
+    global_ymax = float('-inf')
+    all_data = []
+
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
-    for file in os.listdir(rawdata_folder):
-        if file.endswith(".csv") and file.startswith("uwb-test"):
-            csv_path = os.path.join(rawdata_folder, file)
-            plot_csv_graph(csv_path, output_folder)
+    for file in sorted(os.listdir(rawdata_folder)):
+        if file.endswith(".csv"):
+            path = os.path.join(rawdata_folder, file)
+            df = pd.read_csv(path)
+            df.columns = df.columns.str.strip()
+            df = df[['Timestamp (s)', 'Distance (m)']].dropna()
+            df = df.sort_values("Timestamp (s)")
+            df['Timestamp (s)'] -= df['Timestamp (s)'].iloc[0]
+
+            max_time = df['Timestamp (s)'].max()
+            if max_time < global_xmax:
+                global_xmax = max_time
+
+            y_columns = ['Distance (m)']
+            max_y = df[y_columns].max().max()
+            if max_y > global_ymax:
+                global_ymax = max_y
+
+            max_time = df['Timestamp (s)'].max()
+            max_dist = df['Distance (m)'].max()
+
+            global_xmax = max(global_xmax, max_time)
+            global_ymax = max(global_ymax, max_dist)
+
+            actual_distance = extract_distance_from_filename(file)
+            all_data.append((file, df, actual_distance))
+
+    for filename, df, actual_distance in all_data:
+        plot_individual(df, filename, actual_distance, global_xmax, global_ymax, output_folder)
+
+    plot_combined(all_data, global_xmax, global_ymax, output_folder)
 
 if __name__ == "__main__":
-    rawdata_folder = os.path.join(os.path.dirname(__file__), "rawdata")
-    output_folder = os.path.join(os.path.dirname(__file__), "graphs")
-    process_all_csv(rawdata_folder, output_folder)
+    process_all_csv(DATA_FOLDER, OUTPUT_FOLDER)

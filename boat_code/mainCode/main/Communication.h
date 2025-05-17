@@ -3,7 +3,7 @@
 #include "MotorControl.h"
 
 struct motorValues {
-  int right; 
+  int right;
   int left;
 };
 

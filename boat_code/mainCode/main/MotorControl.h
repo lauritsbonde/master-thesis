@@ -11,7 +11,7 @@ struct ESC {
   uint8_t boostPin; // defines if the esc needs a boost to get started
   ESCMode mode;
   bool needsBoost;
-  int speed; // define standard speed for the given ESC; 
+  int speed; // define standard speed for the given ESC;
 };
 
 struct ESCModes {

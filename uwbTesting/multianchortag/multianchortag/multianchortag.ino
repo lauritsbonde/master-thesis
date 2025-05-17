@@ -48,7 +48,7 @@ void setupLogging() {
 
 void setup() {
   Serial.begin(9600);
-  
+
   setupLogging();
 
   Serial1.begin(115200);

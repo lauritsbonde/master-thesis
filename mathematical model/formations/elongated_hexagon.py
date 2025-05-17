@@ -39,16 +39,23 @@ def create_hexagon_formation(n: int) -> List[Boat]:
 
     # Step 3: Middle section (same width as top's last row)
     middle_rows = max(1, n // 6)  # tweak how long the center is
+    middle_index = 0
     for row in range(middle_rows):
-        x_offset = -0.5 * (last_row_width - 1) * spacing
+        ships_in_level = last_row_width
+        if middle_index % 2:
+            ships_in_level -= 1
+
+        x_offset = -0.5 * (ships_in_level - 1) * spacing
         y = -(top_level + 1 + row) * spacing
 
-        for i in range(last_row_width):
+        for i in range(ships_in_level):
             if current_ship >= n:
                 break
             x = x_offset + i * spacing
             positions.append((x, y))
             current_ship += 1
+
+        middle_index += 1
 
     # Step 4: Bottom pyramid (reversed)
     bottom_level = 1

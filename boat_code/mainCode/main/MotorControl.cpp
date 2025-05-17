@@ -12,7 +12,7 @@ ESCMode detectESCMode(uint8_t configPin) {
 
 bool detectESCBoost(uint8_t configPin) {
   pinMode(configPin, INPUT_PULLUP);
-  return digitalRead(configPin) == LOW ? true : false; 
+  return digitalRead(configPin) == LOW ? true : false;
 }
 
 ESCModes setupMotors() {
@@ -41,8 +41,8 @@ ESCModes setupMotors() {
 }
 
 void setDefaultSpeeds(int left, int right) {
-  leftESC.speed = left; 
-  rightESC.speed = right; 
+  leftESC.speed = left;
+  rightESC.speed = right;
 }
 
 
@@ -71,7 +71,7 @@ int calculateESCSignal(int speedPercent, ESC esc) {
 
 void setLeftMotorSpeed(int speedPercent) {
   int escSignal = calculateESCSignal(speedPercent, leftESC);
-   Serial.print("Set left motor speed to: "); 
+   Serial.print("Set left motor speed to: ");
    Serial.println(escSignal);
   leftESC.servo.write(escSignal);
 }
@@ -96,5 +96,5 @@ void StartMotors(int leftMotor, int rightMotor) {
 
 void startDefaultMotors() {
   Serial.println("Arduino starting motors");
-  StartMotors(leftESC.speed, rightESC.speed);    
+  StartMotors(leftESC.speed, rightESC.speed);
 }
