@@ -1,0 +1,5 @@
+Formation,Boats,Distance,Total Power (W),Power per Boat (W),Wh per Meter
+triangle,3,80,0.29,0.1,0.0
+diagonal-line,3,50,0.29,0.1,0.0
+offset-line,3,60,0.29,0.1,0.0
+single-boat,1,20,0.11,0.11,0.0
