@@ -6,12 +6,12 @@
 
 
 /******* MQTT Broker Connection Details *******/
-const char* mqtt_server = "ca403c7db33f468fbc8fa41f694c6f4d.s1.eu.hivemq.cloud";
-const char* mqtt_username = "nicklasjeppesen";
-const char* mqtt_password = "Xujme3-zefrid-reqjyq";
-const int mqtt_port = 8883;
+const char* mqtt_server = "92cb876ba5c6470baaadb3f0ae70e2b8.s1.eu.hivemq.cloud";
+const char* mqtt_username = "lauritsbonde";
+const char* mqtt_password = "rzF1@2E&XZ$nUpTQTQ3z";
+const int mqtt_port =8883;
 
-const char* subscribeTopics[] = {"boats/motors", "boats/motorSetup", "boats/motors-start", "boats/motorsCalibration"};
+const char* subscribeTopics[] = {"connect", "move", "selectedPiece", "startNumber"};
 const int numTopics = 4; // this is the length of the array above
 
 /**** Secure WiFi Connectivity Initialisation *****/
@@ -37,7 +37,7 @@ void reconnect() {
     clientId += getWiFi().macAddress();
     // Attempt to connect
     if (client.connect(clientId.c_str(), mqtt_username, mqtt_password)) {
-      Serial.println("ready");
+      Serial.println("connected");
 
       for(int i = 0; i < numTopics; i++){
         client.subscribe(subscribeTopics[i]);   // subscribe the topics here
@@ -53,93 +53,75 @@ void reconnect() {
 }
 
 /************* These functions will only get called on messages from others ***********/
-void handleInstruction(JsonDocument doc) {
-  Serial.println("Instruction received:");
-
-  if (doc.containsKey("leftMotor") && doc.containsKey("rightMotor")) {
-    int left = doc["leftMotor"];
-    int right = doc["rightMotor"];
-    Serial.print("left: ");
-    Serial.print(left);
-    Serial.print(" - right: ");
-    Serial.println(right);
+void handleSelectedPiece(JsonDocument doc){
+  int oppPlays = doc["selected"];
+  if(oppPlays == Cross) {
+    setOppPiece(Cross);
+  } else if(oppPlays == Circle){
+    setOppPiece(Circle);
   } else {
-    Serial.println("Missing keys in instruction.");
+    Serial.println("Unknown piece");
   }
 }
 
-void handleSpeedSetup(JsonDocument doc) {
-  Serial.println("Instruction received:");
+void handleWhoStartsMessage(JsonDocument doc) {
+  long oppRandNum = doc["randLong"];
 
+  Serial.print("oppRandomNum: ");
+  Serial.println(oppRandNum);
 
-  if (doc.containsKey("leftMotor") && doc.containsKey("rightMotor") && doc.containsKey("mac")) {
-    int left = doc["leftMotor"];
-    int right = doc["rightMotor"];
-    const char* mac = doc["mac"];
-    if(strcmp(mac, getWiFi().macAddress().c_str()) == 0) {
-      Serial.print("setup ");
-      Serial.print("left: ");
-      Serial.print(left);
-      Serial.print(" - right: ");
-      Serial.println(right);
-    }
-  } else {
-    Serial.println("Missing keys in instruction.");
-  }
+  decideWhoStarts(oppRandNum); // gameHandler.ino function
 }
 
-void handleStartMotor() {
-  Serial.println("startMotor");
-}
+void handleMove(JsonDocument doc){
+  int row = doc["row"];
+  int col = doc["col"];
 
-void  handleMotorCalibration(JsonDocument doc) {
-
-  if (doc.containsKey("leftMotor") && doc.containsKey("rightMotor") && doc.containsKey("mac")) {
-    int left = doc["leftMotor"];
-    int right = doc["rightMotor"];
-    const char* mac = doc["mac"];
-    if(strcmp(mac, getWiFi().macAddress().c_str()) == 0) {
-      Serial.print("calibration ");
-      Serial.print("left: ");
-      Serial.print(left);
-      Serial.print(" - right: ");
-      Serial.println(right);
-    }
-  } else {
-    Serial.println("Missing keys in instruction.");
-  }
-
+  placeOppPiece(row, col); // gameHandler.ino function
 }
 
 /**** Function to handle incoming messages *****/
 void callback(char* topic, byte* payload, unsigned int length) {
   // Create a StaticJsonDocument with a sufficient size for your JSON message
   StaticJsonDocument<256> doc;
-
+  
   // Attempt to deserialize the JSON from the payload
   DeserializationError error = deserializeJson(doc, payload, length);
-
+  
+  // Print the topic
+  Serial.print("Message arrived [");
+  Serial.print(topic);
+  Serial.print("]: ");
+  
   // Check if deserialization was successful
   if (error) {
+    Serial.print("deserializeJson() failed: ");
+    Serial.println(error.f_str());
     return;
   }
 
   // check that the message is not from self
   String mac = doc["MAC"];
   if(strcmp(mac.c_str(), getWiFi().macAddress().c_str()) == 0) {
+    Serial.println("Own message");
     return;
   }
 
-  if(strcmp(topic, "boats/motors") == 0) {
-    handleInstruction(doc);
-  } else if(strcmp(topic, "boats/motorSetup") == 0) {
-    handleSpeedSetup(doc);
-  } else if(strcmp(topic, "boats/motors-start") == 0) {
-   handleStartMotor();
-  } else if (strcmp(topic, "boats/motorsCalibration") == 0) {
-    handleMotorCalibration(doc);
-  }
+  Serial.print("topic: ");
+  Serial.println(topic);
 
+  if(strcmp(topic, "selectedPiece") == 0) {
+    Serial.println("handling Piece selection");
+    handleSelectedPiece(doc);
+  } else if(strcmp(topic, "startNumber") == 0) {
+    Serial.println("handling who starts");
+    handleWhoStartsMessage(doc);
+  } else if(strcmp(topic, "move") == 0) {
+    Serial.println("Handling move");
+    handleMove(doc);
+  } else {
+    Serial.println("Something went wrong");
+  }
 }
 
 /**** Method for Publishing MQTT Messages **********/
@@ -147,21 +129,50 @@ void publishMessage(const char* topic, JsonDocument doc , boolean retained){
   String jsonString;
   doc["MAC"] = getWiFi().macAddress();
   serializeJson(doc, jsonString);
-  client.publish(topic, jsonString.c_str(), retained);
+  if (client.publish(topic, jsonString.c_str(), retained)) {
+    Serial.println("Message publised ["+String(topic)+"]: "+jsonString);
+  } else {
+    Serial.println("Message publish failed");
+  }
 }
 
 /*** Methods for Game Messages ****/
-void connected(ESCModes escModes) {
+void connected(){
   JsonDocument doc;
 
+  // Assign values to the JSON document
   doc["message"] = "connected";
-  doc["leftMode"] = escModes.left;
-  doc["rightMode"] = escModes.right;
 
+  // Create a String object to hold the serialized JSON
   publishMessage("connected", doc, false);
 }
 
-void connectToMqtt(ESCModes escModes) {
+void sendSelectPieceMessage(int piece) {
+  JsonDocument doc;
+
+  // Assign values to the JSON document
+  doc["selected"] = piece;
+  
+  publishMessage("selectedPiece", doc, false);
+}
+
+void sendRandomNumber(long randomNum) {
+  JsonDocument doc;
+
+  doc["randLong"] = randomNum;
+
+  publishMessage("startNumber", doc, false);
+}
+
+void sendMove(int row, int col) {
+  JsonDocument doc;
+  doc["row"] = row;
+  doc["col"] = col;
+
+  publishMessage("move", doc, false);
+}
+
+void connectToMqtt() {
   espClient.setInsecure();
 
   client.setServer(mqtt_server, mqtt_port);
@@ -174,5 +185,9 @@ void connectToMqtt(ESCModes escModes) {
     timeOut++;
   }
 
-  connected(escModes);
+  JsonDocument doc;
+  doc["message"] = "Connected";
+
+  publishMessage("connected", doc, false);
 }
+

@@ -9,7 +9,7 @@ bool espConnected = false;
 void setupCommunication(ESCModes escModes) {
   Serial2.begin(115200);
   espNotReady();
-  
+
   // write the modes to the esp
   Serial2.print("leftMode: ");
   Serial2.print(escModes.left);
@@ -17,6 +17,33 @@ void setupCommunication(ESCModes escModes) {
   Serial2.println(escModes.right);
 
   delay(250);
+}
+
+motorValues parseMotorValues(String msg) {
+  // Parse the values (percentages)
+  int rightVal = 0;
+  int leftVal = 0;
+
+
+  int rightIndex = msg.indexOf("right:");
+  int leftIndex = msg.indexOf("left:");
+  motorValues speed = {-1, -1};
+
+  if (rightIndex != -1 && leftIndex != -1) {
+    // Extract number after "right:"
+    String rightStr = msg.substring(rightIndex + 6, msg.indexOf("-", rightIndex));
+    rightStr.trim();
+    rightVal = rightStr.toInt();
+    speed.right = rightVal;
+
+    // Extract number after "left:"
+    String leftStr = msg.substring(leftIndex + 5);
+    leftStr.trim();
+    leftVal = leftStr.toInt();
+    speed.left = leftVal;
+  }
+
+  return speed;
 }
 
 char* readEspComm() {
@@ -35,6 +62,7 @@ char* readEspComm() {
         if(receivedData.indexOf("disconnected") >= 0){
           Serial.println("stopping motors");
           stopMotors();
+          Serial.println("Motor Stopped");
           receivedData = "";
           espConnected = false;
           espNotReady();
@@ -49,33 +77,41 @@ char* readEspComm() {
           return;
         }
 
-        // Parse the values (percentages)
-        int rightVal = 0;
-        int leftVal = 0;
+        motorValues speed = parseMotorValues(receivedData);
 
-        int rightIndex = receivedData.indexOf("right:");
-        int leftIndex = receivedData.indexOf("left:");
+        if(receivedData.indexOf("setup ") >= 0) {
+          Serial.println("setup speed");
 
-        if (rightIndex != -1 && leftIndex != -1) {
-          // Extract number after "right:"
-          String rightStr = receivedData.substring(rightIndex + 6, receivedData.indexOf("-", rightIndex));
-          rightStr.trim();
-          rightVal = rightStr.toInt();
+          if(speed.left >= 0 && speed.right >= 0 ) {
+             setDefaultSpeeds(speed.left, speed.right);
+             Serial.println("Setting default speed");
+          }
+        }
 
-          // Extract number after "left:"
-          String leftStr = receivedData.substring(leftIndex + 5);
-          leftStr.trim();
-          leftVal = leftStr.toInt();
+        if(receivedData.indexOf("startMotor") >= 0)
+        {
+           startDefaultMotors();
+        }
 
-          if(espConnected){
-            if(leftVal == 0 && rightVal == 0){
-              stopMotors();
-              motorStop();
-            } else {
-              setLeftMotorSpeed(leftVal);
-              setRightMotorSpeed(rightVal);
-              motorRuns();
-            }
+        if(receivedData.indexOf("calibration") >= 0)
+        {
+          if(speed.left >= 0 && speed.right >= 0 ) {
+             StartMotors(speed.left, speed.right); // set new motor speed
+            Serial.print("Calibration Motor with values: left: ");
+            Serial.print(speed.left);
+            Serial.print(", right: ");
+            Serial.println(speed.right);
+          }
+        }
+
+
+        if(espConnected){
+          if(speed.left == 0 && speed.right == 0){
+            stopMotors();
+            motorStop();
+            Serial.println("Arduino stopping motors");
+          } else if (speed.left > 0 && speed.right > 0){
+            //StartMotors(speed.left, speed.right);
           }
         } else {
           Serial.print("Malformed message: ");

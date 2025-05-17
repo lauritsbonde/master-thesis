@@ -1,8 +1,8 @@
 #include "MotorControl.h"
 #include "SDWriter.h"
 
-ESC leftESC = {Servo(), 2, 3, 4, UNIDIRECTIONAL, false}; // mode & boost is change in the setup
-ESC rightESC = {Servo(), 5, 6, 7, UNIDIRECTIONAL, false}; // mode & boost is change in the setup
+ESC leftESC = {Servo(), 4, 2, 3, UNIDIRECTIONAL, false, 0}; // mode & boost is change in the setup
+ESC rightESC = {Servo(), 5, 6, 7, UNIDIRECTIONAL, false, 0}; // mode & boost is change in the setup
 
 // connected to ground is Bidirectional
 ESCMode detectESCMode(uint8_t configPin) {
@@ -12,7 +12,7 @@ ESCMode detectESCMode(uint8_t configPin) {
 
 bool detectESCBoost(uint8_t configPin) {
   pinMode(configPin, INPUT_PULLUP);
-  return digitalRead(configPin) == LOW ? true : false; 
+  return digitalRead(configPin) == LOW ? true : false;
 }
 
 ESCModes setupMotors() {
@@ -37,9 +37,12 @@ ESCModes setupMotors() {
   stopMotors();
   // arm done;
 
-  startLogging();
-
   return modes;
+}
+
+void setDefaultSpeeds(int left, int right) {
+  leftESC.speed = left;
+  rightESC.speed = right;
 }
 
 
@@ -50,7 +53,6 @@ void stopMotors() {
 
   leftESC.servo.write(stopValLeft);
   rightESC.servo.write(stopValRight);
-
   stopLogging();
 }
 
@@ -69,15 +71,30 @@ int calculateESCSignal(int speedPercent, ESC esc) {
 
 void setLeftMotorSpeed(int speedPercent) {
   int escSignal = calculateESCSignal(speedPercent, leftESC);
+   Serial.print("Set left motor speed to: ");
+   Serial.println(escSignal);
   leftESC.servo.write(escSignal);
 }
 
 void setRightMotorSpeed(int speedPercent) {
   int escSignal = calculateESCSignal(speedPercent, rightESC);
+  Serial.print("Set right motor speed to: ");
+  Serial.println(escSignal);
   rightESC.servo.write(escSignal);
 }
 
 void setMotorSpeeds(int speedPercent) {
   setLeftMotorSpeed(speedPercent);
   setRightMotorSpeed(speedPercent);
+}
+
+void StartMotors(int leftMotor, int rightMotor) {
+    setLeftMotorSpeed(leftMotor);
+    setRightMotorSpeed(rightMotor);
+    startLogging();
+}
+
+void startDefaultMotors() {
+  Serial.println("Arduino starting motors");
+  StartMotors(leftESC.speed, rightESC.speed);
 }

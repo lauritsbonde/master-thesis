@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boat Dual Motor Control</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f0f4f8;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #004080;
+        color: white;
+        padding: 1rem 2rem;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      #control-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: #e6f0ff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      #control-buttons button {
+        padding: 0.75rem 1.25rem;
+        background-color: #0074d9;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.2s;
+      }
+
+      #control-buttons button:hover {
+        background-color: #005fa3;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      #content {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 0.25rem;
+      }
+
+      input[type="number"] {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        width: 100%;
+      }
+
+      button {
+        padding: 0.75rem;
+        background-color: #0074d9;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.2s;
+      }
+
+      button:hover {
+        background-color: #005fa3;
+      }
+
+      #stop-button {
+        background-color: #ff4136;
+        margin-top: 1rem;
+      }
+
+      #stop-button:hover {
+        background-color: #e3362d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Setup motor speed</h1>
+    </header>
+
+    <!-- Horizontal Buttons Row -->
+    <div id="control-buttons">
+    </div>
+
+    <main>
+      <section id="content">
+        <div style="margin-top: 1rem">
+          <h4>ESC Config</h4>
+          <p id="esc-config">Loading ESC modes...</p>
+        </div>
+
+        <form>
+            <div>
+                <h3>Motor Control</h3>
+                <label for="right-angle">Right motor</label>
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="1"
+                  default="0"
+                  id="right-angle"
+                  placeholder="Enter percentage (0-100)"
+                  name="rightMotor"
+                />
+              </div>
+    
+              <div>
+                <label for="left-angle">Left motor</label>
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="1"
+                  default="0"
+                  id="left-angle"
+                  placeholder="Enter percentage (0-100)"
+                  name="leftMotor"
+                />
+              </div>
+    
+
+          <button type="submit">Send</button>
+        </form>
+        <button id="start-button">Start</button> 
+        <button id="stop-button" type="button">Stop</button>
+      </section>
+    </main>
+
+    <section style="text-align: center; padding: 1.5rem">
+      <p style="margin-bottom: 0.75rem; font-weight: bold">
+        Need individual control?
+      </p>
+      <a
+        href="index.html"
+        style="
+          display: inline-block;
+          background-color: #0074d9;
+          color: white;
+          padding: 0.75rem 1.5rem;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: 500;
+          transition: background-color 0.2s;
+        "
+        onmouseover="this.style.backgroundColor='#005fa3'"
+        onmouseout="this.style.backgroundColor='#0074d9'"
+      >
+        Go to Individual Motor Control
+      </a>
+    </section>
+
+    <script>
+    
+    let activeMacAdress; 
+
+  function addNewButton(label, mode) {
+    const button = document.createElement("button");
+    button.textContent = label;
+    button.type = "button";
+    button.setAttribute("data-mode", mode);
+
+    // Styling
+    Object.assign(button.style, {
+      padding: "0.75rem 1.25rem",
+      backgroundColor: "#0074d9",
+      color: "white",
+      border: "none",
+      borderRadius: "8px",
+      cursor: "pointer",
+      fontSize: "1rem",
+      transition: "background-color 0.2s",
+    });
+
+    button.addEventListener("mouseover", () => {
+      if (!button.classList.contains("active")) {
+        button.style.backgroundColor = "#005fa3";
+      }
+  });
+
+  button.addEventListener("mouseout", () => {
+    if (!button.classList.contains("active")) {
+      button.style.backgroundColor = "#0074d9";
+    }
+  });
+
+  button.addEventListener("click", () => {
+    // Remove "active" from all buttons in the container
+    const container = document.getElementById("control-buttons");
+    const buttons = container.querySelectorAll("button");
+    buttons.forEach((btn) => {
+      btn.classList.remove("active");
+      btn.style.backgroundColor = "#0074d9";
+    });
+
+    // Activate the clicked button
+    button.classList.add("active");
+    button.style.backgroundColor = "#003d66";
+    activeMacAdress = button.getAttribute("data-mode");
+    
+    
+    // Retrieve and use data-mode
+    const modeValue = button.getAttribute("data-mode");
+    // TODO call 
+
+
+    // You can add logic here to handle the selected mode
+  });
+
+  const container = document.getElementById("control-buttons");
+  container.appendChild(button);
+}
+
+
+    async function GetActiveBoats() 
+    {
+        try {
+          const res = await fetch("http://localhost:3000/activboat");
+          if (!res.ok) throw new Error("Failed to load activeboats");
+
+            const data = await res.json();
+            console.log(data);
+
+            data.forEach(element => {
+                addNewButton(element.label, element.mac);
+            });
+
+        } catch (err) {
+          console.error(err);
+          alert("error happen");
+        }
+        
+    }
+
+
+
+      async function fetchESCConfig() {
+        try {
+          const res = await fetch("http://localhost:3000/config");
+          if (!res.ok) throw new Error("Failed to load config");
+
+          const data = await res.json();
+
+          const escConfigElement = document.getElementById("esc-config");
+
+          const left = data.leftMode === 0 ? "BIDIRECTIONAL" : "UNIDIRECTIONAL";
+          const right =
+            data.rightMode === 0 ? "BIDIRECTIONAL" : "UNIDIRECTIONAL";
+
+          escConfigElement.textContent = `Left ESC: ${left} - Right ESC: ${right}`;
+        } catch (err) {
+          console.error("Failed to load ESC config:", err);
+          document.getElementById("esc-config").textContent =
+            "ESC config unavailable.";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        fetchESCConfig();
+        GetActiveBoats();
+
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          
+          const formData = new FormData(form);
+          const rightMotor = formData.get("rightMotor");
+          const leftMotor = formData.get("leftMotor");
+          console.log(activeMacAdress);
+
+          try {
+            const res = await fetch("http://localhost:3000/send-setup-data", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams({
+                leftMotor: leftMotor,
+                rightMotor: rightMotor,
+                mac: activeMacAdress,
+              }),
+            });
+
+            const text = await res.text();
+            console.log("Sent:", text);
+          } catch (err) {
+            console.error("Failed to send speed:", err);
+          }
+        });
+
+
+        const stopButton = document.getElementById("stop-button");
+
+        stopButton.addEventListener("click", async () => {
+          try {
+            const res = await fetch("http://localhost:3000/send-data", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams({
+                rightMotor: 0,
+                leftMotor: 0,
+              }),
+            });
+
+            const text = await res.text();
+            console.log("Stopped:", text);
+          } catch (err) {
+            console.error("Failed to send stop command:", err);
+          }
+        });
+
+        const startButton = document.getElementById("start-button");
+        
+        startButton.addEventListener("click", async () => {
+          try {
+            const res = await fetch("http://localhost:3000/start", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams({
+              }),
+            });
+
+            const text = await res.text();
+            console.log("Started:", text);
+          } catch (err) {
+            console.error("Failed to send stop command:", err);
+          }
+        });
+
+        
+
+      
+      });
+    </script>
+  </body>
+</html>
