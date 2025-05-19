@@ -1,0 +1,5660 @@
+{
+  "boat_3_singlerun": [
+    {
+      "section": null,
+      "run_number": 1,
+      "duration_s": 25,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 0.7,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 2520
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 3705
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 4890
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 6076
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 7261
+        },
+        {
+          "current_measure": 0.75,
+          "elapsed_ms": 8446
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 9632
+        },
+        {
+          "current_measure": 0.76,
+          "elapsed_ms": 10817
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 12003
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 13187
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 14375
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 15560
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 16745
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 17931
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 19116
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 20302
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 21487
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 22672
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 23858
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 25042
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 26228
+        },
+        {
+          "current_measure": 0.75,
+          "elapsed_ms": 27416
+        },
+        {
+          "current_measure": 0.69,
+          "elapsed_ms": 28601
+        },
+        {
+          "current_measure": 0.71,
+          "elapsed_ms": 29786
+        }
+      ],
+      "speed": 0.54,
+      "power_consumption": 5.6548333333333335e-05
+    },
+    {
+      "section": null,
+      "run_number": 2,
+      "duration_s": 41,
+      "invalid": true,
+      "measurements": [
+        {
+          "current_measure": 0.72,
+          "elapsed_ms": 2381
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 3566
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 4751
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 5937
+        },
+        {
+          "current_measure": 0.72,
+          "elapsed_ms": 7122
+        },
+        {
+          "current_measure": 0.7,
+          "elapsed_ms": 8307
+        },
+        {
+          "current_measure": 0.68,
+          "elapsed_ms": 9492
+        },
+        {
+          "current_measure": 0.71,
+          "elapsed_ms": 10680
+        },
+        {
+          "current_measure": 0.69,
+          "elapsed_ms": 11865
+        },
+        {
+          "current_measure": 0.7,
+          "elapsed_ms": 13051
+        },
+        {
+          "current_measure": 0.68,
+          "elapsed_ms": 14236
+        },
+        {
+          "current_measure": 0.68,
+          "elapsed_ms": 15421
+        },
+        {
+          "current_measure": 0.72,
+          "elapsed_ms": 16607
+        },
+        {
+          "current_measure": 0.72,
+          "elapsed_ms": 17792
+        },
+        {
+          "current_measure": 0.72,
+          "elapsed_ms": 18978
+        },
+        {
+          "current_measure": 0.74,
+          "elapsed_ms": 20163
+        },
+        {
+          "current_measure": 0.72,
+          "elapsed_ms": 21348
+        },
+        {
+          "current_measure": 0.73,
+          "elapsed_ms": 22535
+        },
+        {
+          "current_measure": 0.9,
+          "elapsed_ms": 23794
+        },
+        {
+          "current_measure": 0.89,
+          "elapsed_ms": 24980
+        },
+        {
+          "current_measure": 0.87,
+          "elapsed_ms": 26167
+        },
+        {
+          "current_measure": 0.87,
+          "elapsed_ms": 27354
+        },
+        {
+          "current_measure": 0.86,
+          "elapsed_ms": 28541
+        },
+        {
+          "current_measure": 0.9,
+          "elapsed_ms": 29727
+        },
+        {
+          "current_measure": 0.88,
+          "elapsed_ms": 30914
+        },
+        {
+          "current_measure": 0.86,
+          "elapsed_ms": 32100
+        },
+        {
+          "current_measure": 0.81,
+          "elapsed_ms": 33288
+        },
+        {
+          "current_measure": 0.83,
+          "elapsed_ms": 34475
+        },
+        {
+          "current_measure": 0.87,
+          "elapsed_ms": 35663
+        },
+        {
+          "current_measure": 0.84,
+          "elapsed_ms": 36850
+        },
+        {
+          "current_measure": 0.81,
+          "elapsed_ms": 38036
+        },
+        {
+          "current_measure": 0.81,
+          "elapsed_ms": 39223
+        },
+        {
+          "current_measure": 0.79,
+          "elapsed_ms": 40411
+        },
+        {
+          "current_measure": 0.79,
+          "elapsed_ms": 41597
+        },
+        {
+          "current_measure": 0.84,
+          "elapsed_ms": 42785
+        },
+        {
+          "current_measure": 0.79,
+          "elapsed_ms": 43972
+        },
+        {
+          "current_measure": 0.83,
+          "elapsed_ms": 45158
+        },
+        {
+          "current_measure": 0.88,
+          "elapsed_ms": 46388
+        }
+      ],
+      "speed": 0.32926829268292684,
+      "power_consumption": 9.893767543859647e-05
+    },
+    {
+      "section": null,
+      "run_number": 3,
+      "duration_s": 20,
+      "invalid": true,
+      "measurements": [
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.21,
+          "elapsed_ms": 2384
+        },
+        {
+          "current_measure": 1.23,
+          "elapsed_ms": 3570
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 4757
+        },
+        {
+          "current_measure": 0.94,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 2381
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 4754
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 5941
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 7128
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 8315
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 9501
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 10690
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 11876
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 13063
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 14250
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 15437
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 16624
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 17809
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 18996
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 20183
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 21370
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 22564
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 23751
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 24937
+        },
+        {
+          "current_measure": 0.87,
+          "elapsed_ms": 1242
+        },
+        {
+          "current_measure": 0.9,
+          "elapsed_ms": 2428
+        },
+        {
+          "current_measure": 0.89,
+          "elapsed_ms": 3615
+        },
+        {
+          "current_measure": 0.91,
+          "elapsed_ms": 4802
+        },
+        {
+          "current_measure": 0.9,
+          "elapsed_ms": 5989
+        },
+        {
+          "current_measure": 0.9,
+          "elapsed_ms": 7176
+        },
+        {
+          "current_measure": 0.89,
+          "elapsed_ms": 8363
+        },
+        {
+          "current_measure": 0.89,
+          "elapsed_ms": 9549
+        },
+        {
+          "current_measure": 0.88,
+          "elapsed_ms": 10738
+        },
+        {
+          "current_measure": 0.88,
+          "elapsed_ms": 11925
+        },
+        {
+          "current_measure": 0.88,
+          "elapsed_ms": 13112
+        },
+        {
+          "current_measure": 0.86,
+          "elapsed_ms": 14299
+        },
+        {
+          "current_measure": 0.87,
+          "elapsed_ms": 15485
+        },
+        {
+          "current_measure": 0.88,
+          "elapsed_ms": 16715
+        },
+        {
+          "current_measure": 0.87,
+          "elapsed_ms": 17902
+        },
+        {
+          "current_measure": 0.88,
+          "elapsed_ms": 19089
+        },
+        {
+          "current_measure": 0.87,
+          "elapsed_ms": 20276
+        },
+        {
+          "current_measure": 0.86,
+          "elapsed_ms": 21463
+        },
+        {
+          "current_measure": 0.86,
+          "elapsed_ms": 22649
+        },
+        {
+          "current_measure": 0.87,
+          "elapsed_ms": 23838
+        },
+        {
+          "current_measure": 0.89,
+          "elapsed_ms": 25025
+        },
+        {
+          "current_measure": 0.88,
+          "elapsed_ms": 26212
+        },
+        {
+          "current_measure": 0.95,
+          "elapsed_ms": 27399
+        },
+        {
+          "current_measure": 0.95,
+          "elapsed_ms": 28586
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 29772
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 30959
+        }
+      ],
+      "speed": 0.675,
+      "power_consumption": 5.8498692810457523e-05
+    },
+    {
+      "section": null,
+      "run_number": 4,
+      "duration_s": 27,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.03,
+          "elapsed_ms": 1242
+        },
+        {
+          "current_measure": 1.03,
+          "elapsed_ms": 2478
+        },
+        {
+          "current_measure": 1.03,
+          "elapsed_ms": 3665
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 4852
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 6041
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 7227
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 8413
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 9600
+        },
+        {
+          "current_measure": 1.0,
+          "elapsed_ms": 10787
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 11974
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 13160
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 14390
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 15577
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 16764
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 17958
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 19145
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 20331
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 21518
+        },
+        {
+          "current_measure": 1.0,
+          "elapsed_ms": 22706
+        },
+        {
+          "current_measure": 1.0,
+          "elapsed_ms": 23893
+        },
+        {
+          "current_measure": 1.0,
+          "elapsed_ms": 25080
+        },
+        {
+          "current_measure": 1.0,
+          "elapsed_ms": 26267
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 27453
+        },
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 28640
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 29827
+        }
+      ],
+      "speed": 0.5,
+      "power_consumption": 8.48817e-05
+    },
+    {
+      "section": null,
+      "run_number": 5,
+      "duration_s": 31,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.03,
+          "elapsed_ms": 1242
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 2478
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 3664
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 4851
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 6038
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 7225
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 8412
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 9599
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 10785
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 11972
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 13159
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 14348
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 15535
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 16721
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 17908
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 19095
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 20282
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 21469
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 22656
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 23842
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 25072
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 26259
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 27448
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 28635
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 29821
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 31008
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 32195
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 33382
+        }
+      ],
+      "speed": 0.43548387096774194,
+      "power_consumption": 0.00010162556547619048
+    }
+  ],
+  "boat_3_double_back": [
+    {
+      "section": "ATTACHED TO RIGHT",
+      "run_number": 1,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 3569
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 4755
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 5949
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 7136
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 8323
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 9510
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 10697
+        },
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 11884
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 13070
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 14257
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 15444
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 16631
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 17818
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 19006
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 20193
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 21380
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 22567
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 23754
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 24941
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 26170
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 27357
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 28545
+        },
+        {
+          "current_measure": 1.23,
+          "elapsed_ms": 29732
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 9.513933333333333e-05
+    },
+    {
+      "section": "ATTACHED TO RIGHT",
+      "run_number": 2,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 2384
+        },
+        {
+          "current_measure": 1.04,
+          "elapsed_ms": 3571
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 4758
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 5944
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 7131
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 8318
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 9505
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 10692
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 11878
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 13065
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 14252
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 15441
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 16628
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 17815
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 19001
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 20188
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 21375
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 22562
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 23750
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 24935
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 26122
+        },
+        {
+          "current_measure": 1.0,
+          "elapsed_ms": 27317
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 28504
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 8.762833333333333e-05
+    },
+    {
+      "section": "ATTACHED TO RIGHT",
+      "run_number": 3,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 3569
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 4756
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 5942
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 7129
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 8316
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 9503
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 10690
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 11879
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 13065
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 14252
+        },
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 15439
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 16626
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 17813
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 18999
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 20186
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 21373
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 22560
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 23749
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 24936
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 26122
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 27309
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 28496
+        },
+        {
+          "current_measure": 1.19,
+          "elapsed_ms": 29683
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 30870
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 32058
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 9.842456790123456e-05
+    },
+    {
+      "section": "ATTACHED TO RIGHT",
+      "run_number": 4,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.04,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 3569
+        },
+        {
+          "current_measure": 1.04,
+          "elapsed_ms": 4758
+        },
+        {
+          "current_measure": 1.03,
+          "elapsed_ms": 5945
+        },
+        {
+          "current_measure": 1.04,
+          "elapsed_ms": 7131
+        },
+        {
+          "current_measure": 1.03,
+          "elapsed_ms": 8318
+        },
+        {
+          "current_measure": 1.03,
+          "elapsed_ms": 9505
+        },
+        {
+          "current_measure": 1.03,
+          "elapsed_ms": 10735
+        },
+        {
+          "current_measure": 1.04,
+          "elapsed_ms": 11922
+        },
+        {
+          "current_measure": 1.03,
+          "elapsed_ms": 13108
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 14295
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 15482
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 16677
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 17864
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 19051
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 20238
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 21424
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 22611
+        },
+        {
+          "current_measure": 1.01,
+          "elapsed_ms": 23798
+        },
+        {
+          "current_measure": 1.02,
+          "elapsed_ms": 24985
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 9.171595238095235e-05
+    },
+    {
+      "section": "ATTACHED TO RIGHT",
+      "run_number": 5,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.04,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 3569
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 4755
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 5942
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 7129
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 8316
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 9546
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 10733
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 11919
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 13106
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 14295
+        },
+        {
+          "current_measure": 1.05,
+          "elapsed_ms": 15482
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 16669
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 17855
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 19042
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 20229
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 21416
+        },
+        {
+          "current_measure": 1.06,
+          "elapsed_ms": 22603
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 23791
+        },
+        {
+          "current_measure": 1.07,
+          "elapsed_ms": 24977
+        },
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 26165
+        },
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 27352
+        },
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 28539
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 29727
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 9.210039999999999e-05
+    },
+    {
+      "section": "ATTACHED TO LEFT",
+      "run_number": 1,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.37,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.41,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 1.4,
+          "elapsed_ms": 3569
+        },
+        {
+          "current_measure": 1.39,
+          "elapsed_ms": 4756
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 5943
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 7129
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 8316
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 9511
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 10698
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 11885
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 13072
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 14259
+        },
+        {
+          "current_measure": 1.37,
+          "elapsed_ms": 15445
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 16632
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 17819
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 19006
+        },
+        {
+          "current_measure": 1.38,
+          "elapsed_ms": 20193
+        },
+        {
+          "current_measure": 1.39,
+          "elapsed_ms": 21382
+        },
+        {
+          "current_measure": 1.39,
+          "elapsed_ms": 22568
+        },
+        {
+          "current_measure": 1.4,
+          "elapsed_ms": 23755
+        },
+        {
+          "current_measure": 1.4,
+          "elapsed_ms": 24942
+        },
+        {
+          "current_measure": 1.39,
+          "elapsed_ms": 26129
+        },
+        {
+          "current_measure": 1.4,
+          "elapsed_ms": 27359
+        },
+        {
+          "current_measure": 1.4,
+          "elapsed_ms": 28544
+        },
+        {
+          "current_measure": 1.53,
+          "elapsed_ms": 29732
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.000124468
+    },
+    {
+      "section": "ATTACHED TO LEFT",
+      "run_number": 2,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.51,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.34,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 1.34,
+          "elapsed_ms": 3569
+        },
+        {
+          "current_measure": 1.33,
+          "elapsed_ms": 4757
+        },
+        {
+          "current_measure": 1.32,
+          "elapsed_ms": 5944
+        },
+        {
+          "current_measure": 1.28,
+          "elapsed_ms": 7131
+        },
+        {
+          "current_measure": 1.33,
+          "elapsed_ms": 8318
+        },
+        {
+          "current_measure": 1.35,
+          "elapsed_ms": 9505
+        },
+        {
+          "current_measure": 1.35,
+          "elapsed_ms": 10692
+        },
+        {
+          "current_measure": 1.37,
+          "elapsed_ms": 11878
+        },
+        {
+          "current_measure": 1.36,
+          "elapsed_ms": 13065
+        },
+        {
+          "current_measure": 1.35,
+          "elapsed_ms": 14252
+        },
+        {
+          "current_measure": 1.35,
+          "elapsed_ms": 15439
+        },
+        {
+          "current_measure": 1.35,
+          "elapsed_ms": 16628
+        },
+        {
+          "current_measure": 1.34,
+          "elapsed_ms": 17858
+        },
+        {
+          "current_measure": 1.34,
+          "elapsed_ms": 19044
+        },
+        {
+          "current_measure": 1.35,
+          "elapsed_ms": 20231
+        },
+        {
+          "current_measure": 1.34,
+          "elapsed_ms": 21418
+        },
+        {
+          "current_measure": 1.33,
+          "elapsed_ms": 22605
+        },
+        {
+          "current_measure": 1.34,
+          "elapsed_ms": 23792
+        },
+        {
+          "current_measure": 1.35,
+          "elapsed_ms": 24978
+        },
+        {
+          "current_measure": 1.35,
+          "elapsed_ms": 26165
+        },
+        {
+          "current_measure": 1.35,
+          "elapsed_ms": 27352
+        },
+        {
+          "current_measure": 1.35,
+          "elapsed_ms": 28539
+        },
+        {
+          "current_measure": 1.3,
+          "elapsed_ms": 29734
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00012042636666666666
+    },
+    {
+      "section": "ATTACHED TO LEFT",
+      "run_number": 3,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.22,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 4755
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 5942
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 7129
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 8316
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 9503
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 10689
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 11878
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 13065
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 14252
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 15439
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 16625
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 17812
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 18999
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 20186
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 21373
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 22560
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 23746
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 24935
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 26122
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 27309
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 28496
+        },
+        {
+          "current_measure": 1.23,
+          "elapsed_ms": 29682
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00011123433333333332
+    },
+    {
+      "section": "ATTACHED TO LEFT",
+      "run_number": 4,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 3569
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 4755
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 5942
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 7132
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 8318
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 9505
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 10692
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 11878
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 13108
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 14295
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 15482
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 16669
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 17855
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 19042
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 20237
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 21424
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 22611
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 23798
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 24985
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 26171
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 27401
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 28588
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 29775
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 9.600266666666669e-05
+    },
+    {
+      "section": "ATTACHED TO LEFT",
+      "run_number": 5,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.32,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.33,
+          "elapsed_ms": 2384
+        },
+        {
+          "current_measure": 1.34,
+          "elapsed_ms": 3571
+        },
+        {
+          "current_measure": 1.34,
+          "elapsed_ms": 4758
+        },
+        {
+          "current_measure": 1.32,
+          "elapsed_ms": 5945
+        },
+        {
+          "current_measure": 1.32,
+          "elapsed_ms": 7131
+        },
+        {
+          "current_measure": 1.31,
+          "elapsed_ms": 8318
+        },
+        {
+          "current_measure": 1.31,
+          "elapsed_ms": 9505
+        },
+        {
+          "current_measure": 1.29,
+          "elapsed_ms": 10692
+        },
+        {
+          "current_measure": 1.3,
+          "elapsed_ms": 11879
+        },
+        {
+          "current_measure": 1.32,
+          "elapsed_ms": 13065
+        },
+        {
+          "current_measure": 1.34,
+          "elapsed_ms": 14252
+        },
+        {
+          "current_measure": 1.31,
+          "elapsed_ms": 15441
+        },
+        {
+          "current_measure": 1.31,
+          "elapsed_ms": 16628
+        },
+        {
+          "current_measure": 1.27,
+          "elapsed_ms": 17815
+        },
+        {
+          "current_measure": 1.2,
+          "elapsed_ms": 19002
+        },
+        {
+          "current_measure": 1.23,
+          "elapsed_ms": 20188
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 21376
+        },
+        {
+          "current_measure": 1.28,
+          "elapsed_ms": 22563
+        },
+        {
+          "current_measure": 1.27,
+          "elapsed_ms": 23750
+        },
+        {
+          "current_measure": 1.29,
+          "elapsed_ms": 24937
+        },
+        {
+          "current_measure": 1.3,
+          "elapsed_ms": 26123
+        },
+        {
+          "current_measure": 1.31,
+          "elapsed_ms": 27312
+        },
+        {
+          "current_measure": 1.32,
+          "elapsed_ms": 28499
+        },
+        {
+          "current_measure": 1.29,
+          "elapsed_ms": 29686
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00011613436666666666
+    }
+  ],
+  "boat_1_double_front": [
+    {
+      "section": "RIGHT ATTACHMENT",
+      "run_number": 1,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.69,
+          "elapsed_ms": 2380
+        },
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 3567
+        },
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 4753
+        },
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 5982
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 7168
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 8354
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 9540
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 10727
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 11915
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 13102
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 14288
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 15474
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 16661
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 17847
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 19034
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 20219
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 21405
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 22592
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 23778
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 24967
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 26153
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 27339
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 28526
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 0.00032018875
+    },
+    {
+      "section": "RIGHT ATTACHMENT",
+      "run_number": 2,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.76,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 3.76,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 3.77,
+          "elapsed_ms": 4754
+        },
+        {
+          "current_measure": 3.77,
+          "elapsed_ms": 5940
+        },
+        {
+          "current_measure": 3.77,
+          "elapsed_ms": 7127
+        },
+        {
+          "current_measure": 3.77,
+          "elapsed_ms": 8321
+        },
+        {
+          "current_measure": 3.77,
+          "elapsed_ms": 9508
+        },
+        {
+          "current_measure": 3.76,
+          "elapsed_ms": 10693
+        },
+        {
+          "current_measure": 3.76,
+          "elapsed_ms": 11880
+        },
+        {
+          "current_measure": 3.77,
+          "elapsed_ms": 13066
+        },
+        {
+          "current_measure": 3.77,
+          "elapsed_ms": 14253
+        },
+        {
+          "current_measure": 3.77,
+          "elapsed_ms": 15439
+        },
+        {
+          "current_measure": 3.76,
+          "elapsed_ms": 16625
+        },
+        {
+          "current_measure": 3.76,
+          "elapsed_ms": 17812
+        },
+        {
+          "current_measure": 3.76,
+          "elapsed_ms": 18999
+        },
+        {
+          "current_measure": 3.76,
+          "elapsed_ms": 20185
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 21374
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 22561
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 23746
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 24933
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 26119
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 27306
+        },
+        {
+          "current_measure": 3.56,
+          "elapsed_ms": 28493
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 0.00032389388888888883
+    },
+    {
+      "section": "RIGHT ATTACHMENT",
+      "run_number": 3,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.49,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.5,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 3.51,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 3.51,
+          "elapsed_ms": 4755
+        },
+        {
+          "current_measure": 3.51,
+          "elapsed_ms": 5942
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 7129
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 8316
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 9502
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 10688
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 11874
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 13060
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 14247
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 15433
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 16662
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 17890
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 19079
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 20265
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 21452
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 22638
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 23825
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 25010
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 26197
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 27383
+        },
+        {
+          "current_measure": 3.53,
+          "elapsed_ms": 28570
+        },
+        {
+          "current_measure": 3.53,
+          "elapsed_ms": 29756
+        },
+        {
+          "current_measure": 3.54,
+          "elapsed_ms": 30950
+        },
+        {
+          "current_measure": 3.54,
+          "elapsed_ms": 32136
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.0003146804320987654
+    },
+    {
+      "section": "RIGHT ATTACHMENT",
+      "run_number": 4,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.64,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 2381
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 3567
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 4754
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 5940
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 7127
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 8312
+        },
+        {
+          "current_measure": 3.67,
+          "elapsed_ms": 9499
+        },
+        {
+          "current_measure": 3.67,
+          "elapsed_ms": 10685
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 11874
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 13060
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 14246
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 15432
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 16619
+        },
+        {
+          "current_measure": 3.65,
+          "elapsed_ms": 17805
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 18992
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 20177
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 21364
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 22550
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 23737
+        },
+        {
+          "current_measure": 3.66,
+          "elapsed_ms": 24925
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00032722242063492067
+    },
+    {
+      "section": "RIGHT ATTACHMENT",
+      "run_number": 5,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 2381
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 4754
+        },
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 5940
+        },
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 7126
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 8313
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 9502
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 10687
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 11874
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 13060
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 14247
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 15434
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 16619
+        },
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 17806
+        },
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 18993
+        },
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 20179
+        },
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 21373
+        },
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 22560
+        },
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 23747
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 24974
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 26161
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 27347
+        },
+        {
+          "current_measure": 3.75,
+          "elapsed_ms": 28534
+        },
+        {
+          "current_measure": 3.96,
+          "elapsed_ms": 29721
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 0.0003236464
+    },
+    {
+      "section": "LEFT ATTACHMENT",
+      "run_number": 1,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.93,
+          "elapsed_ms": 2381
+        },
+        {
+          "current_measure": 3.93,
+          "elapsed_ms": 3567
+        },
+        {
+          "current_measure": 3.92,
+          "elapsed_ms": 4755
+        },
+        {
+          "current_measure": 3.93,
+          "elapsed_ms": 5942
+        },
+        {
+          "current_measure": 3.93,
+          "elapsed_ms": 7128
+        },
+        {
+          "current_measure": 3.93,
+          "elapsed_ms": 8315
+        },
+        {
+          "current_measure": 3.93,
+          "elapsed_ms": 9500
+        },
+        {
+          "current_measure": 3.93,
+          "elapsed_ms": 10687
+        },
+        {
+          "current_measure": 3.92,
+          "elapsed_ms": 11873
+        },
+        {
+          "current_measure": 3.92,
+          "elapsed_ms": 13060
+        },
+        {
+          "current_measure": 3.93,
+          "elapsed_ms": 14246
+        },
+        {
+          "current_measure": 3.92,
+          "elapsed_ms": 15432
+        },
+        {
+          "current_measure": 3.92,
+          "elapsed_ms": 16618
+        },
+        {
+          "current_measure": 3.92,
+          "elapsed_ms": 17807
+        },
+        {
+          "current_measure": 3.92,
+          "elapsed_ms": 18993
+        },
+        {
+          "current_measure": 3.92,
+          "elapsed_ms": 20180
+        },
+        {
+          "current_measure": 3.92,
+          "elapsed_ms": 21366
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 22552
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 23738
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 24925
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 26111
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 27298
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 28483
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 29670
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.0003500841333333333
+    },
+    {
+      "section": "LEFT ATTACHMENT",
+      "run_number": 2,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 4755
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 5942
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 7127
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 8314
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 9501
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 10687
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 11874
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 13152
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 14338
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 15524
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 16711
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 17898
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 19084
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 20270
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 21457
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 22643
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 23830
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 25017
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 26206
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 27391
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 28578
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 29764
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.0003447906666666667
+    },
+    {
+      "section": "LEFT ATTACHMENT",
+      "run_number": 3,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 3567
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 4754
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 5940
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 7127
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 8316
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 9501
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 10688
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 11874
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 13061
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 14247
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 15433
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 16619
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 17806
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 18992
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 20179
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 21368
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 22554
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 23740
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 24927
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 26113
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 27300
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 28486
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00034820340277777776
+    },
+    {
+      "section": "LEFT ATTACHMENT",
+      "run_number": 4,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 2381
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 4762
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 5949
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 7135
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 8321
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 9508
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 10695
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 11881
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 13068
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 14253
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 15440
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 16627
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 17816
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 19002
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 20189
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 21374
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 22561
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 23790
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 24976
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 26163
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 27349
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 28536
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 29766
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 0.0003339028
+    },
+    {
+      "section": "LEFT ATTACHMENT",
+      "run_number": 5,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 2380
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 3567
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 4753
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 5940
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 7127
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 8313
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 9499
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 10685
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 11872
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 13061
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 14246
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 15433
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 16619
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 17807
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 18993
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 20180
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 21365
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 22552
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 23739
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 24934
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 26120
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 27307
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 28492
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 29679
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00034439723333333326
+    }
+  ],
+  "boat_1_double_back": [
+    {
+      "section": "ATTACHED TO RIGHT",
+      "run_number": 1,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.76,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 3567
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 4754
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 5941
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 7127
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 8316
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 9502
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 10688
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 11875
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 13061
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 14248
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 15435
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 16621
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 17807
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 18994
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 20182
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 21369
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 22555
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 23742
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 24928
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 26115
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 27301
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 28488
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 0.00032903791666666663
+    },
+    {
+      "section": "ATTACHED TO RIGHT",
+      "run_number": 2,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 4798
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 5985
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 7171
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 8358
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 9544
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 10730
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 11917
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 13103
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 14290
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 15477
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 16713
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 17899
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 19085
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 20273
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 21459
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 22646
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 23833
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 25019
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 26206
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 27392
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 28579
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 29767
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00034285926666666666
+    },
+    {
+      "section": "ATTACHED TO RIGHT",
+      "run_number": 3,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 4753
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 5940
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 7126
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 8314
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 9500
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 10686
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 11875
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 13061
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 14248
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 15434
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 16621
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 17807
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 18994
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 20180
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 21367
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 22553
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 23739
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 24928
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 26115
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 27301
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 28488
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 29674
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 0.0003314509333333333
+    },
+    {
+      "section": "ATTACHED TO RIGHT",
+      "run_number": 4,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 4754
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 5941
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 7135
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 8322
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 9509
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 10695
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 11882
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 13110
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 14297
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 15484
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 16670
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 17856
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 19043
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 20232
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 21418
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 22605
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 23792
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 24977
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 26164
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 27351
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.000342971231884058
+    },
+    {
+      "section": "ATTACHED TO RIGHT",
+      "run_number": 5,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 2380
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 3567
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 4797
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 5984
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 7171
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 8356
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 9543
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 10729
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 11916
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 13103
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 14289
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 15475
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 16662
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 17850
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 19037
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 20223
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 21410
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 22596
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 23783
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 24970
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 26157
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 27343
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 28529
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 29723
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 30910
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00034662714743589743
+    },
+    {
+      "section": "ATTACHED TO LEFT",
+      "run_number": 1,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 3569
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 4754
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 5941
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 7127
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 8315
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 9501
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 10687
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 11875
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 13062
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 14249
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 15436
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 16623
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 17809
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 18995
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 20183
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 21369
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 22556
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 23784
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 24973
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 26160
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 27347
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 28533
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.0003404167013888889
+    },
+    {
+      "section": "ATTACHED TO LEFT",
+      "run_number": 2,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.77,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 3569
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 4756
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 5942
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 7128
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 8317
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 9504
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 10691
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 11877
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 13064
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 14250
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 15437
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 16624
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 17811
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 18998
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 20226
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 21420
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 22607
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 23794
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 24981
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 26168
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 27353
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 28540
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 29727
+        },
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 30914
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.0003414341025641026
+    },
+    {
+      "section": "ATTACHED TO LEFT",
+      "run_number": 3,
+      "duration_s": 30,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 2383
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 3570
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 4756
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 5943
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 7129
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 8316
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 9503
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 10690
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 11877
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 13063
+        },
+        {
+          "current_measure": 3.84,
+          "elapsed_ms": 14250
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 15438
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 16625
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 17812
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 18998
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 20184
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 21371
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 22558
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 23745
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 24931
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 26118
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 27306
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 28493
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 29680
+        }
+      ],
+      "speed": 0.45,
+      "power_consumption": 0.00035453399999999994
+    },
+    {
+      "section": "ATTACHED TO LEFT",
+      "run_number": 4,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 2423
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 3610
+        },
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 4796
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 5983
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 7170
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 8356
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 9542
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 10737
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 11924
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 13111
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 14298
+        },
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 15485
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 16670
+        },
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 17858
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 19044
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 20231
+        },
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 21418
+        },
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 22606
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 23793
+        },
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 24980
+        },
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 26167
+        },
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 27353
+        },
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 28539
+        },
+        {
+          "current_measure": 3.77,
+          "elapsed_ms": 29726
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.0003382811333333333
+    },
+    {
+      "section": "ATTACHED TO LEFT",
+      "run_number": 5,
+      "duration_s": 30,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 2381
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 3567
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 4796
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 5985
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 7171
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 8357
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 9544
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 10731
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 11918
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 13105
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 14292
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 15477
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 16664
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 17852
+        },
+        {
+          "current_measure": 3.83,
+          "elapsed_ms": 19039
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 20226
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 21412
+        },
+        {
+          "current_measure": 3.82,
+          "elapsed_ms": 22598
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 23786
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 24972
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 26159
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 27345
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 28532
+        },
+        {
+          "current_measure": 3.81,
+          "elapsed_ms": 29719
+        },
+        {
+          "current_measure": 3.79,
+          "elapsed_ms": 30914
+        }
+      ],
+      "speed": 0.45,
+      "power_consumption": 0.0003532432692307693
+    }
+  ],
+  "boat_2_singlerun": [
+    {
+      "section": null,
+      "run_number": 1,
+      "duration_s": 22,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 5.65,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 5.59,
+          "elapsed_ms": 2383
+        },
+        {
+          "current_measure": 5.62,
+          "elapsed_ms": 3576
+        },
+        {
+          "current_measure": 5.69,
+          "elapsed_ms": 4763
+        },
+        {
+          "current_measure": 5.76,
+          "elapsed_ms": 5949
+        },
+        {
+          "current_measure": 5.68,
+          "elapsed_ms": 7136
+        },
+        {
+          "current_measure": 5.73,
+          "elapsed_ms": 8323
+        },
+        {
+          "current_measure": 5.76,
+          "elapsed_ms": 9508
+        },
+        {
+          "current_measure": 5.78,
+          "elapsed_ms": 10695
+        },
+        {
+          "current_measure": 5.85,
+          "elapsed_ms": 11881
+        },
+        {
+          "current_measure": 5.86,
+          "elapsed_ms": 13068
+        },
+        {
+          "current_measure": 5.91,
+          "elapsed_ms": 14255
+        },
+        {
+          "current_measure": 5.94,
+          "elapsed_ms": 15444
+        },
+        {
+          "current_measure": 5.91,
+          "elapsed_ms": 16629
+        },
+        {
+          "current_measure": 5.88,
+          "elapsed_ms": 17816
+        },
+        {
+          "current_measure": 5.78,
+          "elapsed_ms": 19003
+        },
+        {
+          "current_measure": 5.85,
+          "elapsed_ms": 20190
+        },
+        {
+          "current_measure": 5.9,
+          "elapsed_ms": 21419
+        },
+        {
+          "current_measure": 5.95,
+          "elapsed_ms": 22604
+        },
+        {
+          "current_measure": 7.09,
+          "elapsed_ms": 23791
+        },
+        {
+          "current_measure": 7.4,
+          "elapsed_ms": 24978
+        },
+        {
+          "current_measure": 6.82,
+          "elapsed_ms": 26206
+        },
+        {
+          "current_measure": 6.66,
+          "elapsed_ms": 27393
+        },
+        {
+          "current_measure": 6.72,
+          "elapsed_ms": 28580
+        },
+        {
+          "current_measure": 6.49,
+          "elapsed_ms": 29767
+        },
+        {
+          "current_measure": 6.26,
+          "elapsed_ms": 30954
+        },
+        {
+          "current_measure": 6.43,
+          "elapsed_ms": 32141
+        },
+        {
+          "current_measure": 6.42,
+          "elapsed_ms": 33327
+        },
+        {
+          "current_measure": 6.41,
+          "elapsed_ms": 34514
+        },
+        {
+          "current_measure": 6.41,
+          "elapsed_ms": 35700
+        },
+        {
+          "current_measure": 6.37,
+          "elapsed_ms": 36886
+        },
+        {
+          "current_measure": 6.27,
+          "elapsed_ms": 38073
+        }
+      ],
+      "speed": 0.6136363636363636,
+      "power_consumption": 0.00041514000000000004
+    },
+    {
+      "section": null,
+      "run_number": 2,
+      "duration_s": 23,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 5.84,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 5.67,
+          "elapsed_ms": 2385
+        },
+        {
+          "current_measure": 5.65,
+          "elapsed_ms": 3574
+        },
+        {
+          "current_measure": 5.4,
+          "elapsed_ms": 4761
+        },
+        {
+          "current_measure": 5.41,
+          "elapsed_ms": 5947
+        },
+        {
+          "current_measure": 5.35,
+          "elapsed_ms": 7133
+        },
+        {
+          "current_measure": 5.21,
+          "elapsed_ms": 8320
+        },
+        {
+          "current_measure": 5.63,
+          "elapsed_ms": 9506
+        },
+        {
+          "current_measure": 5.61,
+          "elapsed_ms": 10693
+        },
+        {
+          "current_measure": 5.61,
+          "elapsed_ms": 11880
+        },
+        {
+          "current_measure": 5.62,
+          "elapsed_ms": 13066
+        },
+        {
+          "current_measure": 5.63,
+          "elapsed_ms": 14252
+        },
+        {
+          "current_measure": 5.41,
+          "elapsed_ms": 15439
+        },
+        {
+          "current_measure": 5.48,
+          "elapsed_ms": 16634
+        },
+        {
+          "current_measure": 5.69,
+          "elapsed_ms": 17820
+        },
+        {
+          "current_measure": 5.7,
+          "elapsed_ms": 19007
+        },
+        {
+          "current_measure": 5.69,
+          "elapsed_ms": 20194
+        },
+        {
+          "current_measure": 5.64,
+          "elapsed_ms": 21380
+        },
+        {
+          "current_measure": 5.51,
+          "elapsed_ms": 22567
+        }
+      ],
+      "speed": 0.5869565217391305,
+      "power_consumption": 0.0003947072368421053
+    },
+    {
+      "section": null,
+      "run_number": 3,
+      "duration_s": 23,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 6.32,
+          "elapsed_ms": 1210
+        },
+        {
+          "current_measure": 6.37,
+          "elapsed_ms": 2399
+        },
+        {
+          "current_measure": 6.33,
+          "elapsed_ms": 3586
+        },
+        {
+          "current_measure": 6.26,
+          "elapsed_ms": 4773
+        },
+        {
+          "current_measure": 6.3,
+          "elapsed_ms": 5961
+        },
+        {
+          "current_measure": 6.24,
+          "elapsed_ms": 7148
+        },
+        {
+          "current_measure": 6.26,
+          "elapsed_ms": 8335
+        },
+        {
+          "current_measure": 6.23,
+          "elapsed_ms": 9520
+        },
+        {
+          "current_measure": 6.22,
+          "elapsed_ms": 10707
+        },
+        {
+          "current_measure": 6.2,
+          "elapsed_ms": 11894
+        },
+        {
+          "current_measure": 6.19,
+          "elapsed_ms": 13081
+        },
+        {
+          "current_measure": 6.18,
+          "elapsed_ms": 14268
+        },
+        {
+          "current_measure": 6.03,
+          "elapsed_ms": 15453
+        },
+        {
+          "current_measure": 6.0,
+          "elapsed_ms": 16640
+        },
+        {
+          "current_measure": 6.05,
+          "elapsed_ms": 17827
+        },
+        {
+          "current_measure": 6.02,
+          "elapsed_ms": 19016
+        },
+        {
+          "current_measure": 6.06,
+          "elapsed_ms": 20202
+        },
+        {
+          "current_measure": 6.09,
+          "elapsed_ms": 21389
+        },
+        {
+          "current_measure": 6.06,
+          "elapsed_ms": 22575
+        },
+        {
+          "current_measure": 6.09,
+          "elapsed_ms": 23761
+        },
+        {
+          "current_measure": 6.12,
+          "elapsed_ms": 24948
+        }
+      ],
+      "speed": 0.5869565217391305,
+      "power_consumption": 0.0004377246825396825
+    }
+  ],
+  "boat_3_double_front": [
+    {
+      "section": "RIGHT ATTACHMENT",
+      "run_number": 1,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 2382
+        },
+        {
+          "current_measure": 1.0,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 4755
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 5942
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 7129
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 8316
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 9503
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 10799
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 11986
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 13173
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 14359
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 15547
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 16734
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 17921
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 19108
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 20294
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 21481
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 22670
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 23857
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 25045
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 26232
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 27418
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 28605
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 8.521819444444444e-05
+    },
+    {
+      "section": "RIGHT ATTACHMENT",
+      "run_number": 2,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 0.95,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 2381
+        },
+        {
+          "current_measure": 0.99,
+          "elapsed_ms": 3568
+        },
+        {
+          "current_measure": 1.0,
+          "elapsed_ms": 4755
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 5942
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 7131
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 8318
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 9504
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 10691
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 11878
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 13065
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 14252
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 15438
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 16625
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 17812
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 19001
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 20189
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 21376
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 22562
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 23749
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 24936
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 26123
+        },
+        {
+          "current_measure": 0.97,
+          "elapsed_ms": 27310
+        },
+        {
+          "current_measure": 0.96,
+          "elapsed_ms": 28496
+        },
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 29683
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 8.70203e-05
+    },
+    {
+      "section": "RIGHT ATTACHMENT",
+      "run_number": 3,
+      "duration_s": 28,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 1210
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 2405
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 3592
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 4781
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 5969
+        },
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 7157
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 8346
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 9534
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 10722
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 11910
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 13099
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 14289
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 15477
+        },
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 16666
+        },
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 17854
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 19042
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 20230
+        },
+        {
+          "current_measure": 1.08,
+          "elapsed_ms": 21462
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 22650
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 23839
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 25027
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 26215
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 27449
+        },
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 28637
+        }
+      ],
+      "speed": 0.48214285714285715,
+      "power_consumption": 9.413930555555558e-05
+    },
+    {
+      "section": "RIGHT ATTACHMENT",
+      "run_number": 4,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 2383
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 3571
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 4760
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 5947
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 7136
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 8324
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 9512
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 10703
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 11891
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 13080
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 14267
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 15455
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 16644
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 17832
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 19021
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 20209
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 21396
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 22585
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 23781
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 24970
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 26158
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 27347
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 28535
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.0001028664236111111
+    },
+    {
+      "section": "RIGHT ATTACHMENT",
+      "run_number": 5,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 2384
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 3571
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 4759
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 5948
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 7139
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 8327
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 9516
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 10704
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 11893
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 13080
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 14269
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 15457
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 16645
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 17834
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 19022
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 20211
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 21400
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 22588
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 23777
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 24965
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 26154
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 27342
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 28529
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 29718
+        },
+        {
+          "current_measure": 1.21,
+          "elapsed_ms": 30906
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00010083448717948719
+    },
+    {
+      "section": "LEFT ATTACHMENT",
+      "run_number": 1,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.18,
+          "elapsed_ms": 2383
+        },
+        {
+          "current_measure": 1.19,
+          "elapsed_ms": 3572
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 4760
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 5948
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 7137
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 8324
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 9513
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 10701
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 11889
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 13078
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 14317
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 15506
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 16694
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 17881
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 19070
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 20258
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 21447
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 22635
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 23823
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 25012
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 26201
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 27390
+        },
+        {
+          "current_measure": 1.18,
+          "elapsed_ms": 28578
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00010431944444444445
+    },
+    {
+      "section": "LEFT ATTACHMENT",
+      "run_number": 2,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 2383
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 3572
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 4759
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 5948
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 7136
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 8324
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 9513
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 10703
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 11892
+        },
+        {
+          "current_measure": 1.17,
+          "elapsed_ms": 13079
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 14268
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 15456
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 16645
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 17833
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 19022
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 20209
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 21398
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 22586
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 23776
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 24964
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 26153
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 27341
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 28529
+        },
+        {
+          "current_measure": 1.16,
+          "elapsed_ms": 29717
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00010300799999999999
+    },
+    {
+      "section": "LEFT ATTACHMENT",
+      "run_number": 3,
+      "duration_s": 30,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.09,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 2383
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 3572
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 4759
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 5955
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 7144
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 8333
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 9521
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 10710
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 11941
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 13130
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 14318
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 15506
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 16695
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 17883
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 19073
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 20262
+        },
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 21450
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 22638
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 23827
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 25016
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 26204
+        },
+        {
+          "current_measure": 1.11,
+          "elapsed_ms": 27392
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 28581
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 29770
+        }
+      ],
+      "speed": 0.45,
+      "power_consumption": 0.00010319299999999999
+    },
+    {
+      "section": "LEFT ATTACHMENT",
+      "run_number": 4,
+      "duration_s": 29,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.19,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.22,
+          "elapsed_ms": 2384
+        },
+        {
+          "current_measure": 1.21,
+          "elapsed_ms": 3572
+        },
+        {
+          "current_measure": 1.23,
+          "elapsed_ms": 4761
+        },
+        {
+          "current_measure": 1.23,
+          "elapsed_ms": 5949
+        },
+        {
+          "current_measure": 1.23,
+          "elapsed_ms": 7137
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 8326
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 9513
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 10702
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 11890
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 13079
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 14269
+        },
+        {
+          "current_measure": 1.26,
+          "elapsed_ms": 15458
+        },
+        {
+          "current_measure": 1.26,
+          "elapsed_ms": 16646
+        },
+        {
+          "current_measure": 1.26,
+          "elapsed_ms": 17833
+        },
+        {
+          "current_measure": 1.26,
+          "elapsed_ms": 19022
+        },
+        {
+          "current_measure": 1.26,
+          "elapsed_ms": 20211
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 21399
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 22588
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 23776
+        },
+        {
+          "current_measure": 1.25,
+          "elapsed_ms": 24963
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 26247
+        },
+        {
+          "current_measure": 1.24,
+          "elapsed_ms": 27434
+        },
+        {
+          "current_measure": 1.23,
+          "elapsed_ms": 28623
+        },
+        {
+          "current_measure": 1.18,
+          "elapsed_ms": 29811
+        }
+      ],
+      "speed": 0.46551724137931033,
+      "power_consumption": 0.00011073359999999999
+    },
+    {
+      "section": "LEFT ATTACHMENT",
+      "run_number": 5,
+      "duration_s": 30,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 1.1,
+          "elapsed_ms": 1195
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 2384
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 3572
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 4761
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 5948
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 7136
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 8325
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 9515
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 10704
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 11893
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 13081
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 14269
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 15458
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 16646
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 17835
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 19023
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 20212
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 21403
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 22590
+        },
+        {
+          "current_measure": 1.13,
+          "elapsed_ms": 23778
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 24967
+        },
+        {
+          "current_measure": 1.14,
+          "elapsed_ms": 26156
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 27344
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 28533
+        },
+        {
+          "current_measure": 1.15,
+          "elapsed_ms": 29721
+        },
+        {
+          "current_measure": 1.12,
+          "elapsed_ms": 30908
+        },
+        {
+          "current_measure": 1.0,
+          "elapsed_ms": 32097
+        },
+        {
+          "current_measure": 0.98,
+          "elapsed_ms": 33286
+        }
+      ],
+      "speed": 0.45,
+      "power_consumption": 0.00010412857142857143
+    }
+  ],
+  "boat_1_singlerun": [
+    {
+      "section": null,
+      "run_number": 1,
+      "duration_s": 30,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.47,
+          "elapsed_ms": 1242
+        },
+        {
+          "current_measure": 3.47,
+          "elapsed_ms": 2534
+        },
+        {
+          "current_measure": 3.47,
+          "elapsed_ms": 3718
+        },
+        {
+          "current_measure": 3.47,
+          "elapsed_ms": 4903
+        },
+        {
+          "current_measure": 3.47,
+          "elapsed_ms": 6089
+        },
+        {
+          "current_measure": 3.46,
+          "elapsed_ms": 7274
+        },
+        {
+          "current_measure": 3.47,
+          "elapsed_ms": 8459
+        },
+        {
+          "current_measure": 3.47,
+          "elapsed_ms": 9644
+        },
+        {
+          "current_measure": 3.46,
+          "elapsed_ms": 10829
+        },
+        {
+          "current_measure": 3.47,
+          "elapsed_ms": 12064
+        },
+        {
+          "current_measure": 3.48,
+          "elapsed_ms": 13249
+        },
+        {
+          "current_measure": 3.48,
+          "elapsed_ms": 14436
+        },
+        {
+          "current_measure": 3.48,
+          "elapsed_ms": 15621
+        },
+        {
+          "current_measure": 3.48,
+          "elapsed_ms": 16806
+        },
+        {
+          "current_measure": 3.47,
+          "elapsed_ms": 17992
+        },
+        {
+          "current_measure": 3.49,
+          "elapsed_ms": 19342
+        },
+        {
+          "current_measure": 3.49,
+          "elapsed_ms": 20526
+        },
+        {
+          "current_measure": 3.49,
+          "elapsed_ms": 21711
+        },
+        {
+          "current_measure": 3.48,
+          "elapsed_ms": 22897
+        },
+        {
+          "current_measure": 3.46,
+          "elapsed_ms": 24082
+        },
+        {
+          "current_measure": 3.45,
+          "elapsed_ms": 25267
+        },
+        {
+          "current_measure": 3.45,
+          "elapsed_ms": 26452
+        },
+        {
+          "current_measure": 3.45,
+          "elapsed_ms": 27639
+        },
+        {
+          "current_measure": 3.46,
+          "elapsed_ms": 28825
+        },
+        {
+          "current_measure": 3.48,
+          "elapsed_ms": 30010
+        },
+        {
+          "current_measure": 3.52,
+          "elapsed_ms": 31194
+        }
+      ],
+      "speed": 0.45,
+      "power_consumption": 0.0003212240384615385
+    },
+    {
+      "section": null,
+      "run_number": 2,
+      "duration_s": 27,
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 1256
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 2442
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 3676
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 4861
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 6046
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 7230
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 8416
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 9603
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 10788
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 11974
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 13158
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 14343
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 15529
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 16714
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 17898
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 19084
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 20269
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 21454
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 22644
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 23830
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 25016
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 26203
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 27389
+        },
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 28576
+        },
+        {
+          "current_measure": 3.74,
+          "elapsed_ms": 29762
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 30949
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 32135
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 33322
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 34553
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 35739
+        }
+      ],
+      "speed": 0.5,
+      "power_consumption": 0.00031013399999999994
+    }
+  ]
+}
