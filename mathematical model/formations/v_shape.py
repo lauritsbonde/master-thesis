@@ -1,7 +1,7 @@
 from boats.boat import Boat
 from alpha.rules import calculate_alpha
 
-def create_v_shape(n: int) -> list[Boat]:
+def create_v_shape(n: int, speed: float = 1.0) -> list[Boat]:
     spacing_x = 0.5
     spacing_y = 1.25
     center_index = n // 2
@@ -14,7 +14,7 @@ def create_v_shape(n: int) -> list[Boat]:
         if i < center_index:
             x = -x
         position = (x + center_index * spacing_x, y)
-        boats.append(Boat(id=i, width=1, length=1, height=1, weight=10, speed=2, alpha=1.0, position=position))
+        boats.append(Boat(id=i, width=1, length=1, height=1, weight=2, speed=speed, alpha=1.0, position=position))
 
     # Step 2: Update alpha based on all positions
     positions = [b.position for b in boats]

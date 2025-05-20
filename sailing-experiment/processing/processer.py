@@ -40,5 +40,5 @@ def find_power_consumption_kwh(measurements, duration_s):
 def process_run(data):
   return {
     "speed": find_speed(data["duration_s"]),
-    "power_consumption": find_power_consumption_kwh(data["measurements"], data["duration_s"])
+    "power_consumption_kwh": find_power_consumption_kwh(data["measurements"], data["duration_s"])
   }

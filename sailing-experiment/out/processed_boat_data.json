@@ -108,7 +108,7 @@
         }
       ],
       "speed": 0.54,
-      "power_consumption": 5.6548333333333335e-05
+      "power_consumption_kwh": 5.6548333333333335e-05
     },
     {
       "section": null,
@@ -270,7 +270,7 @@
         }
       ],
       "speed": 0.32926829268292684,
-      "power_consumption": 9.893767543859647e-05
+      "power_consumption_kwh": 9.893767543859647e-05
     },
     {
       "section": null,
@@ -484,7 +484,7 @@
         }
       ],
       "speed": 0.675,
-      "power_consumption": 5.8498692810457523e-05
+      "power_consumption_kwh": 5.8498692810457523e-05
     },
     {
       "section": null,
@@ -594,7 +594,7 @@
         }
       ],
       "speed": 0.5,
-      "power_consumption": 8.48817e-05
+      "power_consumption_kwh": 8.48817e-05
     },
     {
       "section": null,
@@ -716,7 +716,7 @@
         }
       ],
       "speed": 0.43548387096774194,
-      "power_consumption": 0.00010162556547619048
+      "power_consumption_kwh": 0.00010162556547619048
     }
   ],
   "boat_3_double_back": [
@@ -828,7 +828,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 9.513933333333333e-05
+      "power_consumption_kwh": 9.513933333333333e-05
     },
     {
       "section": "ATTACHED TO RIGHT",
@@ -934,7 +934,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 8.762833333333333e-05
+      "power_consumption_kwh": 8.762833333333333e-05
     },
     {
       "section": "ATTACHED TO RIGHT",
@@ -1052,7 +1052,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 9.842456790123456e-05
+      "power_consumption_kwh": 9.842456790123456e-05
     },
     {
       "section": "ATTACHED TO RIGHT",
@@ -1146,7 +1146,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 9.171595238095235e-05
+      "power_consumption_kwh": 9.171595238095235e-05
     },
     {
       "section": "ATTACHED TO RIGHT",
@@ -1256,7 +1256,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 9.210039999999999e-05
+      "power_consumption_kwh": 9.210039999999999e-05
     },
     {
       "section": "ATTACHED TO LEFT",
@@ -1366,7 +1366,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.000124468
+      "power_consumption_kwh": 0.000124468
     },
     {
       "section": "ATTACHED TO LEFT",
@@ -1476,7 +1476,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00012042636666666666
+      "power_consumption_kwh": 0.00012042636666666666
     },
     {
       "section": "ATTACHED TO LEFT",
@@ -1586,7 +1586,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00011123433333333332
+      "power_consumption_kwh": 0.00011123433333333332
     },
     {
       "section": "ATTACHED TO LEFT",
@@ -1696,7 +1696,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 9.600266666666669e-05
+      "power_consumption_kwh": 9.600266666666669e-05
     },
     {
       "section": "ATTACHED TO LEFT",
@@ -1806,7 +1806,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00011613436666666666
+      "power_consumption_kwh": 0.00011613436666666666
     }
   ],
   "boat_1_double_front": [
@@ -1914,7 +1914,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 0.00032018875
+      "power_consumption_kwh": 0.00032018875
     },
     {
       "section": "RIGHT ATTACHMENT",
@@ -2020,7 +2020,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 0.00032389388888888883
+      "power_consumption_kwh": 0.00032389388888888883
     },
     {
       "section": "RIGHT ATTACHMENT",
@@ -2138,7 +2138,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.0003146804320987654
+      "power_consumption_kwh": 0.0003146804320987654
     },
     {
       "section": "RIGHT ATTACHMENT",
@@ -2232,7 +2232,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00032722242063492067
+      "power_consumption_kwh": 0.00032722242063492067
     },
     {
       "section": "RIGHT ATTACHMENT",
@@ -2342,7 +2342,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 0.0003236464
+      "power_consumption_kwh": 0.0003236464
     },
     {
       "section": "LEFT ATTACHMENT",
@@ -2452,7 +2452,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.0003500841333333333
+      "power_consumption_kwh": 0.0003500841333333333
     },
     {
       "section": "LEFT ATTACHMENT",
@@ -2562,7 +2562,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.0003447906666666667
+      "power_consumption_kwh": 0.0003447906666666667
     },
     {
       "section": "LEFT ATTACHMENT",
@@ -2668,7 +2668,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00034820340277777776
+      "power_consumption_kwh": 0.00034820340277777776
     },
     {
       "section": "LEFT ATTACHMENT",
@@ -2778,7 +2778,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 0.0003339028
+      "power_consumption_kwh": 0.0003339028
     },
     {
       "section": "LEFT ATTACHMENT",
@@ -2888,7 +2888,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00034439723333333326
+      "power_consumption_kwh": 0.00034439723333333326
     }
   ],
   "boat_1_double_back": [
@@ -2996,7 +2996,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 0.00032903791666666663
+      "power_consumption_kwh": 0.00032903791666666663
     },
     {
       "section": "ATTACHED TO RIGHT",
@@ -3106,7 +3106,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00034285926666666666
+      "power_consumption_kwh": 0.00034285926666666666
     },
     {
       "section": "ATTACHED TO RIGHT",
@@ -3216,7 +3216,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 0.0003314509333333333
+      "power_consumption_kwh": 0.0003314509333333333
     },
     {
       "section": "ATTACHED TO RIGHT",
@@ -3318,7 +3318,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.000342971231884058
+      "power_consumption_kwh": 0.000342971231884058
     },
     {
       "section": "ATTACHED TO RIGHT",
@@ -3432,7 +3432,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00034662714743589743
+      "power_consumption_kwh": 0.00034662714743589743
     },
     {
       "section": "ATTACHED TO LEFT",
@@ -3538,7 +3538,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.0003404167013888889
+      "power_consumption_kwh": 0.0003404167013888889
     },
     {
       "section": "ATTACHED TO LEFT",
@@ -3652,7 +3652,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.0003414341025641026
+      "power_consumption_kwh": 0.0003414341025641026
     },
     {
       "section": "ATTACHED TO LEFT",
@@ -3762,7 +3762,7 @@
         }
       ],
       "speed": 0.45,
-      "power_consumption": 0.00035453399999999994
+      "power_consumption_kwh": 0.00035453399999999994
     },
     {
       "section": "ATTACHED TO LEFT",
@@ -3872,7 +3872,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.0003382811333333333
+      "power_consumption_kwh": 0.0003382811333333333
     },
     {
       "section": "ATTACHED TO LEFT",
@@ -3986,7 +3986,7 @@
         }
       ],
       "speed": 0.45,
-      "power_consumption": 0.0003532432692307693
+      "power_consumption_kwh": 0.0003532432692307693
     }
   ],
   "boat_2_singlerun": [
@@ -4126,7 +4126,7 @@
         }
       ],
       "speed": 0.6136363636363636,
-      "power_consumption": 0.00041514000000000004
+      "power_consumption_kwh": 0.00041514000000000004
     },
     {
       "section": null,
@@ -4212,7 +4212,7 @@
         }
       ],
       "speed": 0.5869565217391305,
-      "power_consumption": 0.0003947072368421053
+      "power_consumption_kwh": 0.0003947072368421053
     },
     {
       "section": null,
@@ -4306,7 +4306,7 @@
         }
       ],
       "speed": 0.5869565217391305,
-      "power_consumption": 0.0004377246825396825
+      "power_consumption_kwh": 0.0004377246825396825
     }
   ],
   "boat_3_double_front": [
@@ -4414,7 +4414,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 8.521819444444444e-05
+      "power_consumption_kwh": 8.521819444444444e-05
     },
     {
       "section": "RIGHT ATTACHMENT",
@@ -4524,7 +4524,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 8.70203e-05
+      "power_consumption_kwh": 8.70203e-05
     },
     {
       "section": "RIGHT ATTACHMENT",
@@ -4630,7 +4630,7 @@
         }
       ],
       "speed": 0.48214285714285715,
-      "power_consumption": 9.413930555555558e-05
+      "power_consumption_kwh": 9.413930555555558e-05
     },
     {
       "section": "RIGHT ATTACHMENT",
@@ -4736,7 +4736,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.0001028664236111111
+      "power_consumption_kwh": 0.0001028664236111111
     },
     {
       "section": "RIGHT ATTACHMENT",
@@ -4850,7 +4850,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00010083448717948719
+      "power_consumption_kwh": 0.00010083448717948719
     },
     {
       "section": "LEFT ATTACHMENT",
@@ -4956,7 +4956,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00010431944444444445
+      "power_consumption_kwh": 0.00010431944444444445
     },
     {
       "section": "LEFT ATTACHMENT",
@@ -5066,7 +5066,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00010300799999999999
+      "power_consumption_kwh": 0.00010300799999999999
     },
     {
       "section": "LEFT ATTACHMENT",
@@ -5176,7 +5176,7 @@
         }
       ],
       "speed": 0.45,
-      "power_consumption": 0.00010319299999999999
+      "power_consumption_kwh": 0.00010319299999999999
     },
     {
       "section": "LEFT ATTACHMENT",
@@ -5286,7 +5286,7 @@
         }
       ],
       "speed": 0.46551724137931033,
-      "power_consumption": 0.00011073359999999999
+      "power_consumption_kwh": 0.00011073359999999999
     },
     {
       "section": "LEFT ATTACHMENT",
@@ -5408,7 +5408,7 @@
         }
       ],
       "speed": 0.45,
-      "power_consumption": 0.00010412857142857143
+      "power_consumption_kwh": 0.00010412857142857143
     }
   ],
   "boat_1_singlerun": [
@@ -5524,7 +5524,7 @@
         }
       ],
       "speed": 0.45,
-      "power_consumption": 0.0003212240384615385
+      "power_consumption_kwh": 0.0003212240384615385
     },
     {
       "section": null,
@@ -5654,7 +5654,7 @@
         }
       ],
       "speed": 0.5,
-      "power_consumption": 0.00031013399999999994
+      "power_consumption_kwh": 0.00031013399999999994
     }
   ]
 }

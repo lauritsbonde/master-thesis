@@ -7,7 +7,7 @@ def calculate_blocks_needed(level: int) -> int:
     return level * (level + 1) // 2
 
 
-def create_hexagon_formation(n: int) -> List[Boat]:
+def create_hexagon_formation(n: int, speed: float = 1.0) -> List[Boat]:
     spacing = 1.25
     positions: List[Tuple[float, float]] = []
 
@@ -78,7 +78,7 @@ def create_hexagon_formation(n: int) -> List[Boat]:
 
     # Create boats
     boats = [
-        Boat(id=i, width=1, length=1, height=1, weight=10, speed=2, alpha=1.0, position=pos)
+        Boat(id=i, width=1, length=1, height=1, weight=2, speed=speed, alpha=1.0, position=pos)
         for i, pos in enumerate(positions)
     ]
 

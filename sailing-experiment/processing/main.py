@@ -1,4 +1,4 @@
-from constants import DATA_DIR
+from constants import DATA_DIR, OUT_DIR
 from boat_log_parser import parse_boat_file
 from pathlib import Path
 from processer import process_run
@@ -10,6 +10,7 @@ from visualize import (
   plot_power_and_speed_comparison_by_boat,
 )
 
+import os
 import json
 
 if __name__ == "__main__":
@@ -32,10 +33,6 @@ if __name__ == "__main__":
             except ValueError as e:
                 print(f"Error processing run: {e}")
 
-    # Write to enriched JSON
-    with open("processed_boat_data.json", "w") as f:
-        json.dump(all_runs_by_file, f, indent=2)
-
     # Visualize
     # Single run boxplot
     speeds = extract_singlerun_grouped(all_runs_by_file, key="speed")
@@ -46,3 +43,9 @@ if __name__ == "__main__":
     power_data = extract_power_by_config(all_runs_by_file, boats=[1, 3])
     speed_data = extract_speed_by_config(all_runs_by_file, boats=[1, 3])
     plot_power_and_speed_comparison_by_boat(power_data, speed_data, save_as="power_speed_by_boat")
+
+    # Write to JSON
+    os.makedirs(OUT_DIR, exist_ok=True)
+    out_path = f"{OUT_DIR}/processed_boat_data.json"
+    with open(out_path, "w") as f:
+        json.dump(all_runs_by_file, f, indent=2)

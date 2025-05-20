@@ -1,5 +1,5 @@
 class Boat:
-    def __init__(self,id, width, length, height, weight, speed=0, alpha=1.0, position=None):
+    def __init__(self,id, width, length, height, weight, speed=0.0, alpha=1.0, position=None):
         self.id = id  # unique identifier for the boat (index)
         self.width = width  # meter
         self.length = length  # meter
@@ -13,7 +13,7 @@ class Boat:
     def boxDeep(self, waterDensity=1000):
         return self.weight / (waterDensity * self.areaOfBottom())
 
-    ## Calculate the area of the bottom of the box
+    ## Calculate the area of the bottom of the box - used to calculate water displacement
     def areaOfBottom(self) -> float:
         return self.length * self.width
 

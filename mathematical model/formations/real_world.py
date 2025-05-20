@@ -2,8 +2,9 @@ import math
 from typing import List, Tuple
 from boats.boat import Boat
 from alpha.rules import calculate_alpha
+from config import BOAT_WEIGHT
 
-def create_v_formation(n: int) -> List[Boat]:
+def create_v_formation(n: int, speed: int = 1) -> List[Boat]:
     spacing_x = .5
     spacing_y = 1.25
     positions: List[Tuple[float, float]] = []
@@ -28,17 +29,17 @@ def create_v_formation(n: int) -> List[Boat]:
             i += 1
         offset += 1
 
-    return create_boats_from_positions(positions)
+    return create_boats_from_positions(positions, speed=speed)
 
 
-def create_diagonal_line(n: int) -> List[Boat]:
+def create_diagonal_line(n: int, speed: int = 1) -> List[Boat]:
     spacing_x = .5
     spacing_y = 1.25
     positions = [(i * spacing_x, i * spacing_y) for i in range(n)]
-    return create_boats_from_positions(positions)
+    return create_boats_from_positions(positions, speed)
 
 
-def create_line(n: int) -> List[Boat]:
+def create_line(n: int, speed: int = 1) -> List[Boat]:
     spacing_x = 0.5
     spacing_y = 1.25
     positions: List[Tuple[float, float]] = []
@@ -54,17 +55,34 @@ def create_line(n: int) -> List[Boat]:
 
         positions.append((x, y))
 
-    return create_boats_from_positions(positions)
+    return create_boats_from_positions(positions, speed)
 
-def create_single_boat(n: int) -> List[Boat]:
+def create_double(n: int, speed: int = 1) -> List[Boat]:
     if n < 1:
         return []
-    return create_boats_from_positions([(0, 0)])
+    if n == 1:
+        return create_boats_from_positions([(0, 0)], speed=speed)
+
+    spacing_x = 0.5  # horizontal offset
+    spacing_y = 1.25  # vertical offset
+
+    # One boat in front (top), one behind and to the side
+    positions = [
+        (0, 0),  # front boat
+        (spacing_x, -spacing_y)  # rear-side boat
+    ]
+
+    return create_boats_from_positions(positions[:n], speed=speed)
+
+def create_single_boat(n: int, speed: int = 1) -> List[Boat]:
+    if n < 1:
+        return []
+    return create_boats_from_positions([(0, 0)], speed=speed)
 
 
-def create_boats_from_positions(positions: List[Tuple[float, float]]) -> List[Boat]:
+def create_boats_from_positions(positions: List[Tuple[float, float]], speed: int = 1) -> List[Boat]:
     boats = [
-        Boat(id=i, width=1, length=1, height=1, weight=10, speed=2, alpha=1.0, position=pos)
+        Boat(id=i, width=0.21, length=0.32, height=0.12, weight=BOAT_WEIGHT, speed=speed, alpha=1.0, position=pos)
         for i, pos in enumerate(positions)
     ]
 

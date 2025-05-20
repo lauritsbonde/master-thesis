@@ -16,26 +16,23 @@ def drag(boat: Boat, coeficientOfDrag: float = 1.09) -> float:
     Calculate the power usage of the fleet
     GUIDE:
     mechanical power in WATT: total_drag_force (N) * speed (m/s)
-    Electrical Power required WATT: Mechanical power * n (Efficiency of the propulsion system, often 0.6 - 0.9) that the Watt
+    Electrical Power required WATT: Mechanical power * n (Efficiency of the propulsion system)
     Current: Electrical Power required WATT / Battery Watt
 
- Args:
+    Args:
         boats List[Boat]: Array of boats in the swarm
-        batteryWatt: int: the watt the battery operate on
-        Efficency: 0-1 float: The Efficiency of propulsion system.
+        Efficency: 0-1 float: The Efficiency of propulsion system. default is 1.0 (100% efficency)
 
     Returns:
-        Returnt the total current used for all the boats.
-
-
+        Return the total current used for all the boats.
  """
 def calculatePowerUsage(boats: List[Boat], efficency: float = 1.0) -> float:
 
     total_DragForce = sum(drag(boat) for boat in boats)
     mechanicalPower = total_DragForce * boats[0].speed # Watt
-    Electricpower = mechanicalPower / efficency # Watt
+    electricPower = mechanicalPower / efficency # Watt
 
-    return Electricpower
+    return electricPower
 
 """
     Based on using 11.1 V batery, this calculate the current used.
@@ -61,3 +58,13 @@ def calculateWhPerDistance(boats: List[Boat], distance: float) -> float:
     # Wh per distance
     whPerDistance = energyUsed / distance
     return whPerDistance
+
+def calculateTotalEnergyKWh(boats: List[Boat], distance: float) -> float:
+    powerUsage = calculatePowerUsage(boats)  # Power in watts (W)
+    timeToTravel = distance / boats[0].speed  # time in seconds
+
+    # Energy in watt-seconds (joules), then convert to kWh
+    energyUsedWh = (powerUsage * timeToTravel) / 3600  # Wh
+    energyUsedKWh = energyUsedWh / 1000  # Convert to kWh
+
+    return energyUsedKWh

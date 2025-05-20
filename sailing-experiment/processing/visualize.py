@@ -171,9 +171,9 @@ def extract_power_by_config(data: dict, boats: list[int]):
             continue
 
         values = [
-            run["power_consumption"]
+            run["power_consumption_kwh"]
             for run in runs
-            if not run.get("invalid", False) and "power_consumption" in run
+            if not run.get("invalid", False) and "power_consumption_kwh" in run
         ]
 
         result[boat_num][config].extend(values)
