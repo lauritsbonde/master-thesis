@@ -10,7 +10,8 @@ from typing import List
 # The drag force is calculated for a single boat
 """
 def drag(boat: Boat, coeficientOfDrag: float = 1.09) -> float:
-    return coeficientOfDrag * boat.areaUnderWater() * boat.speed**2.0 * boat.alpha  # Use boat.alpha
+    fudge_factor = 20_000
+    return fudge_factor * coeficientOfDrag * boat.areaUnderWater() * boat.speed**2.0 * boat.alpha  # Use boat.alpha
 
 """
     Calculate the power usage of the fleet

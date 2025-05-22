@@ -42,7 +42,7 @@ def create_hexagon_formation(n: int, speed: float = 1.0) -> List[Boat]:
     middle_index = 0
     for row in range(middle_rows):
         ships_in_level = last_row_width
-        if middle_index % 2:
+        if middle_index % 2 == 0:
             ships_in_level -= 1
 
         x_offset = -0.5 * (ships_in_level - 1) * spacing
@@ -59,8 +59,13 @@ def create_hexagon_formation(n: int, speed: float = 1.0) -> List[Boat]:
 
     # Step 4: Bottom pyramid (reversed)
     bottom_level = 1
+    middle_index = 0 if middle_rows % 2 == 0 else 1
     while current_ship < n:
-        ships_in_level = last_row_width - bottom_level
+        ships_in_level = last_row_width
+
+        if middle_index % 2 == 0:
+            ships_in_level -= 1
+
         if ships_in_level <= 0:
             break
 
@@ -70,10 +75,16 @@ def create_hexagon_formation(n: int, speed: float = 1.0) -> List[Boat]:
         for i in range(ships_in_level):
             if current_ship >= n:
                 break
-            x = x_offset + i * spacing
+
+            offset = (i + 1) // 2 * spacing
+            x = offset if i % 2 else -offset
+            x -= 0 if ships_in_level % 2 else spacing / 2  # shift even-numbered rows for symmetry
+            x -= 0  # optional global x offset
+
             positions.append((x, y))
             current_ship += 1
 
+        middle_index += 1
         bottom_level += 1
 
     # Create boats

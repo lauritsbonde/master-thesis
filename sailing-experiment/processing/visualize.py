@@ -260,7 +260,7 @@ def plot_power_and_speed_comparison_by_boat(power_data: dict, speed_data: dict, 
         ax2.set_ylabel("Speed (m/s)", color="green")
         ax1.set_xticks(positions)
         ax1.set_xticklabels(labels)
-        ax1.set_title(f"Boat {boat} — Power and Speed by Position")
+        ax1.set_title(f"Boat {boat} — Power and Speed by Position (double)")
         ax1.grid(True, axis="y")
 
         ax1.set_ylim(bottom=0)
@@ -270,3 +270,88 @@ def plot_power_and_speed_comparison_by_boat(power_data: dict, speed_data: dict, 
         out_path = f"{OUT_DIR}/{save_as}_boat{boat}.png"
         plt.savefig(out_path, bbox_inches="tight", dpi=300)
         plt.close()
+
+
+def extract_formation_data(data: dict, formations: list[str]) -> tuple[dict, dict]:
+    speed_result = {}
+    power_result = {}
+
+    for key, runs in data.items():
+        normalized_key = key.lower()
+        if normalized_key in formations:
+            speeds = [r["speed"] for r in runs if not r.get("invalid", False) and "speed" in r]
+            powers = [r["power_consumption_kwh"] for r in runs if not r.get("invalid", False) and "power_consumption_kwh" in r]
+
+            if speeds:
+                speed_result[normalized_key] = speeds
+            if powers:
+                power_result[normalized_key] = powers
+
+    return speed_result, power_result
+
+def plot_formation_comparison(speeds: dict, powers: dict, output_name: str):
+    import matplotlib.pyplot as plt
+    import os
+
+    formations = sorted(set(speeds) & set(powers))
+    if not formations:
+        print("No matching formation data.")
+        return
+
+    speed_data = [speeds[f] for f in formations]
+    power_data = [powers[f] for f in formations]
+    positions = list(range(len(formations)))
+    offset = 0.2
+
+    fig, ax1 = plt.subplots(figsize=(8, 5))
+    ax2 = ax1.twinx()
+
+    # Boxplots
+    bp1 = ax1.boxplot(
+        power_data,
+        positions=[p - offset for p in positions],
+        widths=0.3,
+        patch_artist=True,
+        boxprops=dict(facecolor="skyblue"),
+        medianprops=dict(color="blue"),
+    )
+    bp2 = ax2.boxplot(
+        speed_data,
+        positions=[p + offset for p in positions],
+        widths=0.3,
+        patch_artist=True,
+        boxprops=dict(facecolor="lightgreen"),
+        medianprops=dict(color="green"),
+    )
+
+    # Overlay individual points
+    for i, (p_vals, s_vals) in enumerate(zip(power_data, speed_data)):
+        ax1.scatter(
+            [i - offset] * len(p_vals),
+            p_vals,
+            color="blue",
+            edgecolors="black",
+            alpha=0.6,
+            zorder=3
+        )
+        ax2.scatter(
+            [i + offset] * len(s_vals),
+            s_vals,
+            color="green",
+            edgecolors="black",
+            alpha=0.6,
+            zorder=3
+        )
+
+    # Labels and formatting
+    ax1.set_ylabel("Power Consumption (kWh)", color="blue")
+    ax2.set_ylabel("Speed (m/s)", color="green")
+    ax1.set_xticks(positions)
+    ax1.set_xticklabels(formations, rotation=20)
+    ax1.set_title("Power and Speed Comparison")
+    ax1.grid(True)
+
+    fig.tight_layout()
+    os.makedirs(OUT_DIR, exist_ok=True)
+    plt.savefig(f"{OUT_DIR}/{output_name}.png", dpi=300)
+    plt.close()

@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Define the regex patterns
 HEADER_PATTERN = re.compile(r'^#(\d+) - (\d+)s(?: - (\w+))?$')
-DATA_PATTERN = re.compile(r'round:\s*(\d+);\s*currentMeasure:\s*([\d.]+);\s*elapsed:\s*(\d+)')
+DATA_PATTERN = re.compile(r'round:\s*(\d+);\s*currentMeasure:\s*(-?[\d.]+);\s*elapsed:\s*(\d+)')
 SECTION_HEADER_PATTERN = re.compile(r'^##\s*(.*)$')
 
 def parse_boat_file(filepath: Path):
@@ -44,10 +44,16 @@ def parse_boat_file(filepath: Path):
             data_match = DATA_PATTERN.match(line)
             if data_match:
                 round_num, measure, elapsed = data_match.groups()
-                current_run["measurements"].append({
-                    "current_measure": float(measure),
-                    "elapsed_ms": int(elapsed)
-                })
+                if current_run:
+                    # Convert to absolute value
+                    abs_current = abs(float(measure))
+
+                    # Append measurement data
+                    current_run["measurements"].append({
+                        "current_measure": abs_current,
+                        "elapsed_ms": int(elapsed),
+                        "watt": abs_current * 11.1,
+                    })
 
         # Add last run
         if current_run:

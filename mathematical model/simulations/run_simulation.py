@@ -38,7 +38,7 @@ def run_simulation_for_formation(
 ) -> dict:
     boats = formation_fn(number_of_boats, speed=speed)
 
-    power = calculatePowerUsage(boats)
+    power = calculatePowerUsage(boats, efficency=0.8)
     wh_per_meter = calculateWhPerDistance(boats, distance)
     kwh_used = calculateTotalEnergyKWh(boats, distance)
 
@@ -90,7 +90,7 @@ def run_simulation(with_plot: bool = False, export_csv: bool = True):
     generated_formations = {
             "elongated-hexagon": {
                 "fn": create_hexagon_formation,
-                "boats": 20,
+                "boats": 24,
                 "distance": 100,
             },
             "pyramid-to-line": {

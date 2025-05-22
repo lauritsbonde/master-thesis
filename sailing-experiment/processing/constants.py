@@ -1,4 +1,4 @@
-DATA_DIR = "../data/19 maj"
+DATA_DIR = "../data/"
 OUT_DIR = "../out"
 
 SAILING_DISTANCE = 13.5 # meters (m)

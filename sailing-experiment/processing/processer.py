@@ -13,32 +13,25 @@ def find_speed(duration_s):
     speed = SAILING_DISTANCE / duration_s
     return speed
 
-def find_power_consumption_kwh(measurements, duration_s):
-    """
-    Calculate the energy consumption in kilowatt-hours (kWh)
-    using average current and fixed voltage.
+def integrate_power_kwh(measurements, duration_s):
+    if not measurements or len(measurements) < 2:
+        raise ValueError("At least two measurements are required.")
 
-    :param measurements: List of dicts with "current_measure" (in amps)
-    :param duration_s: Duration in seconds
-    :return: Power consumption in kWh
-    """
-    if duration_s <= 0:
-        raise ValueError("Duration must be greater than zero.")
-    if not measurements:
-        raise ValueError("No measurements provided.")
+    total_energy_ws = 0.0  # watt-seconds
 
-    total_current = sum(m["current_measure"] for m in measurements)
-    average_current = total_current / len(measurements)
+    for i in range(1, len(measurements)):
+        prev = measurements[i - 1]
+        curr = measurements[i]
 
-    # Energy in joules: P = I * V * t
-    energy_joules = average_current * NOMINAL_VOLTAGE * duration_s
+        dt = (curr["elapsed_ms"] - prev["elapsed_ms"]) / 1000  # seconds
+        avg_power = (prev["watt"] + curr["watt"]) / 2
 
-    # Convert to kWh - 1 kWh = 3.6 million joules
-    energy_kwh = energy_joules / 3_600_000
-    return energy_kwh
+        total_energy_ws += avg_power * dt
+
+    return total_energy_ws / 3600000  # convert to kWh
 
 def process_run(data):
   return {
     "speed": find_speed(data["duration_s"]),
-    "power_consumption_kwh": find_power_consumption_kwh(data["measurements"], data["duration_s"])
+    "power_consumption_kwh": integrate_power_kwh(data["measurements"], data["duration_s"])
   }
