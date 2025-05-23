@@ -9,7 +9,7 @@ from boats.boat import Boat, BOAT_SHAPE
 def translate_shape(shape, dx, dy):
     return [(x + dx, y + dy) for x, y in shape]
 
-def plot_formation(boats: list[Boat], title: str = "Boat Formation", show_plot: bool = True):
+def plot_formation(boats: list[Boat], title: str = "Boat Formation", show_plot: bool = True, real_world: bool = False):
     alphas = [boat.alpha for boat in boats]
     norm = plt.Normalize(min(alphas), max(alphas))
     base_cmap = cm.get_cmap("viridis", 256)
@@ -55,7 +55,7 @@ def plot_formation(boats: list[Boat], title: str = "Boat Formation", show_plot: 
     ax.invert_yaxis()
 
     # save the plot
-    save_path = f"plots/{title.replace(' ', '_').lower()}.png"
+    save_path = f"plots/{"validation" if real_world == True else "scaled" }/{title.replace(' ', '_').lower()}.png"
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
     plt.savefig(save_path, bbox_inches="tight", dpi=300)
     print(f"Saved plot to {save_path}")

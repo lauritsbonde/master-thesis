@@ -82,7 +82,7 @@ def create_single_boat(n: int, speed: int = 1) -> List[Boat]:
 
 def create_boats_from_positions(positions: List[Tuple[float, float]], speed: int = 1) -> List[Boat]:
     boats = [
-        Boat(id=i, width=0.21, length=0.32, height=0.12, weight=BOAT_WEIGHT, speed=speed, alpha=1.0, position=pos)
+        Boat(id=i, speed=speed, alpha=1.0, position=pos)
         for i, pos in enumerate(positions)
     ]
 

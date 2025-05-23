@@ -1,5 +1,5 @@
 class Boat:
-    def __init__(self,id, width, length, height, weight, speed=0.0, alpha=1.0, position=None):
+    def __init__(self,id, width=0.210, length=0.320, height=0.110, weight=5, speed=0.0, alpha=1.0, position=None):
         self.id = id  # unique identifier for the boat (index)
         self.width = width  # meter
         self.length = length  # meter
@@ -19,7 +19,9 @@ class Boat:
 
     ## Calculate the area of the box under water pressing against the water
     def areaUnderWater(self) -> float:
-        return self.boxDeep() * self.width
+        hull_area = self.boxDeep() * self.width
+        motor_holder_area = 0.01 * self.width
+        return hull_area + motor_holder_area
 
     def compute_power_usage(self, base_drag: float) -> float:
         # Power = Drag * some factor (simplified model)

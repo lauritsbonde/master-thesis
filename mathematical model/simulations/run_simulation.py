@@ -19,30 +19,24 @@ import csv
 import os
 
 
-def print_stats(boats: List[Boat], number_of_boats: int, distance: float):
-    power = calculatePowerUsage(boats, efficency=0.8)
-    wh_per_meter = calculateWhPerDistance(boats, distance)
-
-    print(f"Total Power: {power:.2f} W")
-    print(f"Power per boat: {power / number_of_boats:.2f} W")
-    print(f"Wh per distance: {wh_per_meter:.4f} Wh/m")
-
-
 def run_simulation_for_formation(
     name: str,
     formation_fn: Callable[..., List[Boat]],
     number_of_boats: int,
     distance: float,
     with_plot: bool,
+    real_world: bool = False,
     speed: float = 1.0,
 ) -> dict:
     boats = formation_fn(number_of_boats, speed=speed)
 
-    power = calculatePowerUsage(boats, efficency=0.8)
-    wh_per_meter = calculateWhPerDistance(boats, distance)
-    kwh_used = calculateTotalEnergyKWh(boats, distance)
+    print()
 
-    plot_formation(boats, name, with_plot)
+    power = calculatePowerUsage(boats, efficency=0.5)
+    wh_per_meter = calculateWhPerDistance(boats, distance, power)
+    kwh_used = calculateTotalEnergyKWh(boats, distance, power)
+
+    plot_formation(boats, name, with_plot, real_world)
 
     return {
         "Formation": name,
@@ -56,6 +50,8 @@ def run_simulation_for_formation(
 
 def run_simulation(with_plot: bool = False, export_csv: bool = True):
     os.makedirs("out", exist_ok=True)
+
+    print("double speed", find_double_speed())
 
     real_world_formations = {
         # "triangle": {
@@ -73,12 +69,12 @@ def run_simulation(with_plot: bool = False, export_csv: bool = True):
         #     "boats": 3,
         #     "distance": SAILING_DISTANCE,
         # },
-        # "double": {
-        #     "fn": create_double,
-        #     "boats": 2,
-        #     "distance": SAILING_DISTANCE,
-        #     "speed": find_double_speed(),
-        # },
+        "double": {
+            "fn": create_double,
+            "boats": 2,
+            "distance": SAILING_DISTANCE,
+            "speed": find_double_speed(),
+        },
         "singlerun": {
             "fn": create_single_boat,
             "boats": 1,
@@ -105,7 +101,7 @@ def run_simulation(with_plot: bool = False, export_csv: bool = True):
             },
         }
 
-    def run_batch(name_config_map):
+    def run_batch(name_config_map, real_world):
         results = []
         for name, cfg in name_config_map.items():
             result = run_simulation_for_formation(
@@ -115,21 +111,33 @@ def run_simulation(with_plot: bool = False, export_csv: bool = True):
                 distance=cfg["distance"],
                 with_plot=with_plot,
                 speed=cfg["speed"] if "speed" in cfg else 1.0,
+                real_world=real_world,
             )
             results.append(result)
         return results
 
-    real_world_results = run_batch(real_world_formations)
-    validate_with_real_experiment(real_world_results)
-    generated_results = run_batch(generated_formations)
+    real_world_results = run_batch(real_world_formations, True)
+    validation = validate_with_real_experiment(real_world_results)
+    print("Valid results", len(validation["valid"]), "Suspicious results", len(validation["suspicious"]))
+    generated_results = run_batch(generated_formations, False)
 
     # Export to CSV
     if export_csv:
         def save_csv(path, data):
+            def format_row(row):
+                return {
+                    k: (
+                        f"{v:.3e}" if isinstance(v, float) and abs(v) < 0.01 else
+                        f"{v:.6f}" if isinstance(v, float) else
+                        v
+                    )
+                    for k, v in row.items()
+                }
+
             with open(path, "w", newline="") as f:
                 writer = csv.DictWriter(f, fieldnames=data[0].keys())
                 writer.writeheader()
-                writer.writerows(data)
+                writer.writerows([format_row(row) for row in data])
 
         save_csv("out/real_world_results.csv", real_world_results)
         save_csv("out/generated_results.csv", generated_results)

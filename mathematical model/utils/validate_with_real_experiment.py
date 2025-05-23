@@ -29,7 +29,7 @@ def find_double_speed():
     for key, runs in data.items():
         if "double" in key:
             for run in runs:
-                if not run.get("invalid", False) and run.get("_2_", False) and "speed" in run:
+                if not run.get("invalid", False) and "_2_" not in run and "speed" in run:
                     speeds.append(run["speed"])
 
     if not speeds:
@@ -110,28 +110,65 @@ def percentage_diff(a: float, b: float) -> float:
         return float('inf')  # avoid division by zero
     return abs(a - b) / abs(a) * 100
 
+def percentage_diff_smart(a: float, b: float, min_threshold: float = 0.001) -> float:
+    # If both are very small, use absolute difference
+    if abs(a) < min_threshold and abs(b) < min_threshold:
+        return 0.0  # treat as no significant difference
+    if abs(a) < min_threshold or abs(b) < min_threshold:
+        return float('inf')  # one is basically zero, huge mismatch
+    return abs(a - b) / max(abs(a), abs(b)) * 100
+
 def validate_with_real_experiment(results):
     data = read_real_world_file()
     if data is None:
         print("No data to validate against.")
-        return
+        return {"valid": [], "suspicious": []}
+
+    valid_runs = []
+    suspicious_runs = []
 
     for result in results:
         simulated_kwh = result["Total Energy (kWh)"]
-        simulated_speed = result["Power per Boat (W)"]
+        simulated_speed = result.get("Speed")
         formation_name = result["Formation"]
 
-        # Match with keys in real data
         for key, runs in data.items():
-            if formation_name in key:  # "double" in "boat_3_double_back", etc.
-                for run in runs:
-                    if not run.get("invalid", False):
-                        if "power_consumption_kwh" in run:
-                            diff = percentage_diff(run["power_consumption_kwh"], simulated_kwh)
-                            if diff > 10:
-                                print(f"⚠️  {key} kWh mismatch: {run['power_consumption_kwh']:.6f} vs {simulated_kwh:.6f} ({diff:.2f}%)")
+            if formation_name not in key:
+                continue
 
-                        if "speed" in run:
-                            diff = percentage_diff(run["speed"], result.get("Speed", run["speed"]))  # use stored result or estimate
-                            if diff > 10:
-                                print(f"⚠️  {key} speed mismatch: {run['speed']:.3f} vs {simulated_speed:.3f} ({diff:.2f}%)")
+            for run in runs:
+                if run.get("invalid", False):
+                    continue
+
+                entry = {"key": key}
+                is_suspicious = False
+
+                # Check kWh
+                if "power_consumption_kwh" in run:
+                    real_kwh = run["power_consumption_kwh"]
+                    diff_kwh = percentage_diff_smart(real_kwh, simulated_kwh)
+                    entry.update({
+                        "simulated_kwh": simulated_kwh,
+                        "real_kwh": real_kwh,
+                        "kwh_diff_pct": diff_kwh
+                    })
+                    if diff_kwh > 10:
+                        is_suspicious = True
+                        print(f"⚠️  {key} kWh mismatch: {real_kwh:.6f} vs {simulated_kwh:.6f} ({diff_kwh:.2f}%)")
+
+                # Check speed
+                if "speed" in run and simulated_speed is not None:
+                    real_speed = run["speed"]
+                    diff_speed = percentage_diff_smart(real_speed, simulated_speed)
+                    entry.update({
+                        "simulated_speed": simulated_speed,
+                        "real_speed": real_speed,
+                        "speed_diff_pct": diff_speed
+                    })
+                    if diff_speed > 10:
+                        is_suspicious = True
+                        print(f"⚠️  {key} speed mismatch: {real_speed:.3f} vs {simulated_speed:.3f} ({diff_speed:.2f}%)")
+
+                (suspicious_runs if is_suspicious else valid_runs).append(entry)
+
+    return {"valid": valid_runs, "suspicious": suspicious_runs}
