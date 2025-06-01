@@ -1,4 +1,4 @@
-#1 - 30s
+ #1 - 30s
 round: 1; currentMeasure: 3.47; elapsed: 1242
 round: 1; currentMeasure: 3.47; elapsed: 2534
 round: 1; currentMeasure: 3.47; elapsed: 3718
