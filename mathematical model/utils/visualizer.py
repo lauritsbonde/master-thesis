@@ -32,8 +32,8 @@ def plot_formation(boats: list[Boat], title: str = "Boat Formation", show_plot: 
         shape = translate_shape(BOAT_SHAPE, *boat.position)
         polygon = patches.Polygon(shape, closed=True, facecolor=color, edgecolor='black')
         ax.add_patch(polygon)
-        ax.text(boat.position[0], boat.position[1] - 0.4, f"ID: {i}", ha='center', fontsize=9)
-        ax.text(boat.position[0], boat.position[1] + 0.4, f"Alpha: {boat.alpha:.2f}", ha='center', fontsize=9)
+        # ax.text(boat.position[0], boat.position[1] - 0.4, f"ID: {i}", ha='center', fontsize=9)
+        ax.text(boat.position[0], boat.position[1], f"α: {boat.alpha:.2f}", ha='center', fontsize=9)
 
     # After drawing all polygons
     all_x = [boat.position[0] for boat in boats]

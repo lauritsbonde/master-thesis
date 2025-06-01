@@ -25,4 +25,4 @@ def calculate_alpha(position: tuple[float, float], neighbors: list[tuple[float, 
                 side_influence += 0.5 / distance
 
     raw_alpha = 1.0 - (0.2 * front_influence + 0.1 * side_influence)
-    return max(0.5, min(raw_alpha, 1.0))
+    return max(0.05, min(raw_alpha, 1.0))

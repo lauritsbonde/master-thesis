@@ -1,4 +1,4 @@
-Formation,Boats,Distance,Total Power (W),Power per Boat (W),Wh per Meter,Total Energy (kWh)
-elongated-hexagon,24,100,364.504228,15.187676,0.101251,0.010125
-pyramid-to-line,20,100,312.184631,15.609232,0.086718,8.672e-03
-v-shape,15,90,272.084718,18.138981,0.075579,6.802e-03
+Formation,Boats,Distance,Speed (m/s),Total Power (W),Power per Boat (W),Wh per Meter,Total Energy (kWh)
+elongated-hexagon,24,100,1.00,126.84,5.29,3.523e-02,3.523e-03
+pyramid-to-line,24,100,1.00,128.24,5.34,3.562e-02,3.562e-03
+v-shape,24,100,1.00,196.27,8.18,5.452e-02,5.452e-03
