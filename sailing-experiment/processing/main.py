@@ -31,7 +31,7 @@ if __name__ == "__main__":
         for file in files:
             try:
                 runs = []
-                if "diagonal" in file.name or "line" in file.name or "pyramid" in file.name:
+                if "diagonal" in file.name or "offset line" in file.name or "triangle" in file.name:
                     runs = parse_group_run_file(file)
                 else:
                     runs = parse_boat_file(file)
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     plot_power_and_speed_comparison_by_boat(power_data, speed_data, save_as="power_speed_by_boat_double")
 
     # Existing extraction for formations
-    formations = ["diagonal", "line", "pyramid"]
+    formations = ["diagonal", "offset line", "triangle"]
     formation_speeds, formation_powers = extract_formation_data(all_runs_by_file, formations)
 
     # Existing singlerun extraction

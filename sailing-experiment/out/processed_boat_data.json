@@ -12940,1780 +12940,7 @@
       "power_consumption_kwh": 0.000215081185
     }
   ],
-  "line": [
-    {
-      "section": "1,2,3 - right",
-      "run_number": 1,
-      "duration_s": 46,
-      "boat_id": "boat-1",
-      "invalid": false,
-      "measurements": [
-        {
-          "current_measure": 3.8,
-          "elapsed_ms": 1195,
-          "watt": 42.18
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 2384,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 3571,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 4759,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 5948,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 7136,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 8324,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 9520,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 10708,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 11896,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 13083,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 14272,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 15460,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 16648,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 17837,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 19025,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 20212,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 21402,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 22590,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 23779,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 24967,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 26155,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 27343,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 28530,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 29719,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 30907,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 32096,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 33284,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 34474,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 35663,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 36850,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 38038,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 39227,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 40415,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.88,
-          "elapsed_ms": 41604,
-          "watt": 43.068
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 42791,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.9,
-          "elapsed_ms": 43980,
-          "watt": 43.29
-        },
-        {
-          "current_measure": 3.91,
-          "elapsed_ms": 45167,
-          "watt": 43.401
-        },
-        {
-          "current_measure": 3.91,
-          "elapsed_ms": 46399,
-          "watt": 43.401
-        },
-        {
-          "current_measure": 3.61,
-          "elapsed_ms": 47587,
-          "watt": 40.071
-        },
-        {
-          "current_measure": 3.63,
-          "elapsed_ms": 48775,
-          "watt": 40.293
-        },
-        {
-          "current_measure": 3.64,
-          "elapsed_ms": 49964,
-          "watt": 40.404
-        },
-        {
-          "current_measure": 3.69,
-          "elapsed_ms": 51152,
-          "watt": 40.958999999999996
-        },
-        {
-          "current_measure": 3.73,
-          "elapsed_ms": 52339,
-          "watt": 41.403
-        },
-        {
-          "current_measure": 3.69,
-          "elapsed_ms": 53528,
-          "watt": 40.958999999999996
-        }
-      ],
-      "date": "20 maj",
-      "speed": 0.29347826086956524,
-      "power_consumption_kwh": 0.0006214461879166667
-    },
-    {
-      "section": "1,2,3 - right",
-      "run_number": 1,
-      "duration_s": 46,
-      "boat_id": "boat-3",
-      "invalid": false,
-      "measurements": [
-        {
-          "current_measure": 6.51,
-          "elapsed_ms": 1195,
-          "watt": 72.261
-        },
-        {
-          "current_measure": 7.96,
-          "elapsed_ms": 2383,
-          "watt": 88.356
-        },
-        {
-          "current_measure": 8.2,
-          "elapsed_ms": 3570,
-          "watt": 91.02
-        },
-        {
-          "current_measure": 8.22,
-          "elapsed_ms": 4757,
-          "watt": 91.242
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 5942,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 7128,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 8315,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 9501,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 10688,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 11873,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 13061,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 14247,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 15436,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 16623,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 17809,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 18995,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 20181,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 21368,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 22554,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 23740,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 24926,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 26112,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.24,
-          "elapsed_ms": 27301,
-          "watt": 91.464
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 28488,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 29674,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 30860,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 32046,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 33233,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 34419,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 35606,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 36793,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 37978,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.23,
-          "elapsed_ms": 39173,
-          "watt": 91.35300000000001
-        },
-        {
-          "current_measure": 8.17,
-          "elapsed_ms": 40403,
-          "watt": 90.687
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 41590,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 42776,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 43964,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 45149,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 46336,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 47522,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 48710,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.24,
-          "elapsed_ms": 49896,
-          "watt": 91.464
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 51082,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 52270,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 53457,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.24,
-          "elapsed_ms": 54644,
-          "watt": 91.464
-        }
-      ],
-      "date": "20 maj",
-      "speed": 0.29347826086956524,
-      "power_consumption_kwh": 0.0013573469425000003
-    },
-    {
-      "section": "1,2,3 - right",
-      "run_number": 2,
-      "duration_s": 46,
-      "boat_id": "boat-1",
-      "invalid": false,
-      "measurements": [
-        {
-          "current_measure": 3.64,
-          "elapsed_ms": 1195,
-          "watt": 40.404
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 2382,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 3570,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 4758,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 5996,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 7184,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.72,
-          "elapsed_ms": 8373,
-          "watt": 41.292
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 9561,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 10748,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.72,
-          "elapsed_ms": 11937,
-          "watt": 41.292
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 13125,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 14313,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 15502,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 16690,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 17880,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 19067,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 20256,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 21444,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 22633,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 23821,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 25009,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 26198,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.7,
-          "elapsed_ms": 27385,
-          "watt": 41.07
-        },
-        {
-          "current_measure": 3.71,
-          "elapsed_ms": 28573,
-          "watt": 41.181
-        },
-        {
-          "current_measure": 3.7,
-          "elapsed_ms": 29762,
-          "watt": 41.07
-        },
-        {
-          "current_measure": 3.7,
-          "elapsed_ms": 30952,
-          "watt": 41.07
-        },
-        {
-          "current_measure": 3.7,
-          "elapsed_ms": 32141,
-          "watt": 41.07
-        },
-        {
-          "current_measure": 3.7,
-          "elapsed_ms": 33329,
-          "watt": 41.07
-        },
-        {
-          "current_measure": 3.7,
-          "elapsed_ms": 34517,
-          "watt": 41.07
-        },
-        {
-          "current_measure": 3.69,
-          "elapsed_ms": 35704,
-          "watt": 40.958999999999996
-        },
-        {
-          "current_measure": 3.69,
-          "elapsed_ms": 36892,
-          "watt": 40.958999999999996
-        },
-        {
-          "current_measure": 3.69,
-          "elapsed_ms": 38081,
-          "watt": 40.958999999999996
-        },
-        {
-          "current_measure": 3.69,
-          "elapsed_ms": 39269,
-          "watt": 40.958999999999996
-        },
-        {
-          "current_measure": 3.69,
-          "elapsed_ms": 40458,
-          "watt": 40.958999999999996
-        },
-        {
-          "current_measure": 3.69,
-          "elapsed_ms": 41646,
-          "watt": 40.958999999999996
-        },
-        {
-          "current_measure": 3.69,
-          "elapsed_ms": 42836,
-          "watt": 40.958999999999996
-        },
-        {
-          "current_measure": 3.7,
-          "elapsed_ms": 44024,
-          "watt": 41.07
-        },
-        {
-          "current_measure": 3.7,
-          "elapsed_ms": 45212,
-          "watt": 41.07
-        },
-        {
-          "current_measure": 3.61,
-          "elapsed_ms": 46401,
-          "watt": 40.071
-        }
-      ],
-      "date": "20 maj",
-      "speed": 0.29347826086956524,
-      "power_consumption_kwh": 0.0005160746895833334
-    },
-    {
-      "section": "1,2,3 - right",
-      "run_number": 2,
-      "duration_s": 46,
-      "boat_id": "boat-3",
-      "invalid": false,
-      "measurements": [
-        {
-          "current_measure": 5.85,
-          "elapsed_ms": 1195,
-          "watt": 64.93499999999999
-        },
-        {
-          "current_measure": 7.69,
-          "elapsed_ms": 2382,
-          "watt": 85.359
-        },
-        {
-          "current_measure": 8.14,
-          "elapsed_ms": 3568,
-          "watt": 90.354
-        },
-        {
-          "current_measure": 8.22,
-          "elapsed_ms": 4755,
-          "watt": 91.242
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 5941,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.22,
-          "elapsed_ms": 7127,
-          "watt": 91.242
-        },
-        {
-          "current_measure": 8.2,
-          "elapsed_ms": 8313,
-          "watt": 91.02
-        },
-        {
-          "current_measure": 8.22,
-          "elapsed_ms": 9502,
-          "watt": 91.242
-        },
-        {
-          "current_measure": 8.24,
-          "elapsed_ms": 10689,
-          "watt": 91.464
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 11875,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.24,
-          "elapsed_ms": 13062,
-          "watt": 91.464
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 14247,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 15434,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.16,
-          "elapsed_ms": 16663,
-          "watt": 90.576
-        },
-        {
-          "current_measure": 8.23,
-          "elapsed_ms": 17850,
-          "watt": 91.35300000000001
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 19037,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 20223,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 21412,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.24,
-          "elapsed_ms": 22598,
-          "watt": 91.464
-        },
-        {
-          "current_measure": 8.23,
-          "elapsed_ms": 23785,
-          "watt": 91.35300000000001
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 24971,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 26156,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 27343,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 28529,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.24,
-          "elapsed_ms": 29716,
-          "watt": 91.464
-        },
-        {
-          "current_measure": 8.24,
-          "elapsed_ms": 30904,
-          "watt": 91.464
-        },
-        {
-          "current_measure": 8.23,
-          "elapsed_ms": 32089,
-          "watt": 91.35300000000001
-        },
-        {
-          "current_measure": 8.2,
-          "elapsed_ms": 33284,
-          "watt": 91.02
-        },
-        {
-          "current_measure": 8.22,
-          "elapsed_ms": 34470,
-          "watt": 91.242
-        },
-        {
-          "current_measure": 8.24,
-          "elapsed_ms": 35657,
-          "watt": 91.464
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 36844,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.24,
-          "elapsed_ms": 38031,
-          "watt": 91.464
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 39218,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.23,
-          "elapsed_ms": 40404,
-          "watt": 91.35300000000001
-        },
-        {
-          "current_measure": 8.23,
-          "elapsed_ms": 41590,
-          "watt": 91.35300000000001
-        },
-        {
-          "current_measure": 8.22,
-          "elapsed_ms": 42778,
-          "watt": 91.242
-        },
-        {
-          "current_measure": 8.22,
-          "elapsed_ms": 43964,
-          "watt": 91.242
-        },
-        {
-          "current_measure": 8.23,
-          "elapsed_ms": 45152,
-          "watt": 91.35300000000001
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 46340,
-          "watt": 91.68599999999999
-        }
-      ],
-      "date": "20 maj",
-      "speed": 0.29347826086956524,
-      "power_consumption_kwh": 0.0011401902579166667
-    },
-    {
-      "section": "1,2,3 - left",
-      "run_number": 1,
-      "duration_s": 50,
-      "boat_id": "boat-1",
-      "invalid": false,
-      "measurements": [
-        {
-          "current_measure": 3.78,
-          "elapsed_ms": 1195,
-          "watt": 41.958
-        },
-        {
-          "current_measure": 3.85,
-          "elapsed_ms": 2383,
-          "watt": 42.735
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 3572,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 4760,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 5948,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.85,
-          "elapsed_ms": 7135,
-          "watt": 42.735
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 8324,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 9519,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.85,
-          "elapsed_ms": 10708,
-          "watt": 42.735
-        },
-        {
-          "current_measure": 3.85,
-          "elapsed_ms": 11896,
-          "watt": 42.735
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 13085,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 14272,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 15501,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 16690,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 17879,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 19067,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 20255,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 21445,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.86,
-          "elapsed_ms": 22634,
-          "watt": 42.846
-        },
-        {
-          "current_measure": 3.87,
-          "elapsed_ms": 23823,
-          "watt": 42.957
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 25010,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 26198,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 27387,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 28575,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 29763,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 30951,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 32138,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 33327,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 34560,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 3.9,
-          "elapsed_ms": 35748,
-          "watt": 43.29
-        },
-        {
-          "current_measure": 3.9,
-          "elapsed_ms": 36936,
-          "watt": 43.29
-        },
-        {
-          "current_measure": 3.9,
-          "elapsed_ms": 38125,
-          "watt": 43.29
-        },
-        {
-          "current_measure": 3.91,
-          "elapsed_ms": 39314,
-          "watt": 43.401
-        },
-        {
-          "current_measure": 3.91,
-          "elapsed_ms": 40500,
-          "watt": 43.401
-        },
-        {
-          "current_measure": 3.9,
-          "elapsed_ms": 41689,
-          "watt": 43.29
-        },
-        {
-          "current_measure": 3.91,
-          "elapsed_ms": 42877,
-          "watt": 43.401
-        },
-        {
-          "current_measure": 3.9,
-          "elapsed_ms": 44065,
-          "watt": 43.29
-        },
-        {
-          "current_measure": 3.9,
-          "elapsed_ms": 45254,
-          "watt": 43.29
-        },
-        {
-          "current_measure": 3.91,
-          "elapsed_ms": 46444,
-          "watt": 43.401
-        },
-        {
-          "current_measure": 3.91,
-          "elapsed_ms": 47633,
-          "watt": 43.401
-        },
-        {
-          "current_measure": 3.91,
-          "elapsed_ms": 48820,
-          "watt": 43.401
-        },
-        {
-          "current_measure": 3.89,
-          "elapsed_ms": 50008,
-          "watt": 43.179
-        },
-        {
-          "current_measure": 4.0,
-          "elapsed_ms": 51197,
-          "watt": 44.4
-        }
-      ],
-      "date": "20 maj",
-      "speed": 0.27,
-      "power_consumption_kwh": 0.0005982256354166665
-    },
-    {
-      "section": "1,2,3 - left",
-      "run_number": 1,
-      "duration_s": 50,
-      "boat_id": "boat-3",
-      "invalid": false,
-      "measurements": [
-        {
-          "current_measure": 6.16,
-          "elapsed_ms": 1195,
-          "watt": 68.376
-        },
-        {
-          "current_measure": 7.87,
-          "elapsed_ms": 2382,
-          "watt": 87.357
-        },
-        {
-          "current_measure": 8.19,
-          "elapsed_ms": 3567,
-          "watt": 90.90899999999999
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 4755,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 5941,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 7129,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.17,
-          "elapsed_ms": 8358,
-          "watt": 90.687
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 9543,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 10731,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 11919,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 13106,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.32,
-          "elapsed_ms": 14292,
-          "watt": 92.352
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 15479,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 16664,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 17851,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.31,
-          "elapsed_ms": 19038,
-          "watt": 92.241
-        },
-        {
-          "current_measure": 8.31,
-          "elapsed_ms": 20225,
-          "watt": 92.241
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 21411,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 22597,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 23786,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 24972,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 26159,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.31,
-          "elapsed_ms": 27345,
-          "watt": 92.241
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 28530,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 29717,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.31,
-          "elapsed_ms": 30903,
-          "watt": 92.241
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 32090,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 33277,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 34464,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 35650,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 36844,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 38031,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 39217,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 40405,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 41591,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 42777,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 43964,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.18,
-          "elapsed_ms": 45193,
-          "watt": 90.79799999999999
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 46381,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 47567,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.23,
-          "elapsed_ms": 48756,
-          "watt": 91.35300000000001
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 49942,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.32,
-          "elapsed_ms": 51129,
-          "watt": 92.352
-        },
-        {
-          "current_measure": 8.24,
-          "elapsed_ms": 52316,
-          "watt": 91.464
-        }
-      ],
-      "date": "20 maj",
-      "speed": 0.27,
-      "power_consumption_kwh": 0.0012991765445833333
-    },
-    {
-      "section": "1,2,3 - left",
-      "run_number": 2,
-      "duration_s": 45,
-      "boat_id": "boat-1",
-      "invalid": false,
-      "measurements": [
-        {
-          "current_measure": 3.97,
-          "elapsed_ms": 1194,
-          "watt": 44.067
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 2383,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 3571,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.03,
-          "elapsed_ms": 4759,
-          "watt": 44.733000000000004
-        },
-        {
-          "current_measure": 4.03,
-          "elapsed_ms": 5947,
-          "watt": 44.733000000000004
-        },
-        {
-          "current_measure": 4.03,
-          "elapsed_ms": 7135,
-          "watt": 44.733000000000004
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 8331,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.03,
-          "elapsed_ms": 9519,
-          "watt": 44.733000000000004
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 10707,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 11896,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 13083,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 14272,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 15459,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 16647,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 17836,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 19024,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.03,
-          "elapsed_ms": 20215,
-          "watt": 44.733000000000004
-        },
-        {
-          "current_measure": 4.03,
-          "elapsed_ms": 21403,
-          "watt": 44.733000000000004
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 22590,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 4.04,
-          "elapsed_ms": 23778,
-          "watt": 44.844
-        },
-        {
-          "current_measure": 3.98,
-          "elapsed_ms": 24966,
-          "watt": 44.178
-        },
-        {
-          "current_measure": 3.96,
-          "elapsed_ms": 26154,
-          "watt": 43.955999999999996
-        },
-        {
-          "current_measure": 3.95,
-          "elapsed_ms": 27342,
-          "watt": 43.845
-        },
-        {
-          "current_measure": 3.95,
-          "elapsed_ms": 28531,
-          "watt": 43.845
-        },
-        {
-          "current_measure": 3.95,
-          "elapsed_ms": 29719,
-          "watt": 43.845
-        },
-        {
-          "current_measure": 3.95,
-          "elapsed_ms": 30907,
-          "watt": 43.845
-        },
-        {
-          "current_measure": 3.95,
-          "elapsed_ms": 32095,
-          "watt": 43.845
-        },
-        {
-          "current_measure": 3.96,
-          "elapsed_ms": 33327,
-          "watt": 43.955999999999996
-        },
-        {
-          "current_measure": 3.96,
-          "elapsed_ms": 34515,
-          "watt": 43.955999999999996
-        },
-        {
-          "current_measure": 3.96,
-          "elapsed_ms": 35704,
-          "watt": 43.955999999999996
-        },
-        {
-          "current_measure": 3.95,
-          "elapsed_ms": 36891,
-          "watt": 43.845
-        },
-        {
-          "current_measure": 3.95,
-          "elapsed_ms": 38080,
-          "watt": 43.845
-        },
-        {
-          "current_measure": 3.95,
-          "elapsed_ms": 39267,
-          "watt": 43.845
-        },
-        {
-          "current_measure": 3.96,
-          "elapsed_ms": 40455,
-          "watt": 43.955999999999996
-        },
-        {
-          "current_measure": 3.95,
-          "elapsed_ms": 41644,
-          "watt": 43.845
-        },
-        {
-          "current_measure": 3.95,
-          "elapsed_ms": 42832,
-          "watt": 43.845
-        },
-        {
-          "current_measure": 3.95,
-          "elapsed_ms": 44021,
-          "watt": 43.845
-        },
-        {
-          "current_measure": 3.93,
-          "elapsed_ms": 45210,
-          "watt": 43.623
-        },
-        {
-          "current_measure": 3.78,
-          "elapsed_ms": 46399,
-          "watt": 41.958
-        },
-        {
-          "current_measure": 3.77,
-          "elapsed_ms": 47586,
-          "watt": 41.847
-        }
-      ],
-      "date": "20 maj",
-      "speed": 0.3,
-      "power_consumption_kwh": 0.0005703678729166667
-    },
-    {
-      "section": "1,2,3 - left",
-      "run_number": 2,
-      "duration_s": 45,
-      "boat_id": "boat-3",
-      "invalid": false,
-      "measurements": [
-        {
-          "current_measure": 5.92,
-          "elapsed_ms": 1195,
-          "watt": 65.712
-        },
-        {
-          "current_measure": 7.74,
-          "elapsed_ms": 2381,
-          "watt": 85.914
-        },
-        {
-          "current_measure": 8.17,
-          "elapsed_ms": 3568,
-          "watt": 90.687
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 4754,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.31,
-          "elapsed_ms": 5941,
-          "watt": 92.241
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 7127,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 8316,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 9502,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 10689,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 11875,
-          "watt": 92.01899999999999
-        },
-        {
-          "current_measure": 8.31,
-          "elapsed_ms": 13062,
-          "watt": 92.241
-        },
-        {
-          "current_measure": 8.32,
-          "elapsed_ms": 14247,
-          "watt": 92.352
-        },
-        {
-          "current_measure": 8.32,
-          "elapsed_ms": 15434,
-          "watt": 92.352
-        },
-        {
-          "current_measure": 8.32,
-          "elapsed_ms": 16621,
-          "watt": 92.352
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 17808,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.33,
-          "elapsed_ms": 18994,
-          "watt": 92.463
-        },
-        {
-          "current_measure": 8.33,
-          "elapsed_ms": 20182,
-          "watt": 92.463
-        },
-        {
-          "current_measure": 8.33,
-          "elapsed_ms": 21369,
-          "watt": 92.463
-        },
-        {
-          "current_measure": 8.32,
-          "elapsed_ms": 22555,
-          "watt": 92.352
-        },
-        {
-          "current_measure": 8.23,
-          "elapsed_ms": 23785,
-          "watt": 91.35300000000001
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 24972,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.25,
-          "elapsed_ms": 26157,
-          "watt": 91.575
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 27343,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.34,
-          "elapsed_ms": 28531,
-          "watt": 92.574
-        },
-        {
-          "current_measure": 8.31,
-          "elapsed_ms": 29717,
-          "watt": 92.241
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 30904,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 32091,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.32,
-          "elapsed_ms": 33284,
-          "watt": 92.352
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 34471,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 35657,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.31,
-          "elapsed_ms": 36843,
-          "watt": 92.241
-        },
-        {
-          "current_measure": 8.31,
-          "elapsed_ms": 38030,
-          "watt": 92.241
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 39216,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 40403,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.28,
-          "elapsed_ms": 41589,
-          "watt": 91.90799999999999
-        },
-        {
-          "current_measure": 8.3,
-          "elapsed_ms": 42777,
-          "watt": 92.13000000000001
-        },
-        {
-          "current_measure": 8.26,
-          "elapsed_ms": 43964,
-          "watt": 91.68599999999999
-        },
-        {
-          "current_measure": 8.27,
-          "elapsed_ms": 45152,
-          "watt": 91.797
-        },
-        {
-          "current_measure": 8.29,
-          "elapsed_ms": 46339,
-          "watt": 92.01899999999999
-        }
-      ],
-      "date": "20 maj",
-      "speed": 0.3,
-      "power_consumption_kwh": 0.0011480471308333334
-    }
-  ],
-  "pyramid": [
+  "triangle": [
     {
       "section": "2,3,1",
       "run_number": 1,
@@ -20027,6 +18254,1779 @@
       "date": "20 maj",
       "speed": 0.24545454545454545,
       "power_consumption_kwh": 0.0013909540116666668
+    }
+  ],
+  "offset line": [
+    {
+      "section": "1,2,3 - right",
+      "run_number": 1,
+      "duration_s": 46,
+      "boat_id": "boat-1",
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.8,
+          "elapsed_ms": 1195,
+          "watt": 42.18
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 2384,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 3571,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 4759,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 5948,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 7136,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 8324,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 9520,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 10708,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 11896,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 13083,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 14272,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 15460,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 16648,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 17837,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 19025,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 20212,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 21402,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 22590,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 23779,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 24967,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 26155,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 27343,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 28530,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 29719,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 30907,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 32096,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 33284,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 34474,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 35663,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 36850,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 38038,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 39227,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 40415,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.88,
+          "elapsed_ms": 41604,
+          "watt": 43.068
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 42791,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 43980,
+          "watt": 43.29
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 45167,
+          "watt": 43.401
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 46399,
+          "watt": 43.401
+        },
+        {
+          "current_measure": 3.61,
+          "elapsed_ms": 47587,
+          "watt": 40.071
+        },
+        {
+          "current_measure": 3.63,
+          "elapsed_ms": 48775,
+          "watt": 40.293
+        },
+        {
+          "current_measure": 3.64,
+          "elapsed_ms": 49964,
+          "watt": 40.404
+        },
+        {
+          "current_measure": 3.69,
+          "elapsed_ms": 51152,
+          "watt": 40.958999999999996
+        },
+        {
+          "current_measure": 3.73,
+          "elapsed_ms": 52339,
+          "watt": 41.403
+        },
+        {
+          "current_measure": 3.69,
+          "elapsed_ms": 53528,
+          "watt": 40.958999999999996
+        }
+      ],
+      "date": "20 maj",
+      "speed": 0.29347826086956524,
+      "power_consumption_kwh": 0.0006214461879166667
+    },
+    {
+      "section": "1,2,3 - right",
+      "run_number": 1,
+      "duration_s": 46,
+      "boat_id": "boat-3",
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 6.51,
+          "elapsed_ms": 1195,
+          "watt": 72.261
+        },
+        {
+          "current_measure": 7.96,
+          "elapsed_ms": 2383,
+          "watt": 88.356
+        },
+        {
+          "current_measure": 8.2,
+          "elapsed_ms": 3570,
+          "watt": 91.02
+        },
+        {
+          "current_measure": 8.22,
+          "elapsed_ms": 4757,
+          "watt": 91.242
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 5942,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 7128,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 8315,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 9501,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 10688,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 11873,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 13061,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 14247,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 15436,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 16623,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 17809,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 18995,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 20181,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 21368,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 22554,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 23740,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 24926,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 26112,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.24,
+          "elapsed_ms": 27301,
+          "watt": 91.464
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 28488,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 29674,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 30860,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 32046,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 33233,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 34419,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 35606,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 36793,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 37978,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.23,
+          "elapsed_ms": 39173,
+          "watt": 91.35300000000001
+        },
+        {
+          "current_measure": 8.17,
+          "elapsed_ms": 40403,
+          "watt": 90.687
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 41590,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 42776,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 43964,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 45149,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 46336,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 47522,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 48710,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.24,
+          "elapsed_ms": 49896,
+          "watt": 91.464
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 51082,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 52270,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 53457,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.24,
+          "elapsed_ms": 54644,
+          "watt": 91.464
+        }
+      ],
+      "date": "20 maj",
+      "speed": 0.29347826086956524,
+      "power_consumption_kwh": 0.0013573469425000003
+    },
+    {
+      "section": "1,2,3 - right",
+      "run_number": 2,
+      "duration_s": 46,
+      "boat_id": "boat-1",
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.64,
+          "elapsed_ms": 1195,
+          "watt": 40.404
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 2382,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 3570,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 4758,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 5996,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 7184,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 8373,
+          "watt": 41.292
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 9561,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 10748,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.72,
+          "elapsed_ms": 11937,
+          "watt": 41.292
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 13125,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 14313,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 15502,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 16690,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 17880,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 19067,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 20256,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 21444,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 22633,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 23821,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 25009,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 26198,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 27385,
+          "watt": 41.07
+        },
+        {
+          "current_measure": 3.71,
+          "elapsed_ms": 28573,
+          "watt": 41.181
+        },
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 29762,
+          "watt": 41.07
+        },
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 30952,
+          "watt": 41.07
+        },
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 32141,
+          "watt": 41.07
+        },
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 33329,
+          "watt": 41.07
+        },
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 34517,
+          "watt": 41.07
+        },
+        {
+          "current_measure": 3.69,
+          "elapsed_ms": 35704,
+          "watt": 40.958999999999996
+        },
+        {
+          "current_measure": 3.69,
+          "elapsed_ms": 36892,
+          "watt": 40.958999999999996
+        },
+        {
+          "current_measure": 3.69,
+          "elapsed_ms": 38081,
+          "watt": 40.958999999999996
+        },
+        {
+          "current_measure": 3.69,
+          "elapsed_ms": 39269,
+          "watt": 40.958999999999996
+        },
+        {
+          "current_measure": 3.69,
+          "elapsed_ms": 40458,
+          "watt": 40.958999999999996
+        },
+        {
+          "current_measure": 3.69,
+          "elapsed_ms": 41646,
+          "watt": 40.958999999999996
+        },
+        {
+          "current_measure": 3.69,
+          "elapsed_ms": 42836,
+          "watt": 40.958999999999996
+        },
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 44024,
+          "watt": 41.07
+        },
+        {
+          "current_measure": 3.7,
+          "elapsed_ms": 45212,
+          "watt": 41.07
+        },
+        {
+          "current_measure": 3.61,
+          "elapsed_ms": 46401,
+          "watt": 40.071
+        }
+      ],
+      "date": "20 maj",
+      "speed": 0.29347826086956524,
+      "power_consumption_kwh": 0.0005160746895833334
+    },
+    {
+      "section": "1,2,3 - right",
+      "run_number": 2,
+      "duration_s": 46,
+      "boat_id": "boat-3",
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 5.85,
+          "elapsed_ms": 1195,
+          "watt": 64.93499999999999
+        },
+        {
+          "current_measure": 7.69,
+          "elapsed_ms": 2382,
+          "watt": 85.359
+        },
+        {
+          "current_measure": 8.14,
+          "elapsed_ms": 3568,
+          "watt": 90.354
+        },
+        {
+          "current_measure": 8.22,
+          "elapsed_ms": 4755,
+          "watt": 91.242
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 5941,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.22,
+          "elapsed_ms": 7127,
+          "watt": 91.242
+        },
+        {
+          "current_measure": 8.2,
+          "elapsed_ms": 8313,
+          "watt": 91.02
+        },
+        {
+          "current_measure": 8.22,
+          "elapsed_ms": 9502,
+          "watt": 91.242
+        },
+        {
+          "current_measure": 8.24,
+          "elapsed_ms": 10689,
+          "watt": 91.464
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 11875,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.24,
+          "elapsed_ms": 13062,
+          "watt": 91.464
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 14247,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 15434,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.16,
+          "elapsed_ms": 16663,
+          "watt": 90.576
+        },
+        {
+          "current_measure": 8.23,
+          "elapsed_ms": 17850,
+          "watt": 91.35300000000001
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 19037,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 20223,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 21412,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.24,
+          "elapsed_ms": 22598,
+          "watt": 91.464
+        },
+        {
+          "current_measure": 8.23,
+          "elapsed_ms": 23785,
+          "watt": 91.35300000000001
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 24971,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 26156,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 27343,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 28529,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.24,
+          "elapsed_ms": 29716,
+          "watt": 91.464
+        },
+        {
+          "current_measure": 8.24,
+          "elapsed_ms": 30904,
+          "watt": 91.464
+        },
+        {
+          "current_measure": 8.23,
+          "elapsed_ms": 32089,
+          "watt": 91.35300000000001
+        },
+        {
+          "current_measure": 8.2,
+          "elapsed_ms": 33284,
+          "watt": 91.02
+        },
+        {
+          "current_measure": 8.22,
+          "elapsed_ms": 34470,
+          "watt": 91.242
+        },
+        {
+          "current_measure": 8.24,
+          "elapsed_ms": 35657,
+          "watt": 91.464
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 36844,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.24,
+          "elapsed_ms": 38031,
+          "watt": 91.464
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 39218,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.23,
+          "elapsed_ms": 40404,
+          "watt": 91.35300000000001
+        },
+        {
+          "current_measure": 8.23,
+          "elapsed_ms": 41590,
+          "watt": 91.35300000000001
+        },
+        {
+          "current_measure": 8.22,
+          "elapsed_ms": 42778,
+          "watt": 91.242
+        },
+        {
+          "current_measure": 8.22,
+          "elapsed_ms": 43964,
+          "watt": 91.242
+        },
+        {
+          "current_measure": 8.23,
+          "elapsed_ms": 45152,
+          "watt": 91.35300000000001
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 46340,
+          "watt": 91.68599999999999
+        }
+      ],
+      "date": "20 maj",
+      "speed": 0.29347826086956524,
+      "power_consumption_kwh": 0.0011401902579166667
+    },
+    {
+      "section": "1,2,3 - left",
+      "run_number": 1,
+      "duration_s": 50,
+      "boat_id": "boat-1",
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 1195,
+          "watt": 41.958
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 2383,
+          "watt": 42.735
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 3572,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 4760,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 5948,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 7135,
+          "watt": 42.735
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 8324,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 9519,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 10708,
+          "watt": 42.735
+        },
+        {
+          "current_measure": 3.85,
+          "elapsed_ms": 11896,
+          "watt": 42.735
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 13085,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 14272,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 15501,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 16690,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 17879,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 19067,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 20255,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 21445,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.86,
+          "elapsed_ms": 22634,
+          "watt": 42.846
+        },
+        {
+          "current_measure": 3.87,
+          "elapsed_ms": 23823,
+          "watt": 42.957
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 25010,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 26198,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 27387,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 28575,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 29763,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 30951,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 32138,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 33327,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 34560,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 35748,
+          "watt": 43.29
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 36936,
+          "watt": 43.29
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 38125,
+          "watt": 43.29
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 39314,
+          "watt": 43.401
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 40500,
+          "watt": 43.401
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 41689,
+          "watt": 43.29
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 42877,
+          "watt": 43.401
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 44065,
+          "watt": 43.29
+        },
+        {
+          "current_measure": 3.9,
+          "elapsed_ms": 45254,
+          "watt": 43.29
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 46444,
+          "watt": 43.401
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 47633,
+          "watt": 43.401
+        },
+        {
+          "current_measure": 3.91,
+          "elapsed_ms": 48820,
+          "watt": 43.401
+        },
+        {
+          "current_measure": 3.89,
+          "elapsed_ms": 50008,
+          "watt": 43.179
+        },
+        {
+          "current_measure": 4.0,
+          "elapsed_ms": 51197,
+          "watt": 44.4
+        }
+      ],
+      "date": "20 maj",
+      "speed": 0.27,
+      "power_consumption_kwh": 0.0005982256354166665
+    },
+    {
+      "section": "1,2,3 - left",
+      "run_number": 1,
+      "duration_s": 50,
+      "boat_id": "boat-3",
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 6.16,
+          "elapsed_ms": 1195,
+          "watt": 68.376
+        },
+        {
+          "current_measure": 7.87,
+          "elapsed_ms": 2382,
+          "watt": 87.357
+        },
+        {
+          "current_measure": 8.19,
+          "elapsed_ms": 3567,
+          "watt": 90.90899999999999
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 4755,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 5941,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 7129,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.17,
+          "elapsed_ms": 8358,
+          "watt": 90.687
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 9543,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 10731,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 11919,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 13106,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.32,
+          "elapsed_ms": 14292,
+          "watt": 92.352
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 15479,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 16664,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 17851,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.31,
+          "elapsed_ms": 19038,
+          "watt": 92.241
+        },
+        {
+          "current_measure": 8.31,
+          "elapsed_ms": 20225,
+          "watt": 92.241
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 21411,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 22597,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 23786,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 24972,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 26159,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.31,
+          "elapsed_ms": 27345,
+          "watt": 92.241
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 28530,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 29717,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.31,
+          "elapsed_ms": 30903,
+          "watt": 92.241
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 32090,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 33277,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 34464,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 35650,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 36844,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 38031,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 39217,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 40405,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 41591,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 42777,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 43964,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.18,
+          "elapsed_ms": 45193,
+          "watt": 90.79799999999999
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 46381,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 47567,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.23,
+          "elapsed_ms": 48756,
+          "watt": 91.35300000000001
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 49942,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.32,
+          "elapsed_ms": 51129,
+          "watt": 92.352
+        },
+        {
+          "current_measure": 8.24,
+          "elapsed_ms": 52316,
+          "watt": 91.464
+        }
+      ],
+      "date": "20 maj",
+      "speed": 0.27,
+      "power_consumption_kwh": 0.0012991765445833333
+    },
+    {
+      "section": "1,2,3 - left",
+      "run_number": 2,
+      "duration_s": 45,
+      "boat_id": "boat-1",
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 3.97,
+          "elapsed_ms": 1194,
+          "watt": 44.067
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 2383,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 3571,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.03,
+          "elapsed_ms": 4759,
+          "watt": 44.733000000000004
+        },
+        {
+          "current_measure": 4.03,
+          "elapsed_ms": 5947,
+          "watt": 44.733000000000004
+        },
+        {
+          "current_measure": 4.03,
+          "elapsed_ms": 7135,
+          "watt": 44.733000000000004
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 8331,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.03,
+          "elapsed_ms": 9519,
+          "watt": 44.733000000000004
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 10707,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 11896,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 13083,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 14272,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 15459,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 16647,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 17836,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 19024,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.03,
+          "elapsed_ms": 20215,
+          "watt": 44.733000000000004
+        },
+        {
+          "current_measure": 4.03,
+          "elapsed_ms": 21403,
+          "watt": 44.733000000000004
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 22590,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 4.04,
+          "elapsed_ms": 23778,
+          "watt": 44.844
+        },
+        {
+          "current_measure": 3.98,
+          "elapsed_ms": 24966,
+          "watt": 44.178
+        },
+        {
+          "current_measure": 3.96,
+          "elapsed_ms": 26154,
+          "watt": 43.955999999999996
+        },
+        {
+          "current_measure": 3.95,
+          "elapsed_ms": 27342,
+          "watt": 43.845
+        },
+        {
+          "current_measure": 3.95,
+          "elapsed_ms": 28531,
+          "watt": 43.845
+        },
+        {
+          "current_measure": 3.95,
+          "elapsed_ms": 29719,
+          "watt": 43.845
+        },
+        {
+          "current_measure": 3.95,
+          "elapsed_ms": 30907,
+          "watt": 43.845
+        },
+        {
+          "current_measure": 3.95,
+          "elapsed_ms": 32095,
+          "watt": 43.845
+        },
+        {
+          "current_measure": 3.96,
+          "elapsed_ms": 33327,
+          "watt": 43.955999999999996
+        },
+        {
+          "current_measure": 3.96,
+          "elapsed_ms": 34515,
+          "watt": 43.955999999999996
+        },
+        {
+          "current_measure": 3.96,
+          "elapsed_ms": 35704,
+          "watt": 43.955999999999996
+        },
+        {
+          "current_measure": 3.95,
+          "elapsed_ms": 36891,
+          "watt": 43.845
+        },
+        {
+          "current_measure": 3.95,
+          "elapsed_ms": 38080,
+          "watt": 43.845
+        },
+        {
+          "current_measure": 3.95,
+          "elapsed_ms": 39267,
+          "watt": 43.845
+        },
+        {
+          "current_measure": 3.96,
+          "elapsed_ms": 40455,
+          "watt": 43.955999999999996
+        },
+        {
+          "current_measure": 3.95,
+          "elapsed_ms": 41644,
+          "watt": 43.845
+        },
+        {
+          "current_measure": 3.95,
+          "elapsed_ms": 42832,
+          "watt": 43.845
+        },
+        {
+          "current_measure": 3.95,
+          "elapsed_ms": 44021,
+          "watt": 43.845
+        },
+        {
+          "current_measure": 3.93,
+          "elapsed_ms": 45210,
+          "watt": 43.623
+        },
+        {
+          "current_measure": 3.78,
+          "elapsed_ms": 46399,
+          "watt": 41.958
+        },
+        {
+          "current_measure": 3.77,
+          "elapsed_ms": 47586,
+          "watt": 41.847
+        }
+      ],
+      "date": "20 maj",
+      "speed": 0.3,
+      "power_consumption_kwh": 0.0005703678729166667
+    },
+    {
+      "section": "1,2,3 - left",
+      "run_number": 2,
+      "duration_s": 45,
+      "boat_id": "boat-3",
+      "invalid": false,
+      "measurements": [
+        {
+          "current_measure": 5.92,
+          "elapsed_ms": 1195,
+          "watt": 65.712
+        },
+        {
+          "current_measure": 7.74,
+          "elapsed_ms": 2381,
+          "watt": 85.914
+        },
+        {
+          "current_measure": 8.17,
+          "elapsed_ms": 3568,
+          "watt": 90.687
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 4754,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.31,
+          "elapsed_ms": 5941,
+          "watt": 92.241
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 7127,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 8316,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 9502,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 10689,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 11875,
+          "watt": 92.01899999999999
+        },
+        {
+          "current_measure": 8.31,
+          "elapsed_ms": 13062,
+          "watt": 92.241
+        },
+        {
+          "current_measure": 8.32,
+          "elapsed_ms": 14247,
+          "watt": 92.352
+        },
+        {
+          "current_measure": 8.32,
+          "elapsed_ms": 15434,
+          "watt": 92.352
+        },
+        {
+          "current_measure": 8.32,
+          "elapsed_ms": 16621,
+          "watt": 92.352
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 17808,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.33,
+          "elapsed_ms": 18994,
+          "watt": 92.463
+        },
+        {
+          "current_measure": 8.33,
+          "elapsed_ms": 20182,
+          "watt": 92.463
+        },
+        {
+          "current_measure": 8.33,
+          "elapsed_ms": 21369,
+          "watt": 92.463
+        },
+        {
+          "current_measure": 8.32,
+          "elapsed_ms": 22555,
+          "watt": 92.352
+        },
+        {
+          "current_measure": 8.23,
+          "elapsed_ms": 23785,
+          "watt": 91.35300000000001
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 24972,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.25,
+          "elapsed_ms": 26157,
+          "watt": 91.575
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 27343,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.34,
+          "elapsed_ms": 28531,
+          "watt": 92.574
+        },
+        {
+          "current_measure": 8.31,
+          "elapsed_ms": 29717,
+          "watt": 92.241
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 30904,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 32091,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.32,
+          "elapsed_ms": 33284,
+          "watt": 92.352
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 34471,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 35657,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.31,
+          "elapsed_ms": 36843,
+          "watt": 92.241
+        },
+        {
+          "current_measure": 8.31,
+          "elapsed_ms": 38030,
+          "watt": 92.241
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 39216,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 40403,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.28,
+          "elapsed_ms": 41589,
+          "watt": 91.90799999999999
+        },
+        {
+          "current_measure": 8.3,
+          "elapsed_ms": 42777,
+          "watt": 92.13000000000001
+        },
+        {
+          "current_measure": 8.26,
+          "elapsed_ms": 43964,
+          "watt": 91.68599999999999
+        },
+        {
+          "current_measure": 8.27,
+          "elapsed_ms": 45152,
+          "watt": 91.797
+        },
+        {
+          "current_measure": 8.29,
+          "elapsed_ms": 46339,
+          "watt": 92.01899999999999
+        }
+      ],
+      "date": "20 maj",
+      "speed": 0.3,
+      "power_consumption_kwh": 0.0011480471308333334
     }
   ],
   "diagonal": [
