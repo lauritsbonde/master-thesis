@@ -3,4 +3,3 @@ Timestamp (s),Anchor-0 (m),Anchor-1 (m),MiddlePoint (m),Expected (m), Method, Mo
  97.30,0.427110,0.398110,0.422130,0.410444,direct,TEST
  98.70,0.427110,0.398110,0.422130,0.410444,direct,TEST
  98.71,0.427110,0.398110,0.422130,0.410444,direct,TEST
- 99.81,0.427110,0.398110,0.422130,0.410444,direct,TEST

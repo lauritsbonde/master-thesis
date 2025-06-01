@@ -141,9 +141,16 @@ def plot_singlerun_power_and_speed(speeds: dict, powers: dict, output_name: str)
     ax1.set_ylabel("Power Consumption (kWh)", color="blue")
     ax2.set_ylabel("Speed (m/s)", color="green")
     ax1.set_xticks(positions)
-    ax1.set_xticklabels(labels, rotation=45, ha="right")
-    ax1.set_title("Power and Speed Distribution per Singlerun")
+    ax1.set_xticklabels(["boat-1-individual", "boat-2-individual", "boat-3-individual"], rotation=45, ha="right")
+    ax1.set_title("Power and Speed Distribution for individual Boats")
     ax1.grid(True, axis="y")
+
+    # Set fixed axis limits
+    ax1.set_ylim(0, 0.00175)
+    ax2.set_ylim(0, 0.7)
+
+    # Use scientific notation for ax1 (left axis)
+    ax1.ticklabel_format(style="sci", axis="y", scilimits=(0, 0))
 
     ax1.set_ylim(bottom=0)
     ax2.set_ylim(bottom=0)
@@ -259,9 +266,16 @@ def plot_power_and_speed_comparison_by_boat(power_data: dict, speed_data: dict, 
         ax1.set_ylabel("Power Consumption (kWh)", color="blue")
         ax2.set_ylabel("Speed (m/s)", color="green")
         ax1.set_xticks(positions)
-        ax1.set_xticklabels(labels)
+        ax1.set_xticklabels(["individual", "In front", "Behind"])
         ax1.set_title(f"Boat {boat} — Power and Speed by Position (double)")
         ax1.grid(True, axis="y")
+
+        # Set fixed axis limits
+        ax1.set_ylim(0, 0.00175)
+        ax2.set_ylim(0, 0.7)
+
+        # Use scientific notation for ax1 (left axis)
+        ax1.ticklabel_format(style="sci", axis="y", scilimits=(0, 0))
 
         ax1.set_ylim(bottom=0)
         ax2.set_ylim(bottom=0)
@@ -347,9 +361,16 @@ def plot_formation_comparison(speeds: dict, powers: dict, output_name: str):
     ax1.set_ylabel("Power Consumption (kWh)", color="blue")
     ax2.set_ylabel("Speed (m/s)", color="green")
     ax1.set_xticks(positions)
-    ax1.set_xticklabels(formations, rotation=20)
+    ax1.set_xticklabels(["diagonal_line", "offset_line", "triangle", "boat_1_individual", "boat_3_individual"], rotation=20)
     ax1.set_title("Power and Speed Comparison")
     ax1.grid(True)
+
+    # Set fixed axis limits
+    ax1.set_ylim(0, 0.00175)
+    ax2.set_ylim(0, 0.7)
+
+    # Use scientific notation for ax1 (left axis)
+    ax1.ticklabel_format(style="sci", axis="y", scilimits=(0, 0))
 
     fig.tight_layout()
     os.makedirs(OUT_DIR, exist_ok=True)

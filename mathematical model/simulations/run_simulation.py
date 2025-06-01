@@ -15,9 +15,9 @@ from typing import Callable, List
 from boats.boat import Boat
 from config import SAILING_DISTANCE
 from utils.validate_with_real_experiment import validate_with_real_experiment, find_double_speed, find_single_boat_speed
+from collections import defaultdict
 import csv
 import os
-
 
 def run_simulation_for_formation(
     name: str,
@@ -32,7 +32,7 @@ def run_simulation_for_formation(
 
     print()
 
-    power = calculatePowerUsage(boats, efficency=0.5)
+    power = calculatePowerUsage(boats)
     wh_per_meter = calculateWhPerDistance(boats, distance, power)
     kwh_used = calculateTotalEnergyKWh(boats, distance, power)
 
@@ -46,6 +46,7 @@ def run_simulation_for_formation(
         "Power per Boat (W)": power / number_of_boats,
         "Wh per Meter": wh_per_meter,
         "Total Energy (kWh)": kwh_used,
+        "Speed (m/s)": speed,
     }
 
 def run_simulation(with_plot: bool = False, export_csv: bool = True):
@@ -91,13 +92,13 @@ def run_simulation(with_plot: bool = False, export_csv: bool = True):
             },
             "pyramid-to-line": {
                 "fn": create_pyramid_to_line,
-                "boats": 20,
+                "boats": 24,
                 "distance": 100,
             },
             "v-shape": {
                 "fn": create_v_shape,
-                "boats": 15,
-                "distance": 90,
+                "boats": 24,
+                "distance": 100,
             },
         }
 
@@ -118,6 +119,30 @@ def run_simulation(with_plot: bool = False, export_csv: bool = True):
 
     real_world_results = run_batch(real_world_formations, True)
     validation = validate_with_real_experiment(real_world_results)
+
+    grouped_real_usage = defaultdict(list)
+    for row in validation["valid"] + validation["suspicious"]:
+        key = row["key"]
+        real_kwh = row.get("real_kwh")
+        if real_kwh is None:
+            continue
+        if "singlerun" in key:
+            grouped_real_usage["singlerun"].append(real_kwh)
+        elif "double" in key:
+            grouped_real_usage["double"].append(real_kwh)
+
+    # Compute average real kWh per formation
+    avg_real_usage = {
+        formation: sum(values) / len(values)
+        for formation, values in grouped_real_usage.items()
+        if values
+    }
+
+    # Assign to each row in real_world_results
+    for row in real_world_results:
+        formation = row["Formation"]
+        row["Real Energy (kWh)"] = avg_real_usage.get(formation, "")
+
     print("Valid results", len(validation["valid"]), "Suspicious results", len(validation["suspicious"]))
     generated_results = run_batch(generated_formations, False)
 
@@ -127,15 +152,29 @@ def run_simulation(with_plot: bool = False, export_csv: bool = True):
             def format_row(row):
                 return {
                     k: (
-                        f"{v:.3e}" if isinstance(v, float) and abs(v) < 0.01 else
-                        f"{v:.6f}" if isinstance(v, float) else
+                        f"{v:.3e}" if isinstance(v, float) and abs(v) < 0.1 else
+                        f"{v:.2f}" if isinstance(v, float) else
                         v
                     )
                     for k, v in row.items()
                 }
 
+            fieldnames = [
+                "Formation",
+                "Boats",
+                "Distance",
+                "Speed (m/s)",
+                "Total Power (W)",
+                "Power per Boat (W)",
+                "Wh per Meter",
+                "Total Energy (kWh)",
+            ]
+
+            if path == "out/real_world_results.csv":
+                fieldnames.append("Real Energy (kWh)")
+
             with open(path, "w", newline="") as f:
-                writer = csv.DictWriter(f, fieldnames=data[0].keys())
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
                 writer.writeheader()
                 writer.writerows([format_row(row) for row in data])
 
